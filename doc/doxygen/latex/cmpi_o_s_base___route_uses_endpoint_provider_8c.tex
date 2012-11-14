@@ -1,0 +1,197 @@
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-RouteUsesEndpointProvider.c File Reference}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-RouteUsesEndpointProvider.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpift.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpimacs.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-RouteUsesEndpoint.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a99464f6b4f84b32ac6a880a92279291e}{OSBase\_\-RouteUsesEndpointProviderCleanup} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_afdb0ea7a2f788aeed2ee6e039b859932}{OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a91273dae4c194e26b5c5345369307d4f}{OSBase\_\-RouteUsesEndpointProviderEnumInstances} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab703189c65002dc06648a51d3b0b02d0}{OSBase\_\-RouteUsesEndpointProviderGetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a05699e49091789a20c7359053acf7ef2}{OSBase\_\-RouteUsesEndpointProviderCreateInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a42532d20eabb3dc117216660e3701dbb}{OSBase\_\-RouteUsesEndpointProviderSetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a4322efbb5a6cb8963eab14c19d5cf701}{OSBase\_\-RouteUsesEndpointProviderDeleteInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a1fb09e6d0c6b408257e7f27459524ec3}{OSBase\_\-RouteUsesEndpointProviderExecQuery} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$lang, const char $\ast$query)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab4fcb86468e52c3336bcc90343e33564}{OSBase\_\-RouteUsesEndpointProviderAssociationCleanup} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab84889813e3f817f4a41e3939fa08598}{OSBase\_\-RouteUsesEndpointProviderAssociators} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$resultClass, const char $\ast$role, const char $\ast$resultRole, const char $\ast$$\ast$propertyList)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_ad1eedd0a509f147309adc9c9fe85e4f7}{OSBase\_\-RouteUsesEndpointProviderAssociatorNames} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$resultClass, const char $\ast$role, const char $\ast$resultRole)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a400878ee539241271f21d7ae69bd2de9}{OSBase\_\-RouteUsesEndpointProviderReferences} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$role, const char $\ast$$\ast$propertyList)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a132566fed06d3f836b09135c67fa8a20}{OSBase\_\-RouteUsesEndpointProviderReferenceNames} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$role)
+\item 
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a479ec964726383505ed63431df33c08f}{CMInstanceMIStub} (OSBase\_\-RouteUsesEndpointProvider, OSBase\_\-RouteUsesEndpointProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\item 
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a0e4f1222e66a8201f0f3f23043ca7d48}{CMAssociationMIStub} (OSBase\_\-RouteUsesEndpointProvider, OSBase\_\-RouteUsesEndpointProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const CMPIBroker $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c}{cmpiOSBase\_\-RouteUsesEndpointProvider.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+Linux\_\-RouteUsesEndpointProvider association provider implementation. The following CMPI instance methods are supported:
+\begin{DoxyItemize}
+\item Cleanup
+\item EnumerateInstanceNames
+\item EnumerateInstances
+\item GetInstance
+\item AssociationCleanup
+\item Associators
+\item AssociatorNames
+\item References
+\item ReferenceNames
+\end{DoxyItemize}
+\end{DoxyParagraph}
+Interface Type : Common Manageability Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_source}{cmpiOSBase\_\-RouteUsesEndpointProvider.c}.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a0e4f1222e66a8201f0f3f23043ca7d48}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!CMAssociationMIStub@{CMAssociationMIStub}}
+\index{CMAssociationMIStub@{CMAssociationMIStub}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{CMAssociationMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMAssociationMIStub (OSBase\_\-RouteUsesEndpointProvider, \/  OSBase\_\-RouteUsesEndpointProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a0e4f1222e66a8201f0f3f23043ca7d48}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a479ec964726383505ed63431df33c08f}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!CMInstanceMIStub@{CMInstanceMIStub}}
+\index{CMInstanceMIStub@{CMInstanceMIStub}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{CMInstanceMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMInstanceMIStub (OSBase\_\-RouteUsesEndpointProvider, \/  OSBase\_\-RouteUsesEndpointProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a479ec964726383505ed63431df33c08f}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab4fcb86468e52c3336bcc90343e33564}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderAssociationCleanup@{OSBase\_\-RouteUsesEndpointProviderAssociationCleanup}}
+\index{OSBase\_\-RouteUsesEndpointProviderAssociationCleanup@{OSBase\_\-RouteUsesEndpointProviderAssociationCleanup}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderAssociationCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderAssociationCleanup (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab4fcb86468e52c3336bcc90343e33564}
+
+
+Definition at line 270 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_ad1eedd0a509f147309adc9c9fe85e4f7}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderAssociatorNames@{OSBase\_\-RouteUsesEndpointProviderAssociatorNames}}
+\index{OSBase\_\-RouteUsesEndpointProviderAssociatorNames@{OSBase\_\-RouteUsesEndpointProviderAssociatorNames}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderAssociatorNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderAssociatorNames (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em resultClass}, \/  const char $\ast$ {\em role}, \/  const char $\ast$ {\em resultRole})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_ad1eedd0a509f147309adc9c9fe85e4f7}
+
+
+Definition at line 388 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab84889813e3f817f4a41e3939fa08598}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderAssociators@{OSBase\_\-RouteUsesEndpointProviderAssociators}}
+\index{OSBase\_\-RouteUsesEndpointProviderAssociators@{OSBase\_\-RouteUsesEndpointProviderAssociators}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderAssociators}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderAssociators (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em resultClass}, \/  const char $\ast$ {\em role}, \/  const char $\ast$ {\em resultRole}, \/  const char $\ast$$\ast$ {\em propertyList})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab84889813e3f817f4a41e3939fa08598}
+
+
+Definition at line 283 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a99464f6b4f84b32ac6a880a92279291e}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderCleanup@{OSBase\_\-RouteUsesEndpointProviderCleanup}}
+\index{OSBase\_\-RouteUsesEndpointProviderCleanup@{OSBase\_\-RouteUsesEndpointProviderCleanup}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderCleanup (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a99464f6b4f84b32ac6a880a92279291e}
+
+
+Definition at line 57 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a05699e49091789a20c7359053acf7ef2}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderCreateInstance@{OSBase\_\-RouteUsesEndpointProviderCreateInstance}}
+\index{OSBase\_\-RouteUsesEndpointProviderCreateInstance@{OSBase\_\-RouteUsesEndpointProviderCreateInstance}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderCreateInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderCreateInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a05699e49091789a20c7359053acf7ef2}
+
+
+Definition at line 181 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a4322efbb5a6cb8963eab14c19d5cf701}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderDeleteInstance@{OSBase\_\-RouteUsesEndpointProviderDeleteInstance}}
+\index{OSBase\_\-RouteUsesEndpointProviderDeleteInstance@{OSBase\_\-RouteUsesEndpointProviderDeleteInstance}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderDeleteInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderDeleteInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a4322efbb5a6cb8963eab14c19d5cf701}
+
+
+Definition at line 223 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_afdb0ea7a2f788aeed2ee6e039b859932}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames@{OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames}}
+\index{OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames@{OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderEnumInstanceNames (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_afdb0ea7a2f788aeed2ee6e039b859932}
+
+
+Definition at line 70 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a91273dae4c194e26b5c5345369307d4f}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderEnumInstances@{OSBase\_\-RouteUsesEndpointProviderEnumInstances}}
+\index{OSBase\_\-RouteUsesEndpointProviderEnumInstances@{OSBase\_\-RouteUsesEndpointProviderEnumInstances}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderEnumInstances}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderEnumInstances (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a91273dae4c194e26b5c5345369307d4f}
+
+
+Definition at line 107 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a1fb09e6d0c6b408257e7f27459524ec3}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderExecQuery@{OSBase\_\-RouteUsesEndpointProviderExecQuery}}
+\index{OSBase\_\-RouteUsesEndpointProviderExecQuery@{OSBase\_\-RouteUsesEndpointProviderExecQuery}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderExecQuery}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderExecQuery (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em lang}, \/  const char $\ast$ {\em query})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a1fb09e6d0c6b408257e7f27459524ec3}
+
+
+Definition at line 242 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab703189c65002dc06648a51d3b0b02d0}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderGetInstance@{OSBase\_\-RouteUsesEndpointProviderGetInstance}}
+\index{OSBase\_\-RouteUsesEndpointProviderGetInstance@{OSBase\_\-RouteUsesEndpointProviderGetInstance}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderGetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderGetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_ab703189c65002dc06648a51d3b0b02d0}
+
+
+Definition at line 144 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a132566fed06d3f836b09135c67fa8a20}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderReferenceNames@{OSBase\_\-RouteUsesEndpointProviderReferenceNames}}
+\index{OSBase\_\-RouteUsesEndpointProviderReferenceNames@{OSBase\_\-RouteUsesEndpointProviderReferenceNames}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderReferenceNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderReferenceNames (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em role})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a132566fed06d3f836b09135c67fa8a20}
+
+
+Definition at line 565 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a400878ee539241271f21d7ae69bd2de9}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderReferences@{OSBase\_\-RouteUsesEndpointProviderReferences}}
+\index{OSBase\_\-RouteUsesEndpointProviderReferences@{OSBase\_\-RouteUsesEndpointProviderReferences}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderReferences}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderReferences (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em role}, \/  const char $\ast$$\ast$ {\em propertyList})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a400878ee539241271f21d7ae69bd2de9}
+
+
+Definition at line 492 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a42532d20eabb3dc117216660e3701dbb}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!OSBase\_\-RouteUsesEndpointProviderSetInstance@{OSBase\_\-RouteUsesEndpointProviderSetInstance}}
+\index{OSBase\_\-RouteUsesEndpointProviderSetInstance@{OSBase\_\-RouteUsesEndpointProviderSetInstance}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{OSBase\_\-RouteUsesEndpointProviderSetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-RouteUsesEndpointProviderSetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a42532d20eabb3dc117216660e3701dbb}
+
+
+Definition at line 201 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.
+
+\subsection{Variable Documentation}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{
+\index{cmpiOSBase\_\-RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}!\_\-broker@{\_\-broker}}
+\index{\_\-broker@{\_\-broker}!cmpiOSBase_RouteUsesEndpointProvider.c@{cmpiOSBase\_\-RouteUsesEndpointProvider.c}}
+\subsubsection[{\_\-broker}]{\setlength{\rightskip}{0pt plus 5cm}const CMPIBroker$\ast$ {\bf \_\-broker}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}
+
+
+Definition at line 44 of file cmpiOSBase\_\-RouteUsesEndpointProvider.c.

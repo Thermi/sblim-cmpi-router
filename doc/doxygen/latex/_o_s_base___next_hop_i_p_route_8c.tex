@@ -1,0 +1,200 @@
+\hypertarget{_o_s_base___next_hop_i_p_route_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-NextHopIPRoute.c File Reference}
+\label{_o_s_base___next_hop_i_p_route_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-NextHopIPRoute.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-NextHopIPRoute.c}}
+}
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-NextHopIPRoute.h\char`\"{}}\par
+{\ttfamily \#include $<$linux/rtnetlink.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_a36ea7c7b855508a2fc288d320c3c0e84}{getIPRoutes} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList, struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_a5085a0364ec84a538e904b84a4e25b77}{getAllIPRoutes} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_a56718bb7056e26173ab590bddad2ef14}{getIPRouteIId} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList, const char $\ast$instanceId)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_aac403d090b103ec1932b4d8660cfe91a}{addIPRoute} (struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_aa38ea18d638ce338d241cbf51e2b4ca4}{delIPRoute} (const struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_a666ba60b93e6769421c520282be53b4f}{nlListTOnhList} (struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$$\ast$nlRtInfoList, struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_af3a45ed713dd80af347b7e947184d892}{nhTOnlInfo} (struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP, struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_ab906646758b6f3346849230c8a27c76d}{nlInfoTOnh} (const struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo, struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_ac0f496778846a04608eb1cf5b8c32bfc}{getAddrType} (const char $\ast$addr)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_aa7253cd736fe33432756ce85ee1bd5af}{getAddrTypeStr} (int addressType, char $\ast$addrTypeStr)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8c_aba624c13f657f0638608df830c89806e}{freeNextHopIPList} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$lptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_o_s_base___next_hop_i_p_route_8c}{OSBase\_\-NextHopIPRoute.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This shared library provides resource access functionality for the class Linux\_\-NextHopIPRoute. It is independent from any specific CIM technology. 
+
+Definition in file \hyperlink{_o_s_base___next_hop_i_p_route_8c_source}{OSBase\_\-NextHopIPRoute.c}.
+
+\subsection{Function Documentation}
+\hypertarget{_o_s_base___next_hop_i_p_route_8c_aac403d090b103ec1932b4d8660cfe91a}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!addIPRoute@{addIPRoute}}
+\index{addIPRoute@{addIPRoute}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{addIPRoute}]{\setlength{\rightskip}{0pt plus 5cm}int addIPRoute (struct {\bf nextHopIP} $\ast$ {\em nHopIP})}}
+\label{_o_s_base___next_hop_i_p_route_8c_aac403d090b103ec1932b4d8660cfe91a}
+This function is used to add a new route to FIB. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIP}]\mbox{[}in\mbox{]} route to be added. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_aa38ea18d638ce338d241cbf51e2b4ca4}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!delIPRoute@{delIPRoute}}
+\index{delIPRoute@{delIPRoute}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{delIPRoute}]{\setlength{\rightskip}{0pt plus 5cm}int delIPRoute (const struct {\bf nextHopIP} $\ast$ {\em nHopIP})}}
+\label{_o_s_base___next_hop_i_p_route_8c_aa38ea18d638ce338d241cbf51e2b4ca4}
+This function is used to delete a route from FIB. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIP}]\mbox{[}in\mbox{]} route to be deleted. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 212 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_aba624c13f657f0638608df830c89806e}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!freeNextHopIPList@{freeNextHopIPList}}
+\index{freeNextHopIPList@{freeNextHopIPList}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{freeNextHopIPList}]{\setlength{\rightskip}{0pt plus 5cm}int freeNextHopIPList (struct {\bf nextHopIPList} $\ast$ {\em lptr})}}
+\label{_o_s_base___next_hop_i_p_route_8c_aba624c13f657f0638608df830c89806e}
+This function is used to clean a \hyperlink{structnext_hop_i_p}{nextHopIP} list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lptr}]\mbox{[}in\mbox{]} list to be cleaned. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 623 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_ac0f496778846a04608eb1cf5b8c32bfc}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!getAddrType@{getAddrType}}
+\index{getAddrType@{getAddrType}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{getAddrType}]{\setlength{\rightskip}{0pt plus 5cm}int getAddrType (const char $\ast$ {\em addr})}}
+\label{_o_s_base___next_hop_i_p_route_8c_ac0f496778846a04608eb1cf5b8c32bfc}
+Used to get CIM address type from specified route address. 
+\begin{DoxyParams}{Parameters}
+\item[{\em addr}]\mbox{[}int\mbox{]} route address. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CIM address type. 
+\end{DoxyReturn}
+
+
+Definition at line 582 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_aa7253cd736fe33432756ce85ee1bd5af}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!getAddrTypeStr@{getAddrTypeStr}}
+\index{getAddrTypeStr@{getAddrTypeStr}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{getAddrTypeStr}]{\setlength{\rightskip}{0pt plus 5cm}int getAddrTypeStr (int {\em addressType}, \/  char $\ast$ {\em addrTypeStr})}}
+\label{_o_s_base___next_hop_i_p_route_8c_aa7253cd736fe33432756ce85ee1bd5af}
+Used to get CIM address type in string format. 
+\begin{DoxyParams}{Parameters}
+\item[{\em addressType}]\mbox{[}in\mbox{]} address type identifier. \item[{\em addrTypeStr}]\mbox{[}out\mbox{]} address type string. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 603 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_a5085a0364ec84a538e904b84a4e25b77}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!getAllIPRoutes@{getAllIPRoutes}}
+\index{getAllIPRoutes@{getAllIPRoutes}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{getAllIPRoutes}]{\setlength{\rightskip}{0pt plus 5cm}int getAllIPRoutes (struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList})}}
+\label{_o_s_base___next_hop_i_p_route_8c_a5085a0364ec84a538e904b84a4e25b77}
+This functions is used to get all ipv4 and ipv6 routes from fib. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIPList}]\mbox{[}out\mbox{]} routes struct to be filled. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_a56718bb7056e26173ab590bddad2ef14}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!getIPRouteIId@{getIPRouteIId}}
+\index{getIPRouteIId@{getIPRouteIId}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{getIPRouteIId}]{\setlength{\rightskip}{0pt plus 5cm}int getIPRouteIId (struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList}, \/  const char $\ast$ {\em instanceId})}}
+\label{_o_s_base___next_hop_i_p_route_8c_a56718bb7056e26173ab590bddad2ef14}
+This functions is used to get a route base on specified InstanceID. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIPList}]\mbox{[}out\mbox{]} routes struct to be filled. \item[{\em instanceId}]\mbox{[}in\mbox{]} route InstanceID. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_a36ea7c7b855508a2fc288d320c3c0e84}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!getIPRoutes@{getIPRoutes}}
+\index{getIPRoutes@{getIPRoutes}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{getIPRoutes}]{\setlength{\rightskip}{0pt plus 5cm}int getIPRoutes (struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList}, \/  struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___next_hop_i_p_route_8c_a36ea7c7b855508a2fc288d320c3c0e84}
+This functions is used to get a list of routes based on nlRtInfo filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIPList}]\mbox{[}out\mbox{]} routes struct to be filled. \item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_af3a45ed713dd80af347b7e947184d892}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!nhTOnlInfo@{nhTOnlInfo}}
+\index{nhTOnlInfo@{nhTOnlInfo}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{nhTOnlInfo}]{\setlength{\rightskip}{0pt plus 5cm}int nhTOnlInfo (struct {\bf nextHopIP} $\ast$ {\em nHopIP}, \/  struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___next_hop_i_p_route_8c_af3a45ed713dd80af347b7e947184d892}
+Converts a \hyperlink{structnext_hop_i_p}{nextHopIP} structure to \hyperlink{structnl_route_info}{nlRouteInfo} structure. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIP}]\mbox{[}in\mbox{]} structure to be converted. \item[{\em nlRtInfo}]\mbox{[}out\mbox{]} converted structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 318 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_ab906646758b6f3346849230c8a27c76d}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!nlInfoTOnh@{nlInfoTOnh}}
+\index{nlInfoTOnh@{nlInfoTOnh}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{nlInfoTOnh}]{\setlength{\rightskip}{0pt plus 5cm}int nlInfoTOnh (const struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo}, \/  struct {\bf nextHopIP} $\ast$ {\em nHopIP})}}
+\label{_o_s_base___next_hop_i_p_route_8c_ab906646758b6f3346849230c8a27c76d}
+Converts a \hyperlink{structnl_route_info}{nlRouteInfo} structure to \hyperlink{structnext_hop_i_p}{nextHopIP} structure. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}in\mbox{]} structure to be converted. \item[{\em nHopIP}]\mbox{[}out\mbox{]} converted structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 427 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8c_a666ba60b93e6769421c520282be53b4f}{
+\index{OSBase\_\-NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}!nlListTOnhList@{nlListTOnhList}}
+\index{nlListTOnhList@{nlListTOnhList}!OSBase_NextHopIPRoute.c@{OSBase\_\-NextHopIPRoute.c}}
+\subsubsection[{nlListTOnhList}]{\setlength{\rightskip}{0pt plus 5cm}int nlListTOnhList (struct {\bf nlRouteInfoList} $\ast$$\ast$ {\em nlRtInfoList}, \/  struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList})}}
+\label{_o_s_base___next_hop_i_p_route_8c_a666ba60b93e6769421c520282be53b4f}
+Converts a \hyperlink{structnl_route_info_list}{nlRouteInfoList} structure to \hyperlink{structnext_hop_i_p_list}{nextHopIPList} strucutre. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfoList}]\mbox{[}in\mbox{]} list to be converted. \item[{\em nHopIPList}]\mbox{[}out\mbox{]} converted list. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 262 of file OSBase\_\-NextHopIPRoute.c.

@@ -1,0 +1,24 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<CIM CIMVERSION="2.0" DTDVERSION="2.0">
+  <MESSAGE ID="4711" PROTOCOLVERSION="1.0">
+    <SIMPLEREQ>
+      <IMETHODCALL NAME="Associators"><LOCALNAMESPACEPATH>
+          <NAMESPACE NAME="root"></NAMESPACE>
+          <NAMESPACE NAME="cimv2"></NAMESPACE>
+        </LOCALNAMESPACEPATH>
+        <IPARAMVALUE NAME="ObjectName">
+          <INSTANCENAME CLASSNAME="Linux_ComputerSystem">
+            <KEYBINDING NAME="Name"><KEYVALUE VALUETYPE="string">etacarinae</KEYVALUE></KEYBINDING>
+            <KEYBINDING NAME="CreationClassName"><KEYVALUE VALUETYPE="string">Linux_ComputerSystem</KEYVALUE></KEYBINDING>
+          </INSTANCENAME>
+        </IPARAMVALUE>
+        <IPARAMVALUE NAME="AssocClass"><CLASSNAME NAME="Linux_CSHostedRoute"/></IPARAMVALUE>
+        <IPARAMVALUE NAME="ResultClass"><CLASSNAME NAME="Linux_NextHopIPRoute"/></IPARAMVALUE>
+        <IPARAMVALUE NAME="Role"><VALUE>Antecedent</VALUE></IPARAMVALUE>
+        <IPARAMVALUE NAME="ResultRole"><VALUE>Dependent</VALUE></IPARAMVALUE>
+      </IMETHODCALL>
+    </SIMPLEREQ>
+  </MESSAGE>
+</CIM>
+

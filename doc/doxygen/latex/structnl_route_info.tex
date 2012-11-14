@@ -1,0 +1,166 @@
+\hypertarget{structnl_route_info}{
+\section{nlRouteInfo Struct Reference}
+\label{structnl_route_info}\index{nlRouteInfo@{nlRouteInfo}}
+}
+
+
+{\ttfamily \#include $<$OSBase\_\-Netlink.h$>$}\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structnl_route_info_a4417150d9f858949bd9ea8794995ebcc}{family}
+\item 
+int \hyperlink{structnl_route_info_ac765329451135abec74c45e1897abf26}{type}
+\item 
+int \hyperlink{structnl_route_info_ab30e8d7e05ae904d3248e0d51255c005}{protocol}
+\item 
+int \hyperlink{structnl_route_info_ae1af048ea44870cb8acef396ebc4ad09}{scope}
+\item 
+int \hyperlink{structnl_route_info_a2b4446e353d9a259ddd348e1bf3de330}{srcLen}
+\item 
+int \hyperlink{structnl_route_info_a1a152a3788b0ba020365726705f93ce9}{dstLen}
+\item 
+int \hyperlink{structnl_route_info_a6cf1ef2d03c680cc07a080b1c7abcb46}{tos}
+\item 
+char \hyperlink{structnl_route_info_a54b3e65a2c39c535e124ed189e508691}{dstAddr} \mbox{[}NL\_\-ADDRESS\_\-MAXLEN+1\mbox{]}
+\item 
+char \hyperlink{structnl_route_info_a49c2119e8045d06995653d332271ff8b}{srcAddr} \mbox{[}NL\_\-ADDRESS\_\-MAXLEN+1\mbox{]}
+\item 
+int \hyperlink{structnl_route_info_a65bea094a4f4aef320764f97df3c51d7}{inputIf}
+\item 
+int \hyperlink{structnl_route_info_ae0ce7856052fdb9a226716db04dba402}{outputIf}
+\item 
+char \hyperlink{structnl_route_info_a8f7553e71654921434772b3c49332e9a}{gw} \mbox{[}64\mbox{]}
+\item 
+int \hyperlink{structnl_route_info_acec9ce2df15222151ad66fcb1d74eb9f}{priority}
+\item 
+char \hyperlink{structnl_route_info_a1d8287d8eec6924f2c8d056cd1115b7f}{prefSrc} \mbox{[}NL\_\-ADDRESS\_\-MAXLEN+1\mbox{]}
+\item 
+int \hyperlink{structnl_route_info_afcee26a6d6f42393d37dd68d5562d062}{metrics}
+\item 
+int \hyperlink{structnl_route_info_a381b3daa303e1bdbac3a7b7000e0176c}{table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information of a single route. 
+
+Definition at line 114 of file OSBase\_\-Netlink.h.
+
+\subsection{Field Documentation}
+\hypertarget{structnl_route_info_a54b3e65a2c39c535e124ed189e508691}{
+\index{nlRouteInfo@{nlRouteInfo}!dstAddr@{dstAddr}}
+\index{dstAddr@{dstAddr}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{dstAddr}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf dstAddr}\mbox{[}NL\_\-ADDRESS\_\-MAXLEN+1\mbox{]}}}
+\label{structnl_route_info_a54b3e65a2c39c535e124ed189e508691}
+Destination address to be reached (RTA\_\-DST). 
+
+Definition at line 126 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a1a152a3788b0ba020365726705f93ce9}{
+\index{nlRouteInfo@{nlRouteInfo}!dstLen@{dstLen}}
+\index{dstLen@{dstLen}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{dstLen}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dstLen}}}
+\label{structnl_route_info_a1a152a3788b0ba020365726705f93ce9}
+Destination Route mask prefix (from rtmsg). 
+
+Definition at line 123 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a4417150d9f858949bd9ea8794995ebcc}{
+\index{nlRouteInfo@{nlRouteInfo}!family@{family}}
+\index{family@{family}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{family}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf family}}}
+\label{structnl_route_info_a4417150d9f858949bd9ea8794995ebcc}
+IPv4=AF\_\-INET ; IPv6=AF\_\-INET6 (from rtmsg). 
+
+Definition at line 115 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a8f7553e71654921434772b3c49332e9a}{
+\index{nlRouteInfo@{nlRouteInfo}!gw@{gw}}
+\index{gw@{gw}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{gw}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf gw}\mbox{[}64\mbox{]}}}
+\label{structnl_route_info_a8f7553e71654921434772b3c49332e9a}
+Gateway of the route (RTA\_\-GATEWAY). 
+
+Definition at line 133 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a65bea094a4f4aef320764f97df3c51d7}{
+\index{nlRouteInfo@{nlRouteInfo}!inputIf@{inputIf}}
+\index{inputIf@{inputIf}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{inputIf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inputIf}}}
+\label{structnl_route_info_a65bea094a4f4aef320764f97df3c51d7}
+Input interface index (RTA\_\-IIF). 
+
+Definition at line 129 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_afcee26a6d6f42393d37dd68d5562d062}{
+\index{nlRouteInfo@{nlRouteInfo}!metrics@{metrics}}
+\index{metrics@{metrics}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{metrics}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf metrics}}}
+\label{structnl_route_info_afcee26a6d6f42393d37dd68d5562d062}
+Route metrics (RTA\_\-METRICS). 
+
+Definition at line 139 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_ae0ce7856052fdb9a226716db04dba402}{
+\index{nlRouteInfo@{nlRouteInfo}!outputIf@{outputIf}}
+\index{outputIf@{outputIf}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{outputIf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf outputIf}}}
+\label{structnl_route_info_ae0ce7856052fdb9a226716db04dba402}
+Output interface index (RTA\_\-OIF). 
+
+Definition at line 131 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a1d8287d8eec6924f2c8d056cd1115b7f}{
+\index{nlRouteInfo@{nlRouteInfo}!prefSrc@{prefSrc}}
+\index{prefSrc@{prefSrc}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{prefSrc}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf prefSrc}\mbox{[}NL\_\-ADDRESS\_\-MAXLEN+1\mbox{]}}}
+\label{structnl_route_info_a1d8287d8eec6924f2c8d056cd1115b7f}
+Prefered source (RTA\_\-PREFSRC). 
+
+Definition at line 137 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_acec9ce2df15222151ad66fcb1d74eb9f}{
+\index{nlRouteInfo@{nlRouteInfo}!priority@{priority}}
+\index{priority@{priority}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf priority}}}
+\label{structnl_route_info_acec9ce2df15222151ad66fcb1d74eb9f}
+Priority of the route (RTA\_\-PRIORITY). 
+
+Definition at line 135 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_ab30e8d7e05ae904d3248e0d51255c005}{
+\index{nlRouteInfo@{nlRouteInfo}!protocol@{protocol}}
+\index{protocol@{protocol}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{protocol}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf protocol}}}
+\label{structnl_route_info_ab30e8d7e05ae904d3248e0d51255c005}
+Route origin (from rtmsg). 
+
+Definition at line 118 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_ae1af048ea44870cb8acef396ebc4ad09}{
+\index{nlRouteInfo@{nlRouteInfo}!scope@{scope}}
+\index{scope@{scope}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{scope}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf scope}}}
+\label{structnl_route_info_ae1af048ea44870cb8acef396ebc4ad09}
+Distance to the destination (from rtmsg). 
+
+Definition at line 119 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a49c2119e8045d06995653d332271ff8b}{
+\index{nlRouteInfo@{nlRouteInfo}!srcAddr@{srcAddr}}
+\index{srcAddr@{srcAddr}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{srcAddr}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf srcAddr}\mbox{[}NL\_\-ADDRESS\_\-MAXLEN+1\mbox{]}}}
+\label{structnl_route_info_a49c2119e8045d06995653d332271ff8b}
+Source address (RTA\_\-SRC). 
+
+Definition at line 128 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a2b4446e353d9a259ddd348e1bf3de330}{
+\index{nlRouteInfo@{nlRouteInfo}!srcLen@{srcLen}}
+\index{srcLen@{srcLen}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{srcLen}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf srcLen}}}
+\label{structnl_route_info_a2b4446e353d9a259ddd348e1bf3de330}
+Source Route mask prefix (from rtmsg). 
+
+Definition at line 121 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a381b3daa303e1bdbac3a7b7000e0176c}{
+\index{nlRouteInfo@{nlRouteInfo}!table@{table}}
+\index{table@{table}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf table}}}
+\label{structnl_route_info_a381b3daa303e1bdbac3a7b7000e0176c}
+Route table (RTA\_\-TABLE). 
+
+Definition at line 140 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_a6cf1ef2d03c680cc07a080b1c7abcb46}{
+\index{nlRouteInfo@{nlRouteInfo}!tos@{tos}}
+\index{tos@{tos}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{tos}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tos}}}
+\label{structnl_route_info_a6cf1ef2d03c680cc07a080b1c7abcb46}
+Type of service (from rtmsg). 
+
+Definition at line 125 of file OSBase\_\-Netlink.h.\hypertarget{structnl_route_info_ac765329451135abec74c45e1897abf26}{
+\index{nlRouteInfo@{nlRouteInfo}!type@{type}}
+\index{type@{type}!nlRouteInfo@{nlRouteInfo}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf type}}}
+\label{structnl_route_info_ac765329451135abec74c45e1897abf26}
+Route type (from rtmsg). 
+
+Definition at line 117 of file OSBase\_\-Netlink.h.
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/\hyperlink{_o_s_base___netlink_8h}{OSBase\_\-Netlink.h}\end{DoxyCompactItemize}

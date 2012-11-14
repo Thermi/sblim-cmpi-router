@@ -1,0 +1,31 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<CIM CIMVERSION="2.0" DTDVERSION="2.0">
+  <MESSAGE ID="4711" PROTOCOLVERSION="1.0">
+    <SIMPLEREQ>
+      <IMETHODCALL NAME="References"><LOCALNAMESPACEPATH>
+          <NAMESPACE NAME="root"></NAMESPACE>
+          <NAMESPACE NAME="cimv2"></NAMESPACE>
+        </LOCALNAMESPACEPATH>
+        <IPARAMVALUE NAME="ObjectName">
+          <INSTANCENAME CLASSNAME="Linux_LANEndpoint">
+            <KEYBINDING NAME="SystemCreationClassName">
+              <KEYVALUE TYPE="string" VALUETYPE="string">Linux_ComputerSystem</KEYVALUE>
+            </KEYBINDING>
+            <KEYBINDING NAME="SystemName">
+              <KEYVALUE TYPE="string" VALUETYPE="string">etacarinae</KEYVALUE>
+            </KEYBINDING>
+            <KEYBINDING NAME="CreationClassName">
+              <KEYVALUE TYPE="string" VALUETYPE="string">Linux_LANEndpoint</KEYVALUE>
+            </KEYBINDING>
+            <KEYBINDING NAME="Name">
+              <KEYVALUE TYPE="string" VALUETYPE="string">eth0</KEYVALUE>
+            </KEYBINDING>
+          </INSTANCENAME>
+        </IPARAMVALUE>
+        <IPARAMVALUE NAME="ResultClass"><CLASSNAME NAME="Linux_RouteUsesEndpoint"/></IPARAMVALUE>
+      </IMETHODCALL>
+    </SIMPLEREQ>
+  </MESSAGE>
+</CIM>
+

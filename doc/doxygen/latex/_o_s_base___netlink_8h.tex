@@ -1,0 +1,742 @@
+\hypertarget{_o_s_base___netlink_8h}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-Netlink.h File Reference}
+\label{_o_s_base___netlink_8h}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-Netlink.h@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-Netlink.h}}
+}
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$linux/netlink.h$>$}\par
+{\ttfamily \#include $<$linux/netdevice.h$>$}\par
+{\ttfamily \#include $<$linux/if\_\-arp.h$>$}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnl_sock_handle}{nlSockHandle}
+\item 
+struct \hyperlink{structnl_route_info}{nlRouteInfo}
+\item 
+struct \hyperlink{structnl_route_info_list}{nlRouteInfoList}
+\item 
+struct \hyperlink{structnl_link_info}{nlLinkInfo}
+\item 
+struct \hyperlink{structnl_link_info_list}{nlLinkInfoList}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_ac7d7c2614d84dd87d5d0566a4cbb6798}{NL\_\-OK}~0
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_a9d2577d1da4de0cf796bf18ef0f883cd}{NL\_\-FAIL}~1
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_abe1d8f189d3ba388c224260273f42231}{NL\_\-SKIP}~2
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_a418c7386c57e5a691e5d5bb9a55de0a8}{NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN}~32768
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_a4d79d73fc7c9a98c4bb099342a95b3d3}{NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN}~32768
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_adcd1b5576924f70f8a3c6cb45bbabc93}{NL\_\-ADDRESS\_\-MAXLEN}~64
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_a3c7c6a69f690fc8d2abf0e385280a532}{ARRAY\_\-SIZE}(arr)~(sizeof(arr)/sizeof((arr)\mbox{[}0\mbox{]}))
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_a5a8431d964a3eb0bc6ec073a4d90a651}{FREE\_\-SAFE}(ptr)~\{ if(ptr != NULL) \{ free(ptr); ptr = NULL; \} \}
+\item 
+\#define \hyperlink{_o_s_base___netlink_8h_a65c9772da492944cb5c8785c8a6ed3a5}{NLMSG\_\-TAIL}(nmsg)~((struct rtattr$\ast$) (((void$\ast$) (nmsg)) + NLMSG\_\-ALIGN((nmsg)-\/$>$nlmsg\_\-len)))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_o_s_base___netlink_8h_adbd0d1b2c87161a38f388f0aff6330ce}{nlOpenSocket} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a8a09ea63ead7608a1b6f1b4013ff4e55}{nlCloseSocket} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a0c13b897fa15476608abd05509d32b8f}{nlAddAttrToMsg} (struct nlmsghdr $\ast$h, int maxlen, int attrType, const void $\ast$attrData, int attrBytelen)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a72a4132c0144e082404e96d0d3fffe75}{nlAddAttrToMsg32} (struct nlmsghdr $\ast$h, int maxlen, int attrType, unsigned int attrData)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_ade01cb1f3fc2c9fb975d897966280627}{nlGetRoutes} (struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$$\ast$nlRtInfoList, struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_aa6b96f54c90d285f5443355dee5147f1}{nlModifyRoute} (struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo, int hType, unsigned int hFlags)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a9e7124140d51b67f399924a086b03f4c}{nlAddRouteToList} (const struct nlmsghdr $\ast$rcvH, struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$$\ast$nlRtInfoList, const struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_aa93dafbf9421184575412b6869f42e21}{nlGenRouteFilter} (struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+void \hyperlink{_o_s_base___netlink_8h_afe3f3b355a56167bb6520c658241b457}{nlResetRouteFilter} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a1e603c04209b6f04945c2c330e12e16a}{nlCreateDefaultRtInfo} (struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a69bffc9330322f571b603ec88116a5cc}{nlFreeRouteInfoList} (struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$nlRtInfoList)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_aa90fe0abb39fe8181af62635d48e9f8f}{nlGetLinks} (struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$$\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList}, const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___netlink_8h_ab22ff84b6b0e7f1784619098eec647fe}{nlModifyLink} (const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo}, int hType, unsigned int hFlags)
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a66ed67746977f936554fd3b49c7f2942}{nlAddLinkToList} (const struct nlmsghdr $\ast$rcvH, struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$$\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList}, const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a33d04cf7542daf987bffe1f1f0230e21}{nlGenLinkFilter} (const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+void \hyperlink{_o_s_base___netlink_8h_ab90e8ac6e80206d39731200a765f4475}{nlResetLinkFilter} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a40b120c823bc8b5ef4136be1f86cf29c}{nlCreateDefaultLinkInfo} (struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___netlink_8h_a63fac149c2d915408bf3cf85f5484e69}{nlFreeLinkInfoList} (struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList})
+\item 
+void \hyperlink{_o_s_base___netlink_8h_ad6b3d1f52fb7339b7ff7e09409de914d}{nlAddr\_\-n2a} (const unsigned char $\ast$addr, int alen, int \hyperlink{_o_s_base___netlink_8h_a4bfea42429249a1f65204f0c0f34704a}{type}, char $\ast$buf, int blen)
+\item 
+unsigned short \hyperlink{_o_s_base___netlink_8h_a9b245db0c9ab2df29362ac0e6c58467e}{nlGetLinkTypePos} (unsigned short devType)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a591674bedc8a4e77337bfc871d6d83be}{family}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a4bfea42429249a1f65204f0c0f34704a}{type}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ae0d502f0bb04999b7e692533b226ce52}{protocol}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a7b80b7ca3639ff8353e5568bd535f37b}{scope}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a17bdc3a47a26de3ed2a07eaec7291970}{srcLen}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_abef735b29e0237db8c27e28207852c94}{dstLen}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a25a9305efab3b493ca2519562fcec3d5}{tos}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a7d3d3e9526e30adbff6eefca2f7bf9e3}{dstAddr}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a1c015825403f5e927579e0f703ac3fc4}{srcAddr}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ac85279929b566f5a6de6b8f0018c90b8}{inputIf}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a9bf6ed8d2de0d4792689d74a8b8bc4c5}{outputIf}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a1c23244f13d2897496e8a7cfa7089a58}{gw}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a1e440af9e86f7a3c2784c3e2bd687d25}{priority}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a6f750a868a435140720b47a4ff4e2fd2}{prefSrc}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a0dec1c77452dd11ef392af5e08198987}{metrics}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ab000e1a99b786f55ec4698ed0769988e}{table}: 1\\
+\} \hyperlink{_o_s_base___netlink_8h_a805268d62e4017d5b9c66d471f1f2eae}{rtFlt}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a591674bedc8a4e77337bfc871d6d83be}{family}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a4bfea42429249a1f65204f0c0f34704a}{type}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a589d64202487f78e3cc30dd2e04c5201}{index}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ac92588540e8c1d014a08cd8a45462b19}{flags}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_adda9fdcf309da55ca70fe8fa44228669}{change}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a2f55ff1f6cd45ca1b6431493ab5614eb}{address}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a01ac713c90321daf4238cbf1d00e87ad}{broadcast}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a56cdb3bd56a57fc6710056201498751c}{ifname}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a5ac894ab93685970e62fbf6756f38309}{mtu}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ab641a35003fab404684bc8fedf64bb70}{link}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ae43420957b5f762c26f8f7054b46229f}{qdisc}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a3554d6b61e166b08116f94a529523c27}{stats}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_abc763f5149aed845acb448d3bed1af72}{txqlen}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a286d63b5ef07dafd7b1ba9fa5c67258f}{map}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_a9c1d03cb497019015f3caaab85f1147f}{operstate}: 1\\
+\>unsigned int \hyperlink{_o_s_base___netlink_8h_ab0f46976ac8b5e5cc1a82093b78206dc}{linkmode}: 1\\
+\} \hyperlink{_o_s_base___netlink_8h_a38ac2150b24a52f7978322e9fb7afec1}{linkFlt}\\
+
+\end{tabbing}\item 
+static const unsigned short \hyperlink{_o_s_base___netlink_8h_adb9f4c366d1bbeb2785da540b31c4a21}{linkType} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$ \hyperlink{_o_s_base___netlink_8h_af7dc4c7f2ea2bed08429f040127384d1}{linkTypeName} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+OSBase\_\-NetLink.h
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+Netlink support lib. 
+\end{DoxyParagraph}
+
+
+Definition in file \hyperlink{_o_s_base___netlink_8h_source}{OSBase\_\-Netlink.h}.
+
+\subsection{Define Documentation}
+\hypertarget{_o_s_base___netlink_8h_a3c7c6a69f690fc8d2abf0e385280a532}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!ARRAY\_\-SIZE@{ARRAY\_\-SIZE}}
+\index{ARRAY\_\-SIZE@{ARRAY\_\-SIZE}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{ARRAY\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define ARRAY\_\-SIZE(arr)~(sizeof(arr)/sizeof((arr)\mbox{[}0\mbox{]}))}}
+\label{_o_s_base___netlink_8h_a3c7c6a69f690fc8d2abf0e385280a532}
+Get the size of an array. 
+
+Definition at line 48 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a5a8431d964a3eb0bc6ec073a4d90a651}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!FREE\_\-SAFE@{FREE\_\-SAFE}}
+\index{FREE\_\-SAFE@{FREE\_\-SAFE}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{FREE\_\-SAFE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FREE\_\-SAFE(ptr)~\{ if(ptr != NULL) \{ free(ptr); ptr = NULL; \} \}}}
+\label{_o_s_base___netlink_8h_a5a8431d964a3eb0bc6ec073a4d90a651}
+Safe clean pointers. 
+
+Definition at line 53 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_adcd1b5576924f70f8a3c6cb45bbabc93}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NL\_\-ADDRESS\_\-MAXLEN@{NL\_\-ADDRESS\_\-MAXLEN}}
+\index{NL\_\-ADDRESS\_\-MAXLEN@{NL\_\-ADDRESS\_\-MAXLEN}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NL\_\-ADDRESS\_\-MAXLEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define NL\_\-ADDRESS\_\-MAXLEN~64}}
+\label{_o_s_base___netlink_8h_adcd1b5576924f70f8a3c6cb45bbabc93}
+Address string maximum length. 
+
+Definition at line 43 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a9d2577d1da4de0cf796bf18ef0f883cd}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NL\_\-FAIL@{NL\_\-FAIL}}
+\index{NL\_\-FAIL@{NL\_\-FAIL}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NL\_\-FAIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define NL\_\-FAIL~1}}
+\label{_o_s_base___netlink_8h_a9d2577d1da4de0cf796bf18ef0f883cd}
+An error occurs when executing desired operation. 
+
+Definition at line 36 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ac7d7c2614d84dd87d5d0566a4cbb6798}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NL\_\-OK@{NL\_\-OK}}
+\index{NL\_\-OK@{NL\_\-OK}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NL\_\-OK}]{\setlength{\rightskip}{0pt plus 5cm}\#define NL\_\-OK~0}}
+\label{_o_s_base___netlink_8h_ac7d7c2614d84dd87d5d0566a4cbb6798}
+Operation executed succesful. 
+
+Definition at line 35 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_abe1d8f189d3ba388c224260273f42231}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NL\_\-SKIP@{NL\_\-SKIP}}
+\index{NL\_\-SKIP@{NL\_\-SKIP}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NL\_\-SKIP}]{\setlength{\rightskip}{0pt plus 5cm}\#define NL\_\-SKIP~2}}
+\label{_o_s_base___netlink_8h_abe1d8f189d3ba388c224260273f42231}
+Indicates that the operation has fail, but it was skipped due to their optional condition. 
+
+Definition at line 37 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a4d79d73fc7c9a98c4bb099342a95b3d3}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN@{NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN}}
+\index{NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN@{NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define NL\_\-SOCK\_\-RCV\_\-BUFF\_\-LEN~32768}}
+\label{_o_s_base___netlink_8h_a4d79d73fc7c9a98c4bb099342a95b3d3}
+Netlink socket receive buffer length. 
+
+Definition at line 41 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a418c7386c57e5a691e5d5bb9a55de0a8}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN@{NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN}}
+\index{NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN@{NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define NL\_\-SOCK\_\-SND\_\-BUFF\_\-LEN~32768}}
+\label{_o_s_base___netlink_8h_a418c7386c57e5a691e5d5bb9a55de0a8}
+Netlink socket send buffer length. 
+
+Definition at line 40 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a65c9772da492944cb5c8785c8a6ed3a5}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!NLMSG\_\-TAIL@{NLMSG\_\-TAIL}}
+\index{NLMSG\_\-TAIL@{NLMSG\_\-TAIL}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{NLMSG\_\-TAIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define NLMSG\_\-TAIL(nmsg)~((struct rtattr$\ast$) (((void$\ast$) (nmsg)) + NLMSG\_\-ALIGN((nmsg)-\/$>$nlmsg\_\-len)))}}
+\label{_o_s_base___netlink_8h_a65c9772da492944cb5c8785c8a6ed3a5}
+Netlink attributes. 
+
+Definition at line 58 of file OSBase\_\-Netlink.h.
+
+\subsection{Function Documentation}
+\hypertarget{_o_s_base___netlink_8h_a0c13b897fa15476608abd05509d32b8f}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlAddAttrToMsg@{nlAddAttrToMsg}}
+\index{nlAddAttrToMsg@{nlAddAttrToMsg}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlAddAttrToMsg}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddAttrToMsg (struct nlmsghdr $\ast$ {\em h}, \/  int {\em maxlen}, \/  int {\em attrType}, \/  const void $\ast$ {\em attrData}, \/  int {\em attrBytelen})}}
+\label{_o_s_base___netlink_8h_a0c13b897fa15476608abd05509d32b8f}
+This function is used to add an attribute to a netlink message. 
+\begin{DoxyParams}{Parameters}
+\item[{\em h}]\mbox{[}out\mbox{]} message header. \item[{\em maxlen}]\mbox{[}in\mbox{]} message maximum length. \item[{\em attrType}]\mbox{[}in\mbox{]} attribute type. \item[{\em attrData}]\mbox{[}in\mbox{]} attribute data. \item[{\em attrBytelen}]\mbox{[}in\mbox{]} attribute length. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a72a4132c0144e082404e96d0d3fffe75}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlAddAttrToMsg32@{nlAddAttrToMsg32}}
+\index{nlAddAttrToMsg32@{nlAddAttrToMsg32}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlAddAttrToMsg32}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddAttrToMsg32 (struct nlmsghdr $\ast$ {\em h}, \/  int {\em maxlen}, \/  int {\em attrType}, \/  unsigned int {\em attrData})}}
+\label{_o_s_base___netlink_8h_a72a4132c0144e082404e96d0d3fffe75}
+This function is used to add an attribute to a netlink message. 
+\begin{DoxyParams}{Parameters}
+\item[{\em h}]\mbox{[}out\mbox{]} message header. \item[{\em maxlen}]\mbox{[}in\mbox{]} message length. \item[{\em attrType}]\mbox{[}in\mbox{]} attribute type. \item[{\em attrData}]\mbox{[}in\mbox{]} attribute data. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a66ed67746977f936554fd3b49c7f2942}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlAddLinkToList@{nlAddLinkToList}}
+\index{nlAddLinkToList@{nlAddLinkToList}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlAddLinkToList}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddLinkToList (const struct nlmsghdr $\ast$ {\em rcvH}, \/  struct {\bf nlLinkInfoList} $\ast$$\ast$ {\em nlLinkInfoList}, \/  const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8h_a66ed67746977f936554fd3b49c7f2942}
+This function is used to add a link to specified links list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em rcvH}]\mbox{[}in\mbox{]} link message header. \item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}out\mbox{]} list where link will be added. \item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1693 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_ad6b3d1f52fb7339b7ff7e09409de914d}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlAddr\_\-n2a@{nlAddr\_\-n2a}}
+\index{nlAddr\_\-n2a@{nlAddr\_\-n2a}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlAddr\_\-n2a}]{\setlength{\rightskip}{0pt plus 5cm}void nlAddr\_\-n2a (const unsigned char $\ast$ {\em addr}, \/  int {\em alen}, \/  int {\em type}, \/  char $\ast$ {\em buf}, \/  int {\em blen})}}
+\label{_o_s_base___netlink_8h_ad6b3d1f52fb7339b7ff7e09409de914d}
+Function to convert a L2 address from network representation to string representation (user friendly). 
+\begin{DoxyParams}{Parameters}
+\item[{\em addr}]\mbox{[}in\mbox{]} L2 address to convert. \item[{\em alen}]\mbox{[}in\mbox{]} L2 address length. \item[{\em type}]\mbox{[}in\mbox{]} link type. \item[{\em buf}]\mbox{[}out\mbox{]} converted address. \item[{\em blen}]\mbox{[}in\mbox{]} converted address maximum length. \end{DoxyParams}
+
+
+Definition at line 2200 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a9e7124140d51b67f399924a086b03f4c}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlAddRouteToList@{nlAddRouteToList}}
+\index{nlAddRouteToList@{nlAddRouteToList}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlAddRouteToList}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddRouteToList (const struct nlmsghdr $\ast$ {\em rcvH}, \/  struct {\bf nlRouteInfoList} $\ast$$\ast$ {\em nlRtInfoList}, \/  const struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8h_a9e7124140d51b67f399924a086b03f4c}
+This function is used to add a route to specified routes list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em rcvH}]\mbox{[}in\mbox{]} route message header. \item[{\em nlRtInfoList}]\mbox{[}out\mbox{]} list where route will be added. \item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail $|$ NL\_\-SKIP=skip 
+\end{DoxyReturn}
+
+
+Definition at line 724 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a8a09ea63ead7608a1b6f1b4013ff4e55}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlCloseSocket@{nlCloseSocket}}
+\index{nlCloseSocket@{nlCloseSocket}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlCloseSocket}]{\setlength{\rightskip}{0pt plus 5cm}int nlCloseSocket ()}}
+\label{_o_s_base___netlink_8h_a8a09ea63ead7608a1b6f1b4013ff4e55}
+Used to close a previously open Netlink socket. \begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a40b120c823bc8b5ef4136be1f86cf29c}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlCreateDefaultLinkInfo@{nlCreateDefaultLinkInfo}}
+\index{nlCreateDefaultLinkInfo@{nlCreateDefaultLinkInfo}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlCreateDefaultLinkInfo}]{\setlength{\rightskip}{0pt plus 5cm}int nlCreateDefaultLinkInfo (struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8h_a40b120c823bc8b5ef4136be1f86cf29c}
+Used to create a \hyperlink{structnl_link_info}{nlLinkInfo} structure with default values. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}out\mbox{]} link structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 2131 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a1e603c04209b6f04945c2c330e12e16a}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlCreateDefaultRtInfo@{nlCreateDefaultRtInfo}}
+\index{nlCreateDefaultRtInfo@{nlCreateDefaultRtInfo}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlCreateDefaultRtInfo}]{\setlength{\rightskip}{0pt plus 5cm}int nlCreateDefaultRtInfo (struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8h_a1e603c04209b6f04945c2c330e12e16a}
+Used to create a \hyperlink{structnl_route_info}{nlRouteInfo} structure with default values. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}out\mbox{]} route structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1211 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a63fac149c2d915408bf3cf85f5484e69}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlFreeLinkInfoList@{nlFreeLinkInfoList}}
+\index{nlFreeLinkInfoList@{nlFreeLinkInfoList}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlFreeLinkInfoList}]{\setlength{\rightskip}{0pt plus 5cm}int nlFreeLinkInfoList (struct {\bf nlLinkInfoList} $\ast$ {\em nlLinkInfoList})}}
+\label{_o_s_base___netlink_8h_a63fac149c2d915408bf3cf85f5484e69}
+Used to free a link info list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}out\mbox{]} links list (one or more entries). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 2171 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a69bffc9330322f571b603ec88116a5cc}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlFreeRouteInfoList@{nlFreeRouteInfoList}}
+\index{nlFreeRouteInfoList@{nlFreeRouteInfoList}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlFreeRouteInfoList}]{\setlength{\rightskip}{0pt plus 5cm}int nlFreeRouteInfoList (struct {\bf nlRouteInfoList} $\ast$ {\em nlRtInfoList})}}
+\label{_o_s_base___netlink_8h_a69bffc9330322f571b603ec88116a5cc}
+Used to free a route info list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfoList}]\mbox{[}out\mbox{]} routes list (one or more entries). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1248 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a33d04cf7542daf987bffe1f1f0230e21}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlGenLinkFilter@{nlGenLinkFilter}}
+\index{nlGenLinkFilter@{nlGenLinkFilter}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlGenLinkFilter}]{\setlength{\rightskip}{0pt plus 5cm}int nlGenLinkFilter (const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8h_a33d04cf7542daf987bffe1f1f0230e21}
+Used to generate a filter that will be applied to a list of links. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1974 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_aa93dafbf9421184575412b6869f42e21}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlGenRouteFilter@{nlGenRouteFilter}}
+\index{nlGenRouteFilter@{nlGenRouteFilter}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlGenRouteFilter}]{\setlength{\rightskip}{0pt plus 5cm}int nlGenRouteFilter (struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8h_aa93dafbf9421184575412b6869f42e21}
+Used to generate a filter that will be applied to a list of routes. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 979 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_aa90fe0abb39fe8181af62635d48e9f8f}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlGetLinks@{nlGetLinks}}
+\index{nlGetLinks@{nlGetLinks}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlGetLinks}]{\setlength{\rightskip}{0pt plus 5cm}int nlGetLinks (struct {\bf nlLinkInfoList} $\ast$$\ast$ {\em nlLinkInfoList}, \/  const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8h_aa90fe0abb39fe8181af62635d48e9f8f}
+This function is used to get links using \hyperlink{structnl_link_info}{nlLinkInfo} structure as filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}out\mbox{]} links list (one or more entries). \item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info used as filter. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1284 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_a9b245db0c9ab2df29362ac0e6c58467e}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlGetLinkTypePos@{nlGetLinkTypePos}}
+\index{nlGetLinkTypePos@{nlGetLinkTypePos}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlGetLinkTypePos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short nlGetLinkTypePos (unsigned short {\em devType})}}
+\label{_o_s_base___netlink_8h_a9b245db0c9ab2df29362ac0e6c58467e}
+Lookup the position of the passed type into linkType array. 
+\begin{DoxyParams}{Parameters}
+\item[{\em devType}]\mbox{[}in\mbox{]} type to find. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position into linkType array. 
+\end{DoxyReturn}
+
+
+Definition at line 2235 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_ade01cb1f3fc2c9fb975d897966280627}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlGetRoutes@{nlGetRoutes}}
+\index{nlGetRoutes@{nlGetRoutes}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlGetRoutes}]{\setlength{\rightskip}{0pt plus 5cm}int nlGetRoutes (struct {\bf nlRouteInfoList} $\ast$$\ast$ {\em nlRtInfoList}, \/  struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8h_ade01cb1f3fc2c9fb975d897966280627}
+This function is used to get routes using a \hyperlink{structnl_route_info}{nlRouteInfo} structure as filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfoList}]\mbox{[}out\mbox{]} routes list (one or more entries). \item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info used as filter. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 245 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_ab22ff84b6b0e7f1784619098eec647fe}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlModifyLink@{nlModifyLink}}
+\index{nlModifyLink@{nlModifyLink}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlModifyLink}]{\setlength{\rightskip}{0pt plus 5cm}int nlModifyLink (const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo}, \/  int {\em hType}, \/  unsigned int {\em hFlags})}}
+\label{_o_s_base___netlink_8h_ab22ff84b6b0e7f1784619098eec647fe}
+This function is used to ADD/DELETE/MODIFY a link. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info. \item[{\em hType}]\mbox{[}in\mbox{]} message type (RTM\_\-NEWLINK $|$$|$ RTM\_\-DELLINK). \item[{\em hFlags}]\mbox{[}in\mbox{]} message flags. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1467 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_aa6b96f54c90d285f5443355dee5147f1}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlModifyRoute@{nlModifyRoute}}
+\index{nlModifyRoute@{nlModifyRoute}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlModifyRoute}]{\setlength{\rightskip}{0pt plus 5cm}int nlModifyRoute (struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo}, \/  int {\em hType}, \/  unsigned int {\em hFlags})}}
+\label{_o_s_base___netlink_8h_aa6b96f54c90d285f5443355dee5147f1}
+This function is used to ADD/DELETE/MODIFY a route. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \item[{\em hType}]\mbox{[}in\mbox{]} type of message (RTM\_\-NEWROUTE $|$$|$ RTM\_\-DELROUTE). \item[{\em hFlags}]\mbox{[}in\mbox{]} message flags. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 434 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_adbd0d1b2c87161a38f388f0aff6330ce}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlOpenSocket@{nlOpenSocket}}
+\index{nlOpenSocket@{nlOpenSocket}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlOpenSocket}]{\setlength{\rightskip}{0pt plus 5cm}int nlOpenSocket ()}}
+\label{_o_s_base___netlink_8h_adbd0d1b2c87161a38f388f0aff6330ce}
+Used to open a Netlink socket. \begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_ab90e8ac6e80206d39731200a765f4475}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlResetLinkFilter@{nlResetLinkFilter}}
+\index{nlResetLinkFilter@{nlResetLinkFilter}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlResetLinkFilter}]{\setlength{\rightskip}{0pt plus 5cm}void nlResetLinkFilter ()}}
+\label{_o_s_base___netlink_8h_ab90e8ac6e80206d39731200a765f4475}
+Used to reset link filter handler. 
+
+Definition at line 2102 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8h_afe3f3b355a56167bb6520c658241b457}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!nlResetRouteFilter@{nlResetRouteFilter}}
+\index{nlResetRouteFilter@{nlResetRouteFilter}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{nlResetRouteFilter}]{\setlength{\rightskip}{0pt plus 5cm}void nlResetRouteFilter ()}}
+\label{_o_s_base___netlink_8h_afe3f3b355a56167bb6520c658241b457}
+Used to reset the route filter handler. 
+
+Definition at line 1185 of file OSBase\_\-Netlink.c.
+
+\subsection{Variable Documentation}
+\hypertarget{_o_s_base___netlink_8h_a2f55ff1f6cd45ca1b6431493ab5614eb}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!address@{address}}
+\index{address@{address}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf address}}}
+\label{_o_s_base___netlink_8h_a2f55ff1f6cd45ca1b6431493ab5614eb}
+
+
+Definition at line 311 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a01ac713c90321daf4238cbf1d00e87ad}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{broadcast}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf broadcast}}}
+\label{_o_s_base___netlink_8h_a01ac713c90321daf4238cbf1d00e87ad}
+
+
+Definition at line 312 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_adda9fdcf309da55ca70fe8fa44228669}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!change@{change}}
+\index{change@{change}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{change}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf change}}}
+\label{_o_s_base___netlink_8h_adda9fdcf309da55ca70fe8fa44228669}
+
+
+Definition at line 310 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a7d3d3e9526e30adbff6eefca2f7bf9e3}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!dstAddr@{dstAddr}}
+\index{dstAddr@{dstAddr}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{dstAddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf dstAddr}}}
+\label{_o_s_base___netlink_8h_a7d3d3e9526e30adbff6eefca2f7bf9e3}
+
+
+Definition at line 165 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_abef735b29e0237db8c27e28207852c94}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!dstLen@{dstLen}}
+\index{dstLen@{dstLen}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{dstLen}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf dstLen}}}
+\label{_o_s_base___netlink_8h_abef735b29e0237db8c27e28207852c94}
+
+
+Definition at line 163 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a591674bedc8a4e77337bfc871d6d83be}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!family@{family}}
+\index{family@{family}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{family}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf family}}}
+\label{_o_s_base___netlink_8h_a591674bedc8a4e77337bfc871d6d83be}
+
+
+Definition at line 158 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ac92588540e8c1d014a08cd8a45462b19}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!flags@{flags}}
+\index{flags@{flags}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf flags}}}
+\label{_o_s_base___netlink_8h_ac92588540e8c1d014a08cd8a45462b19}
+
+
+Definition at line 309 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a1c23244f13d2897496e8a7cfa7089a58}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!gw@{gw}}
+\index{gw@{gw}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{gw}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf gw}}}
+\label{_o_s_base___netlink_8h_a1c23244f13d2897496e8a7cfa7089a58}
+
+
+Definition at line 169 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a56cdb3bd56a57fc6710056201498751c}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!ifname@{ifname}}
+\index{ifname@{ifname}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{ifname}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf ifname}}}
+\label{_o_s_base___netlink_8h_a56cdb3bd56a57fc6710056201498751c}
+
+
+Definition at line 313 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a589d64202487f78e3cc30dd2e04c5201}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!index@{index}}
+\index{index@{index}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf index}}}
+\label{_o_s_base___netlink_8h_a589d64202487f78e3cc30dd2e04c5201}
+
+
+Definition at line 308 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ac85279929b566f5a6de6b8f0018c90b8}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!inputIf@{inputIf}}
+\index{inputIf@{inputIf}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{inputIf}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf inputIf}}}
+\label{_o_s_base___netlink_8h_ac85279929b566f5a6de6b8f0018c90b8}
+
+
+Definition at line 167 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ab641a35003fab404684bc8fedf64bb70}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!link@{link}}
+\index{link@{link}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf link}}}
+\label{_o_s_base___netlink_8h_ab641a35003fab404684bc8fedf64bb70}
+
+
+Definition at line 315 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a38ac2150b24a52f7978322e9fb7afec1}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!linkFlt@{linkFlt}}
+\index{linkFlt@{linkFlt}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{linkFlt}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf linkFlt}}}
+\label{_o_s_base___netlink_8h_a38ac2150b24a52f7978322e9fb7afec1}
+Struct used as link filter. If a field is deactivated (= 0), it will be skiped. \hypertarget{_o_s_base___netlink_8h_ab0f46976ac8b5e5cc1a82093b78206dc}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!linkmode@{linkmode}}
+\index{linkmode@{linkmode}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{linkmode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf linkmode}}}
+\label{_o_s_base___netlink_8h_ab0f46976ac8b5e5cc1a82093b78206dc}
+
+
+Definition at line 327 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_adb9f4c366d1bbeb2785da540b31c4a21}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!linkType@{linkType}}
+\index{linkType@{linkType}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{linkType}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned short {\bf linkType}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_o_s_base___netlink_8h_adb9f4c366d1bbeb2785da540b31c4a21}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+        ARPHRD_NETROM, ARPHRD_ETHER, ARPHRD_EETHER, ARPHRD_AX25,
+        ARPHRD_PRONET, ARPHRD_CHAOS, ARPHRD_IEEE802, ARPHRD_ARCNET,
+        ARPHRD_APPLETLK, ARPHRD_DLCI, ARPHRD_ATM, ARPHRD_METRICOM,
+        ARPHRD_IEEE1394, ARPHRD_EUI64, ARPHRD_INFINIBAND, ARPHRD_SLIP,
+        ARPHRD_CSLIP, ARPHRD_SLIP6, ARPHRD_CSLIP6, ARPHRD_RSRVD,
+        ARPHRD_ADAPT, ARPHRD_ROSE, ARPHRD_X25, ARPHRD_HWX25, ARPHRD_CAN,
+        ARPHRD_PPP, ARPHRD_CISCO, ARPHRD_HDLC, ARPHRD_LAPB, ARPHRD_DDCMP,
+        ARPHRD_RAWHDLC, ARPHRD_TUNNEL, ARPHRD_TUNNEL6, ARPHRD_FRAD,
+        ARPHRD_SKIP, ARPHRD_LOOPBACK, ARPHRD_LOCALTLK, ARPHRD_FDDI,
+        ARPHRD_BIF, ARPHRD_SIT, ARPHRD_IPDDP, ARPHRD_IPGRE,
+        ARPHRD_PIMREG, ARPHRD_HIPPI, ARPHRD_ASH, ARPHRD_ECONET,
+        ARPHRD_IRDA, ARPHRD_FCPP, ARPHRD_FCAL, ARPHRD_FCPL,
+        ARPHRD_FCFABRIC, ARPHRD_IEEE802_TR, ARPHRD_IEEE80211,
+        ARPHRD_IEEE80211_PRISM, ARPHRD_IEEE80211_RADIOTAP, ARPHRD_VOID,
+        ARPHRD_NONE
+    }
+\end{DoxyCode}
+The list of link types. (from kernel/net/core/dev.c) 
+
+Definition at line 339 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_af7dc4c7f2ea2bed08429f040127384d1}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!linkTypeName@{linkTypeName}}
+\index{linkTypeName@{linkTypeName}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{linkTypeName}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf linkTypeName}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{_o_s_base___netlink_8h_af7dc4c7f2ea2bed08429f040127384d1}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+        "NETROM", "ETHER", "EETHER", "AX25",
+        "PRONET", "CHAOS", "IEEE802", "ARCNET",
+        "APPLETLK", "DLCI", "ATM", "METRICOM",
+        "IEEE1394", "EUI64", "INFINIBAND", "SLIP",
+        "CSLIP", "SLIP6", "CSLIP6", "RSRVD",
+        "ADAPT", "ROSE", "X25", "HWX25", "CAN"
+        "PPP", "CISCO", "HDLC", "LAPB", "DDCMP",
+        "RAWHDLC", "TUNNEL", "TUNNEL6", "FRAD",
+        "SKIP", "LOOPBACK", "LOCALTLK", "FDDI",
+        "BIF", "SIT", "IPDDP", "IPGRE",
+        "PIMREG", "HIPPI", "ASH", "ECONET",
+        "IRDA", "FCPP", "FCAL", "FCPL",
+        "FCFABRIC", "IEEE802_TR", "IEEE80211",
+        "IEEE80211_PRISM", "IEEE80211_RADIOTAP",
+        "VOID", "NONE"
+    }
+\end{DoxyCode}
+The list of link types string representations. (from kernel/net/core/dev.c) 
+
+Definition at line 361 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a286d63b5ef07dafd7b1ba9fa5c67258f}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!map@{map}}
+\index{map@{map}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf map}}}
+\label{_o_s_base___netlink_8h_a286d63b5ef07dafd7b1ba9fa5c67258f}
+
+
+Definition at line 324 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a0dec1c77452dd11ef392af5e08198987}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!metrics@{metrics}}
+\index{metrics@{metrics}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{metrics}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf metrics}}}
+\label{_o_s_base___netlink_8h_a0dec1c77452dd11ef392af5e08198987}
+
+
+Definition at line 172 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a5ac894ab93685970e62fbf6756f38309}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!mtu@{mtu}}
+\index{mtu@{mtu}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{mtu}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf mtu}}}
+\label{_o_s_base___netlink_8h_a5ac894ab93685970e62fbf6756f38309}
+
+
+Definition at line 314 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a9c1d03cb497019015f3caaab85f1147f}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!operstate@{operstate}}
+\index{operstate@{operstate}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{operstate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf operstate}}}
+\label{_o_s_base___netlink_8h_a9c1d03cb497019015f3caaab85f1147f}
+
+
+Definition at line 326 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a9bf6ed8d2de0d4792689d74a8b8bc4c5}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!outputIf@{outputIf}}
+\index{outputIf@{outputIf}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{outputIf}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf outputIf}}}
+\label{_o_s_base___netlink_8h_a9bf6ed8d2de0d4792689d74a8b8bc4c5}
+
+
+Definition at line 168 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a6f750a868a435140720b47a4ff4e2fd2}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!prefSrc@{prefSrc}}
+\index{prefSrc@{prefSrc}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{prefSrc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf prefSrc}}}
+\label{_o_s_base___netlink_8h_a6f750a868a435140720b47a4ff4e2fd2}
+
+
+Definition at line 171 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a1e440af9e86f7a3c2784c3e2bd687d25}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!priority@{priority}}
+\index{priority@{priority}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf priority}}}
+\label{_o_s_base___netlink_8h_a1e440af9e86f7a3c2784c3e2bd687d25}
+
+
+Definition at line 170 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ae0d502f0bb04999b7e692533b226ce52}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!protocol@{protocol}}
+\index{protocol@{protocol}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{protocol}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf protocol}}}
+\label{_o_s_base___netlink_8h_ae0d502f0bb04999b7e692533b226ce52}
+
+
+Definition at line 160 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ae43420957b5f762c26f8f7054b46229f}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!qdisc@{qdisc}}
+\index{qdisc@{qdisc}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{qdisc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf qdisc}}}
+\label{_o_s_base___netlink_8h_ae43420957b5f762c26f8f7054b46229f}
+
+
+Definition at line 316 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a805268d62e4017d5b9c66d471f1f2eae}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!rtFlt@{rtFlt}}
+\index{rtFlt@{rtFlt}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{rtFlt}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   {\bf rtFlt}}}
+\label{_o_s_base___netlink_8h_a805268d62e4017d5b9c66d471f1f2eae}
+Struct used as route filter. If a field is deactivated (= 0), it will be skiped. \hypertarget{_o_s_base___netlink_8h_a7b80b7ca3639ff8353e5568bd535f37b}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!scope@{scope}}
+\index{scope@{scope}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{scope}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf scope}}}
+\label{_o_s_base___netlink_8h_a7b80b7ca3639ff8353e5568bd535f37b}
+
+
+Definition at line 161 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a1c015825403f5e927579e0f703ac3fc4}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!srcAddr@{srcAddr}}
+\index{srcAddr@{srcAddr}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{srcAddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf srcAddr}}}
+\label{_o_s_base___netlink_8h_a1c015825403f5e927579e0f703ac3fc4}
+
+
+Definition at line 166 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a17bdc3a47a26de3ed2a07eaec7291970}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!srcLen@{srcLen}}
+\index{srcLen@{srcLen}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{srcLen}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf srcLen}}}
+\label{_o_s_base___netlink_8h_a17bdc3a47a26de3ed2a07eaec7291970}
+
+
+Definition at line 162 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a3554d6b61e166b08116f94a529523c27}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!stats@{stats}}
+\index{stats@{stats}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf stats}}}
+\label{_o_s_base___netlink_8h_a3554d6b61e166b08116f94a529523c27}
+
+
+Definition at line 317 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_ab000e1a99b786f55ec4698ed0769988e}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!table@{table}}
+\index{table@{table}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{table}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf table}}}
+\label{_o_s_base___netlink_8h_ab000e1a99b786f55ec4698ed0769988e}
+
+
+Definition at line 173 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a25a9305efab3b493ca2519562fcec3d5}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!tos@{tos}}
+\index{tos@{tos}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{tos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf tos}}}
+\label{_o_s_base___netlink_8h_a25a9305efab3b493ca2519562fcec3d5}
+
+
+Definition at line 164 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_abc763f5149aed845acb448d3bed1af72}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!txqlen@{txqlen}}
+\index{txqlen@{txqlen}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{txqlen}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf txqlen}}}
+\label{_o_s_base___netlink_8h_abc763f5149aed845acb448d3bed1af72}
+
+
+Definition at line 323 of file OSBase\_\-Netlink.h.\hypertarget{_o_s_base___netlink_8h_a4bfea42429249a1f65204f0c0f34704a}{
+\index{OSBase\_\-Netlink.h@{OSBase\_\-Netlink.h}!type@{type}}
+\index{type@{type}!OSBase_Netlink.h@{OSBase\_\-Netlink.h}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf type}}}
+\label{_o_s_base___netlink_8h_a4bfea42429249a1f65204f0c0f34704a}
+
+
+Definition at line 159 of file OSBase\_\-Netlink.h.

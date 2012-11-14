@@ -1,0 +1,129 @@
+# THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+# ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+# CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+#
+# You can obtain a current copy of the Eclipse Public License from
+# http://www.opensource.org/licenses/eclipse-1.0.php
+#
+# Author: Federico Martin Casares (warptrosse@gmail.com)
+# Date:   Tue, 22 Sep 2009 15:18:22 -0300
+
+--------------------------------------------------------------------------------
+SBLIM Router Instrumentation for CMPI README
+--------------------------------------------------------------------------------
+
+
+Introduction
+--------------------------------------------------------------------------------
+The Router Instrumentation allows you to manage a router
+via CIMOM technology/infrastructure.
+
+The instrumented classes / associations are
+
+- Linux_NextHopIPRoute
+- Linux_LANEndpoint
+- Linux_CSHostedRoute
+- Linux_RouteUsesEndpoint
+
+
+Package Contents
+--------------------------------------------------------------------------------
+./README	This file
+./include/*.h   Header Files
+./src/*.c	Provider Code
+./mof/		Schema file(s)
+
+
+Build Instructions
+--------------------------------------------------------------------------------
+
+Prerequisites
+-------------
+- CIMOM installed
+- CMPI enabled CIMOM
+- CIM Schema Version 2.7 or higher loaded into the CIMOM's
+  repository
+- sblim-cmpi-devel package installed
+- sblim-cmpi-base package installed
+
+
+Building CIMOM and CMPI for this CIMOM
+--------------------------------------
+CMPI support is available for SBLIM's sfcb.
+
+- sfcb      ... CMPI as only provider interface
+
+
+Building cmpi-base
+------------------
+Please follow the instructions in the README file of the 
+cmpi-base package.
+
+
+Building cmpi-router
+--------------------
+This package is now GNU autotool enabled, refer to the file
+named INSTALL for generic instructions.
+
+The generated configure script tries to determine where the CMPI header files
+are located. For this purpose it searches a set of well-known locations.
+The "canonical" location is /usr/include/cmpi or /usr/local/include/cmpi,
+depending on how configure is invoked.
+
+Further, configure "determines" where providers are to be installed. Actually,
+there's no detection logic. The provider directory will always be
+/usr/lib/cmpi or /usr/local/lib/cmpi. If a CIM server requires a particular
+directory this can be selected by specifying the PROVIDERDIR variable.
+
+And finally, configure tries to find out which CIM server type is being used.
+This is necessary in order to select the appropriate schema and provider
+registration technique. If the CIM server is not or incorrectly identified,
+it is possible to specify it via the CIMSERVER variable.
+Supported values are pegasus, sfcb, openwbem and sniacimom.
+
+For instance, in order to configure for a locally installed SFCB you can
+issue the following command:
+
+./configure PROVIDERDIR=/usr/local/lib/cmpi CIMSERVER=sfcb \
+TESTSUITEDIR=/usr/local/share/sblim-testsuite
+
+
+Class/Association Libraries
+--------------------------------------------------------------------------------
+
+lib Netlink
+-----------
+- include/OSBase_Netlink.h
+- src/OSBase_Netlink.c
+
+lib Zebra (for future use)
+--------------------------
+- include/OSBase_Zebra.h
+- src/OSBase_Zebra.c
+
+class Linux_NextHopIPRoute
+--------------------------
+- include/cmpiOSBase_NextHopIPRoute.h
+- include/OSBase_NextHopIPRoute.h
+- src/cmpiOSBase_NextHopIPRoute.c
+- src/cmpiOSBase_NextHopIPRouteProvider.c
+- src/OSBase_NextHopIPRoute.c
+
+class Linux_LANEndpoint
+-----------------------
+- include/cmpiOSBase_LANEndpoint.h
+- include/OSBase_LANEndpoint.h
+- src/cmpiOSBase_LANEndpoint.c
+- src/cmpiOSBase_LANEndpointProvider.c
+- src/OSBase_LANEndpoint.c
+
+
+association Linux_CSHostedRoute
+-------------------------------
+- src/cmpiOSBase_CSHostedRouteProvider.c
+
+association Linux_RouteUsesEndpoint
+-----------------------------------
+- include/cmpiOSBase_RouteUsesEndpoint.h
+- src/cmpiOSBase_RouteUsesEndpoint.c
+- src/cmpiOSBase_RouteUsesEndpointProvider.c

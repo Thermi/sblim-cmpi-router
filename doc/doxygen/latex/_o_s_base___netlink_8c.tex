@@ -1,0 +1,337 @@
+\hypertarget{_o_s_base___netlink_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-Netlink.c File Reference}
+\label{_o_s_base___netlink_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-Netlink.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-Netlink.c}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$linux/netlink.h$>$}\par
+{\ttfamily \#include $<$linux/rtnetlink.h$>$}\par
+{\ttfamily \#include $<$linux/if\_\-arp.h$>$}\par
+{\ttfamily \#include $<$netinet/in.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Netlink.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_o_s_base___netlink_8c_adbd0d1b2c87161a38f388f0aff6330ce}{nlOpenSocket} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a8a09ea63ead7608a1b6f1b4013ff4e55}{nlCloseSocket} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a0c13b897fa15476608abd05509d32b8f}{nlAddAttrToMsg} (struct nlmsghdr $\ast$h, int maxlen, int attrType, const void $\ast$attrData, int attrBytelen)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a72a4132c0144e082404e96d0d3fffe75}{nlAddAttrToMsg32} (struct nlmsghdr $\ast$h, int maxlen, int attrType, unsigned int attrData)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_ade01cb1f3fc2c9fb975d897966280627}{nlGetRoutes} (struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$$\ast$nlRtInfoList, struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_aa6b96f54c90d285f5443355dee5147f1}{nlModifyRoute} (struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo, int hType, unsigned int hFlags)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a9e7124140d51b67f399924a086b03f4c}{nlAddRouteToList} (const struct nlmsghdr $\ast$rcvH, struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$$\ast$nlRtInfoList, const struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_aa93dafbf9421184575412b6869f42e21}{nlGenRouteFilter} (struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+void \hyperlink{_o_s_base___netlink_8c_afe3f3b355a56167bb6520c658241b457}{nlResetRouteFilter} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a1e603c04209b6f04945c2c330e12e16a}{nlCreateDefaultRtInfo} (struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a69bffc9330322f571b603ec88116a5cc}{nlFreeRouteInfoList} (struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$nlRtInfoList)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_aa90fe0abb39fe8181af62635d48e9f8f}{nlGetLinks} (struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$$\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList}, const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___netlink_8c_ab22ff84b6b0e7f1784619098eec647fe}{nlModifyLink} (const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo}, int hType, unsigned int hFlags)
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a66ed67746977f936554fd3b49c7f2942}{nlAddLinkToList} (const struct nlmsghdr $\ast$rcvH, struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$$\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList}, const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a33d04cf7542daf987bffe1f1f0230e21}{nlGenLinkFilter} (const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+void \hyperlink{_o_s_base___netlink_8c_ab90e8ac6e80206d39731200a765f4475}{nlResetLinkFilter} ()
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a40b120c823bc8b5ef4136be1f86cf29c}{nlCreateDefaultLinkInfo} (struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___netlink_8c_a63fac149c2d915408bf3cf85f5484e69}{nlFreeLinkInfoList} (struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList})
+\item 
+void \hyperlink{_o_s_base___netlink_8c_ad6b3d1f52fb7339b7ff7e09409de914d}{nlAddr\_\-n2a} (const unsigned char $\ast$addr, int alen, int \hyperlink{_o_s_base___netlink_8h_a4bfea42429249a1f65204f0c0f34704a}{type}, char $\ast$buf, int blen)
+\item 
+unsigned short \hyperlink{_o_s_base___netlink_8c_a9b245db0c9ab2df29362ac0e6c58467e}{nlGetLinkTypePos} (unsigned short devType)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnl_sock_handle}{nlSockHandle} \hyperlink{_o_s_base___netlink_8c_a98706bdaf8eddffdadec7ac3c0849b45}{nlSH} = \{ .fd = -\/1 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+OSBase\_\-NetLink.c
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+Netlink support lib. Based on iproute2 package: (\href{http://www.linuxfoundation.org/en/Net:Iproute2}{\tt http://www.linuxfoundation.org/en/Net:Iproute2}) 
+\end{DoxyParagraph}
+
+
+Definition in file \hyperlink{_o_s_base___netlink_8c_source}{OSBase\_\-Netlink.c}.
+
+\subsection{Function Documentation}
+\hypertarget{_o_s_base___netlink_8c_a0c13b897fa15476608abd05509d32b8f}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlAddAttrToMsg@{nlAddAttrToMsg}}
+\index{nlAddAttrToMsg@{nlAddAttrToMsg}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlAddAttrToMsg}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddAttrToMsg (struct nlmsghdr $\ast$ {\em h}, \/  int {\em maxlen}, \/  int {\em attrType}, \/  const void $\ast$ {\em attrData}, \/  int {\em attrBytelen})}}
+\label{_o_s_base___netlink_8c_a0c13b897fa15476608abd05509d32b8f}
+This function is used to add an attribute to a netlink message. 
+\begin{DoxyParams}{Parameters}
+\item[{\em h}]\mbox{[}out\mbox{]} message header. \item[{\em maxlen}]\mbox{[}in\mbox{]} message maximum length. \item[{\em attrType}]\mbox{[}in\mbox{]} attribute type. \item[{\em attrData}]\mbox{[}in\mbox{]} attribute data. \item[{\em attrBytelen}]\mbox{[}in\mbox{]} attribute length. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a72a4132c0144e082404e96d0d3fffe75}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlAddAttrToMsg32@{nlAddAttrToMsg32}}
+\index{nlAddAttrToMsg32@{nlAddAttrToMsg32}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlAddAttrToMsg32}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddAttrToMsg32 (struct nlmsghdr $\ast$ {\em h}, \/  int {\em maxlen}, \/  int {\em attrType}, \/  unsigned int {\em attrData})}}
+\label{_o_s_base___netlink_8c_a72a4132c0144e082404e96d0d3fffe75}
+This function is used to add an attribute to a netlink message. 
+\begin{DoxyParams}{Parameters}
+\item[{\em h}]\mbox{[}out\mbox{]} message header. \item[{\em maxlen}]\mbox{[}in\mbox{]} message length. \item[{\em attrType}]\mbox{[}in\mbox{]} attribute type. \item[{\em attrData}]\mbox{[}in\mbox{]} attribute data. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a66ed67746977f936554fd3b49c7f2942}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlAddLinkToList@{nlAddLinkToList}}
+\index{nlAddLinkToList@{nlAddLinkToList}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlAddLinkToList}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddLinkToList (const struct nlmsghdr $\ast$ {\em rcvH}, \/  struct {\bf nlLinkInfoList} $\ast$$\ast$ {\em nlLinkInfoList}, \/  const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8c_a66ed67746977f936554fd3b49c7f2942}
+This function is used to add a link to specified links list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em rcvH}]\mbox{[}in\mbox{]} link message header. \item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}out\mbox{]} list where link will be added. \item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1693 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_ad6b3d1f52fb7339b7ff7e09409de914d}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlAddr\_\-n2a@{nlAddr\_\-n2a}}
+\index{nlAddr\_\-n2a@{nlAddr\_\-n2a}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlAddr\_\-n2a}]{\setlength{\rightskip}{0pt plus 5cm}void nlAddr\_\-n2a (const unsigned char $\ast$ {\em addr}, \/  int {\em alen}, \/  int {\em type}, \/  char $\ast$ {\em buf}, \/  int {\em blen})}}
+\label{_o_s_base___netlink_8c_ad6b3d1f52fb7339b7ff7e09409de914d}
+Function to convert a L2 address from network representation to string representation (user friendly). 
+\begin{DoxyParams}{Parameters}
+\item[{\em addr}]\mbox{[}in\mbox{]} L2 address to convert. \item[{\em alen}]\mbox{[}in\mbox{]} L2 address length. \item[{\em type}]\mbox{[}in\mbox{]} link type. \item[{\em buf}]\mbox{[}out\mbox{]} converted address. \item[{\em blen}]\mbox{[}in\mbox{]} converted address maximum length. \end{DoxyParams}
+
+
+Definition at line 2200 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a9e7124140d51b67f399924a086b03f4c}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlAddRouteToList@{nlAddRouteToList}}
+\index{nlAddRouteToList@{nlAddRouteToList}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlAddRouteToList}]{\setlength{\rightskip}{0pt plus 5cm}int nlAddRouteToList (const struct nlmsghdr $\ast$ {\em rcvH}, \/  struct {\bf nlRouteInfoList} $\ast$$\ast$ {\em nlRtInfoList}, \/  const struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8c_a9e7124140d51b67f399924a086b03f4c}
+This function is used to add a route to specified routes list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em rcvH}]\mbox{[}in\mbox{]} route message header. \item[{\em nlRtInfoList}]\mbox{[}out\mbox{]} list where route will be added. \item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail $|$ NL\_\-SKIP=skip 
+\end{DoxyReturn}
+
+
+Definition at line 724 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a8a09ea63ead7608a1b6f1b4013ff4e55}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlCloseSocket@{nlCloseSocket}}
+\index{nlCloseSocket@{nlCloseSocket}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlCloseSocket}]{\setlength{\rightskip}{0pt plus 5cm}int nlCloseSocket ()}}
+\label{_o_s_base___netlink_8c_a8a09ea63ead7608a1b6f1b4013ff4e55}
+Used to close a previously open Netlink socket. \begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a40b120c823bc8b5ef4136be1f86cf29c}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlCreateDefaultLinkInfo@{nlCreateDefaultLinkInfo}}
+\index{nlCreateDefaultLinkInfo@{nlCreateDefaultLinkInfo}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlCreateDefaultLinkInfo}]{\setlength{\rightskip}{0pt plus 5cm}int nlCreateDefaultLinkInfo (struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8c_a40b120c823bc8b5ef4136be1f86cf29c}
+Used to create a \hyperlink{structnl_link_info}{nlLinkInfo} structure with default values. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}out\mbox{]} link structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 2131 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a1e603c04209b6f04945c2c330e12e16a}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlCreateDefaultRtInfo@{nlCreateDefaultRtInfo}}
+\index{nlCreateDefaultRtInfo@{nlCreateDefaultRtInfo}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlCreateDefaultRtInfo}]{\setlength{\rightskip}{0pt plus 5cm}int nlCreateDefaultRtInfo (struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8c_a1e603c04209b6f04945c2c330e12e16a}
+Used to create a \hyperlink{structnl_route_info}{nlRouteInfo} structure with default values. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}out\mbox{]} route structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1211 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a63fac149c2d915408bf3cf85f5484e69}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlFreeLinkInfoList@{nlFreeLinkInfoList}}
+\index{nlFreeLinkInfoList@{nlFreeLinkInfoList}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlFreeLinkInfoList}]{\setlength{\rightskip}{0pt plus 5cm}int nlFreeLinkInfoList (struct {\bf nlLinkInfoList} $\ast$ {\em nlLinkInfoList})}}
+\label{_o_s_base___netlink_8c_a63fac149c2d915408bf3cf85f5484e69}
+Used to free a link info list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}out\mbox{]} links list (one or more entries). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 2171 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a69bffc9330322f571b603ec88116a5cc}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlFreeRouteInfoList@{nlFreeRouteInfoList}}
+\index{nlFreeRouteInfoList@{nlFreeRouteInfoList}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlFreeRouteInfoList}]{\setlength{\rightskip}{0pt plus 5cm}int nlFreeRouteInfoList (struct {\bf nlRouteInfoList} $\ast$ {\em nlRtInfoList})}}
+\label{_o_s_base___netlink_8c_a69bffc9330322f571b603ec88116a5cc}
+Used to free a route info list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfoList}]\mbox{[}out\mbox{]} routes list (one or more entries). \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1248 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a33d04cf7542daf987bffe1f1f0230e21}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlGenLinkFilter@{nlGenLinkFilter}}
+\index{nlGenLinkFilter@{nlGenLinkFilter}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlGenLinkFilter}]{\setlength{\rightskip}{0pt plus 5cm}int nlGenLinkFilter (const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8c_a33d04cf7542daf987bffe1f1f0230e21}
+Used to generate a filter that will be applied to a list of links. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1974 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_aa93dafbf9421184575412b6869f42e21}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlGenRouteFilter@{nlGenRouteFilter}}
+\index{nlGenRouteFilter@{nlGenRouteFilter}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlGenRouteFilter}]{\setlength{\rightskip}{0pt plus 5cm}int nlGenRouteFilter (struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8c_aa93dafbf9421184575412b6869f42e21}
+Used to generate a filter that will be applied to a list of routes. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 979 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_aa90fe0abb39fe8181af62635d48e9f8f}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlGetLinks@{nlGetLinks}}
+\index{nlGetLinks@{nlGetLinks}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlGetLinks}]{\setlength{\rightskip}{0pt plus 5cm}int nlGetLinks (struct {\bf nlLinkInfoList} $\ast$$\ast$ {\em nlLinkInfoList}, \/  const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___netlink_8c_aa90fe0abb39fe8181af62635d48e9f8f}
+This function is used to get links using \hyperlink{structnl_link_info}{nlLinkInfo} structure as filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}out\mbox{]} links list (one or more entries). \item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info used as filter. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1284 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_a9b245db0c9ab2df29362ac0e6c58467e}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlGetLinkTypePos@{nlGetLinkTypePos}}
+\index{nlGetLinkTypePos@{nlGetLinkTypePos}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlGetLinkTypePos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short nlGetLinkTypePos (unsigned short {\em devType})}}
+\label{_o_s_base___netlink_8c_a9b245db0c9ab2df29362ac0e6c58467e}
+Lookup the position of the passed type into linkType array. 
+\begin{DoxyParams}{Parameters}
+\item[{\em devType}]\mbox{[}in\mbox{]} type to find. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position into linkType array. 
+\end{DoxyReturn}
+
+
+Definition at line 2235 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_ade01cb1f3fc2c9fb975d897966280627}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlGetRoutes@{nlGetRoutes}}
+\index{nlGetRoutes@{nlGetRoutes}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlGetRoutes}]{\setlength{\rightskip}{0pt plus 5cm}int nlGetRoutes (struct {\bf nlRouteInfoList} $\ast$$\ast$ {\em nlRtInfoList}, \/  struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___netlink_8c_ade01cb1f3fc2c9fb975d897966280627}
+This function is used to get routes using a \hyperlink{structnl_route_info}{nlRouteInfo} structure as filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfoList}]\mbox{[}out\mbox{]} routes list (one or more entries). \item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info used as filter. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 245 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_ab22ff84b6b0e7f1784619098eec647fe}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlModifyLink@{nlModifyLink}}
+\index{nlModifyLink@{nlModifyLink}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlModifyLink}]{\setlength{\rightskip}{0pt plus 5cm}int nlModifyLink (const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo}, \/  int {\em hType}, \/  unsigned int {\em hFlags})}}
+\label{_o_s_base___netlink_8c_ab22ff84b6b0e7f1784619098eec647fe}
+This function is used to ADD/DELETE/MODIFY a link. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link info. \item[{\em hType}]\mbox{[}in\mbox{]} message type (RTM\_\-NEWLINK $|$$|$ RTM\_\-DELLINK). \item[{\em hFlags}]\mbox{[}in\mbox{]} message flags. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 1467 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_aa6b96f54c90d285f5443355dee5147f1}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlModifyRoute@{nlModifyRoute}}
+\index{nlModifyRoute@{nlModifyRoute}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlModifyRoute}]{\setlength{\rightskip}{0pt plus 5cm}int nlModifyRoute (struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo}, \/  int {\em hType}, \/  unsigned int {\em hFlags})}}
+\label{_o_s_base___netlink_8c_aa6b96f54c90d285f5443355dee5147f1}
+This function is used to ADD/DELETE/MODIFY a route. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \item[{\em hType}]\mbox{[}in\mbox{]} type of message (RTM\_\-NEWROUTE $|$$|$ RTM\_\-DELROUTE). \item[{\em hFlags}]\mbox{[}in\mbox{]} message flags. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 434 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_adbd0d1b2c87161a38f388f0aff6330ce}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlOpenSocket@{nlOpenSocket}}
+\index{nlOpenSocket@{nlOpenSocket}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlOpenSocket}]{\setlength{\rightskip}{0pt plus 5cm}int nlOpenSocket ()}}
+\label{_o_s_base___netlink_8c_adbd0d1b2c87161a38f388f0aff6330ce}
+Used to open a Netlink socket. \begin{DoxyReturn}{Returns}
+NL\_\-OK=succesful $|$ NL\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_ab90e8ac6e80206d39731200a765f4475}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlResetLinkFilter@{nlResetLinkFilter}}
+\index{nlResetLinkFilter@{nlResetLinkFilter}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlResetLinkFilter}]{\setlength{\rightskip}{0pt plus 5cm}void nlResetLinkFilter ()}}
+\label{_o_s_base___netlink_8c_ab90e8ac6e80206d39731200a765f4475}
+Used to reset link filter handler. 
+
+Definition at line 2102 of file OSBase\_\-Netlink.c.\hypertarget{_o_s_base___netlink_8c_afe3f3b355a56167bb6520c658241b457}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlResetRouteFilter@{nlResetRouteFilter}}
+\index{nlResetRouteFilter@{nlResetRouteFilter}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlResetRouteFilter}]{\setlength{\rightskip}{0pt plus 5cm}void nlResetRouteFilter ()}}
+\label{_o_s_base___netlink_8c_afe3f3b355a56167bb6520c658241b457}
+Used to reset the route filter handler. 
+
+Definition at line 1185 of file OSBase\_\-Netlink.c.
+
+\subsection{Variable Documentation}
+\hypertarget{_o_s_base___netlink_8c_a98706bdaf8eddffdadec7ac3c0849b45}{
+\index{OSBase\_\-Netlink.c@{OSBase\_\-Netlink.c}!nlSH@{nlSH}}
+\index{nlSH@{nlSH}!OSBase_Netlink.c@{OSBase\_\-Netlink.c}}
+\subsubsection[{nlSH}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf nlSockHandle} {\bf nlSH} = \{ .fd = -\/1 \}}}
+\label{_o_s_base___netlink_8c_a98706bdaf8eddffdadec7ac3c0849b45}
+Netlink socket handler instance. 
+
+Definition at line 44 of file OSBase\_\-Netlink.c.

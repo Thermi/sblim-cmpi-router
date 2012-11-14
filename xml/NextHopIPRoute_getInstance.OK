@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CIM CIMVERSION="2.0" DTDVERSION="2.0">
+<MESSAGE ID="4700" PROTOCOLVERSION="1.0">
+<SIMPLERSP>
+<IMETHODRESPONSE NAME="GetInstance">
+<IRETURNVALUE>
+<INSTANCE CLASSNAME="Linux_NextHopIPRoute">
+<PROPERTY NAME="RouteType" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RouteTable" TYPE="uint16">
+<VALUE>254</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RouteScope" TYPE="uint16">
+<VALUE>253</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RouteOutputIf" TYPE="uint16">
+<VALUE>2</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RouteGateway" TYPE="string">
+<VALUE></VALUE>
+</PROPERTY>
+<PROPERTY NAME="TypeOfRoute" TYPE="uint16">
+<VALUE>3</VALUE>
+</PROPERTY>
+<PROPERTY NAME="IsStatic" TYPE="boolean">
+<VALUE>TRUE</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RouteMetric" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="AdminDistance" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="DestinationAddress" TYPE="string">
+<VALUE>192.168.0.0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="InstanceID" TYPE="string">
+<VALUE>etacarinae|192.168.0.0|24|254|2|253|</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Caption" TYPE="string">
+<VALUE>NextHop IPv4 route.</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Description" TYPE="string">
+<VALUE>NextHop to 192.168.0.0/24 through &quot;eth0&quot; interface.</VALUE>
+</PROPERTY>
+<PROPERTY NAME="ElementName" TYPE="string">
+<VALUE>IPv4-192.168.0.0/24</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RouteDerivation" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="OtherDerivation" TYPE="string">
+<VALUE></VALUE>
+</PROPERTY>
+<PROPERTY NAME="DestinationMask" TYPE="string">
+<VALUE>24</VALUE>
+</PROPERTY>
+<PROPERTY NAME="PrefixLength" TYPE="uint8">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="AddressType" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+</INSTANCE>
+</IRETURNVALUE>
+</IMETHODRESPONSE>
+</SIMPLERSP>
+</MESSAGE>
+</CIM>

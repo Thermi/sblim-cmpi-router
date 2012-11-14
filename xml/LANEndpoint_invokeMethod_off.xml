@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CIM CIMVERSION="2.0" DTDVERSION="2.0">
+  <MESSAGE ID="54150" PROTOCOLVERSION="1.0">
+    <SIMPLEREQ>
+      <METHODCALL NAME="RequestStateChange">
+	<LOCALINSTANCEPATH>
+	  <LOCALNAMESPACEPATH>
+	    <NAMESPACE NAME="root"/>
+	    <NAMESPACE NAME="cimv2"/>
+	  </LOCALNAMESPACEPATH>
+	  <INSTANCENAME CLASSNAME="Linux_LANEndpoint">
+	    <KEYBINDING NAME="SystemCreationClassName">
+	      <KEYVALUE TYPE="string" VALUETYPE="string">Linux_ComputerSystem</KEYVALUE>
+	    </KEYBINDING>
+	    <KEYBINDING NAME="SystemName">
+	      <KEYVALUE TYPE="string" VALUETYPE="string">etacarinae</KEYVALUE>
+	    </KEYBINDING>
+	    <KEYBINDING NAME="CreationClassName">
+	      <KEYVALUE TYPE="string" VALUETYPE="string">Linux_LANEndpoint</KEYVALUE>
+	    </KEYBINDING>
+	    <KEYBINDING NAME="Name">
+	      <KEYVALUE TYPE="string" VALUETYPE="string">eth0</KEYVALUE>
+	    </KEYBINDING>
+	  </INSTANCENAME>
+	</LOCALINSTANCEPATH>
+	<PARAMVALUE NAME="RequestedState">
+	  <VALUE>3</VALUE>
+	</PARAMVALUE>
+	<PARAMVALUE NAME="TimeoutPeriod">
+	  <VALUE>00000000000000.000000:000</VALUE>
+	</PARAMVALUE>
+      </METHODCALL>
+    </SIMPLEREQ>
+  </MESSAGE>
+</CIM>

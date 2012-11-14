@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CIM CIMVERSION="2.0" DTDVERSION="2.0">
+  <MESSAGE ID="4700" PROTOCOLVERSION="1.0">
+    <SIMPLEREQ>
+      <IMETHODCALL NAME="DeleteInstance">
+        <LOCALNAMESPACEPATH>
+          <NAMESPACE NAME="root"/>
+          <NAMESPACE NAME="cimv2"/>
+        </LOCALNAMESPACEPATH>
+        <IPARAMVALUE NAME="InstanceName">
+          <INSTANCENAME CLASSNAME="Linux_NextHopIPRoute">
+            <KEYBINDING NAME="InstanceId">
+              <KEYVALUE VALUETYPE="string">localhost.localdomain|192.168.2.0|24|254|2|253|</KEYVALUE>
+            </KEYBINDING>
+          </INSTANCENAME>
+        </IPARAMVALUE>
+      </IMETHODCALL>
+    </SIMPLEREQ>
+  </MESSAGE>
+</CIM>

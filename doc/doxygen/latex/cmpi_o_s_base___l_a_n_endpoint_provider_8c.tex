@@ -1,0 +1,167 @@
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-LANEndpointProvider.c File Reference}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-LANEndpointProvider.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-LANEndpointProvider.c}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpift.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpimacs.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-LANEndpoint.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a37fa7459a54076c6e52996053eff6d05}{OSBase\_\-LANEndpointProviderCleanup} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aa8e18ac30a9b6c6f67e1a0a134a138d5}{OSBase\_\-LANEndpointProviderEnumInstanceNames} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a5fd8e199444f059da886b9f862c5b794}{OSBase\_\-LANEndpointProviderEnumInstances} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aed9a058bc27985d195a52e53b8ff8eab}{OSBase\_\-LANEndpointProviderGetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_acbb698e57705578299f8ae72770d809e}{OSBase\_\-LANEndpointProviderCreateInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a8d6ada0d3a2d0a90ed2d2bb6596c9e64}{OSBase\_\-LANEndpointProviderSetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a6716add70301e0db413110445a6594f6}{OSBase\_\-LANEndpointProviderDeleteInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a34e4301faf2db86b2596ad8d9e236eb6}{OSBase\_\-LANEndpointProviderExecQuery} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$lang, const char $\ast$query)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_ac6c0cd206e40bf1924c578935fd4ab7d}{OSBase\_\-LANEndpointProviderMethodCleanup} (CMPIMethodMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a2251c67eecbbf3c7c3f5847e2984dd90}{OSBase\_\-LANEndpointProviderInvokeMethod} (CMPIMethodMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$methodName, const CMPIArgs $\ast$in, CMPIArgs $\ast$out)
+\item 
+\hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a373f87aabae7531e6ddf607869e0bb48}{CMInstanceMIStub} (OSBase\_\-LANEndpointProvider, OSBase\_\-LANEndpointProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\item 
+\hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aab150ca7de72138dd52b272444728b5c}{CMMethodMIStub} (OSBase\_\-LANEndpointProvider, OSBase\_\-LANEndpointProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const CMPIBroker $\ast$ \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c}{cmpiOSBase\_\-LANEndpointProvider.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+Linux\_\-LANEndpoint class provider implementation. The following CMPI instance methods are supported:
+\begin{DoxyItemize}
+\item Cleanup
+\item EnumerateInstanceNames
+\item EnumerateInstances
+\item GetInstance
+\item MethodCleanup
+\item InvokeMethod
+\end{DoxyItemize}
+\end{DoxyParagraph}
+Interface Type : Common Manageability Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___l_a_n_endpoint_provider_8c_source}{cmpiOSBase\_\-LANEndpointProvider.c}.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a373f87aabae7531e6ddf607869e0bb48}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!CMInstanceMIStub@{CMInstanceMIStub}}
+\index{CMInstanceMIStub@{CMInstanceMIStub}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{CMInstanceMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMInstanceMIStub (OSBase\_\-LANEndpointProvider, \/  OSBase\_\-LANEndpointProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a373f87aabae7531e6ddf607869e0bb48}
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aab150ca7de72138dd52b272444728b5c}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!CMMethodMIStub@{CMMethodMIStub}}
+\index{CMMethodMIStub@{CMMethodMIStub}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{CMMethodMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMMethodMIStub (OSBase\_\-LANEndpointProvider, \/  OSBase\_\-LANEndpointProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aab150ca7de72138dd52b272444728b5c}
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a37fa7459a54076c6e52996053eff6d05}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderCleanup@{OSBase\_\-LANEndpointProviderCleanup}}
+\index{OSBase\_\-LANEndpointProviderCleanup@{OSBase\_\-LANEndpointProviderCleanup}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderCleanup (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a37fa7459a54076c6e52996053eff6d05}
+
+
+Definition at line 54 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_acbb698e57705578299f8ae72770d809e}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderCreateInstance@{OSBase\_\-LANEndpointProviderCreateInstance}}
+\index{OSBase\_\-LANEndpointProviderCreateInstance@{OSBase\_\-LANEndpointProviderCreateInstance}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderCreateInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderCreateInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_acbb698e57705578299f8ae72770d809e}
+
+
+Definition at line 249 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a6716add70301e0db413110445a6594f6}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderDeleteInstance@{OSBase\_\-LANEndpointProviderDeleteInstance}}
+\index{OSBase\_\-LANEndpointProviderDeleteInstance@{OSBase\_\-LANEndpointProviderDeleteInstance}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderDeleteInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderDeleteInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a6716add70301e0db413110445a6594f6}
+
+
+Definition at line 290 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aa8e18ac30a9b6c6f67e1a0a134a138d5}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderEnumInstanceNames@{OSBase\_\-LANEndpointProviderEnumInstanceNames}}
+\index{OSBase\_\-LANEndpointProviderEnumInstanceNames@{OSBase\_\-LANEndpointProviderEnumInstanceNames}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderEnumInstanceNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderEnumInstanceNames (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aa8e18ac30a9b6c6f67e1a0a134a138d5}
+
+
+Definition at line 67 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a5fd8e199444f059da886b9f862c5b794}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderEnumInstances@{OSBase\_\-LANEndpointProviderEnumInstances}}
+\index{OSBase\_\-LANEndpointProviderEnumInstances@{OSBase\_\-LANEndpointProviderEnumInstances}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderEnumInstances}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderEnumInstances (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a5fd8e199444f059da886b9f862c5b794}
+
+
+Definition at line 127 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a34e4301faf2db86b2596ad8d9e236eb6}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderExecQuery@{OSBase\_\-LANEndpointProviderExecQuery}}
+\index{OSBase\_\-LANEndpointProviderExecQuery@{OSBase\_\-LANEndpointProviderExecQuery}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderExecQuery}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderExecQuery (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em lang}, \/  const char $\ast$ {\em query})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a34e4301faf2db86b2596ad8d9e236eb6}
+
+
+Definition at line 309 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aed9a058bc27985d195a52e53b8ff8eab}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderGetInstance@{OSBase\_\-LANEndpointProviderGetInstance}}
+\index{OSBase\_\-LANEndpointProviderGetInstance@{OSBase\_\-LANEndpointProviderGetInstance}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderGetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderGetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_aed9a058bc27985d195a52e53b8ff8eab}
+
+
+Definition at line 188 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a2251c67eecbbf3c7c3f5847e2984dd90}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderInvokeMethod@{OSBase\_\-LANEndpointProviderInvokeMethod}}
+\index{OSBase\_\-LANEndpointProviderInvokeMethod@{OSBase\_\-LANEndpointProviderInvokeMethod}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderInvokeMethod}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderInvokeMethod (CMPIMethodMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em methodName}, \/  const CMPIArgs $\ast$ {\em in}, \/  CMPIArgs $\ast$ {\em out})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a2251c67eecbbf3c7c3f5847e2984dd90}
+
+
+Definition at line 350 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_ac6c0cd206e40bf1924c578935fd4ab7d}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderMethodCleanup@{OSBase\_\-LANEndpointProviderMethodCleanup}}
+\index{OSBase\_\-LANEndpointProviderMethodCleanup@{OSBase\_\-LANEndpointProviderMethodCleanup}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderMethodCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderMethodCleanup (CMPIMethodMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_ac6c0cd206e40bf1924c578935fd4ab7d}
+
+
+Definition at line 337 of file cmpiOSBase\_\-LANEndpointProvider.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a8d6ada0d3a2d0a90ed2d2bb6596c9e64}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!OSBase\_\-LANEndpointProviderSetInstance@{OSBase\_\-LANEndpointProviderSetInstance}}
+\index{OSBase\_\-LANEndpointProviderSetInstance@{OSBase\_\-LANEndpointProviderSetInstance}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{OSBase\_\-LANEndpointProviderSetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-LANEndpointProviderSetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a8d6ada0d3a2d0a90ed2d2bb6596c9e64}
+
+
+Definition at line 269 of file cmpiOSBase\_\-LANEndpointProvider.c.
+
+\subsection{Variable Documentation}
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{
+\index{cmpiOSBase\_\-LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}!\_\-broker@{\_\-broker}}
+\index{\_\-broker@{\_\-broker}!cmpiOSBase_LANEndpointProvider.c@{cmpiOSBase\_\-LANEndpointProvider.c}}
+\subsubsection[{\_\-broker}]{\setlength{\rightskip}{0pt plus 5cm}const CMPIBroker$\ast$ {\bf \_\-broker}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___l_a_n_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}
+
+
+Definition at line 41 of file cmpiOSBase\_\-LANEndpointProvider.c.

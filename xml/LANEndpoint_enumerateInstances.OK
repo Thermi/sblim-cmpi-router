@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CIM CIMVERSION="2.0" DTDVERSION="2.0">
+<MESSAGE ID="4711" PROTOCOLVERSION="1.0">
+<SIMPLERSP>
+<IMETHODRESPONSE NAME="EnumerateInstances">
+<IRETURNVALUE>
+<VALUE.NAMEDINSTANCE>
+<INSTANCENAME CLASSNAME="Linux_LANEndpoint">
+<KEYBINDING NAME="CreationClassName">
+<KEYVALUE VALUETYPE="string">Linux_LANEndpoint</KEYVALUE>
+</KEYBINDING>
+<KEYBINDING NAME="SystemName">
+<KEYVALUE VALUETYPE="string">etacarinae</KEYVALUE>
+</KEYBINDING>
+<KEYBINDING NAME="SystemCreationClassName">
+<KEYVALUE VALUETYPE="string">Linux_ComputerSystem</KEYVALUE>
+</KEYBINDING>
+<KEYBINDING NAME="Name">
+<KEYVALUE VALUETYPE="string">lo</KEYVALUE>
+</KEYBINDING>
+</INSTANCENAME>
+<INSTANCE CLASSNAME="Linux_LANEndpoint">
+<PROPERTY NAME="OtherTypeDescription" TYPE="string">
+<VALUE></VALUE>
+</PROPERTY>
+<PROPERTY NAME="ProtocolIFType" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="ProtocolType" TYPE="uint16">
+</PROPERTY>
+<PROPERTY NAME="NameFormat" TYPE="string">
+<VALUE>LOCALTLK</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Name" TYPE="string">
+<VALUE>lo</VALUE>
+</PROPERTY>
+<PROPERTY NAME="TimeOfLastStateChange" TYPE="datetime">
+</PROPERTY>
+<PROPERTY NAME="EnabledState" TYPE="uint16">
+<VALUE>2</VALUE>
+</PROPERTY>
+<PROPERTY.ARRAY NAME="OperationalStatus" TYPE="uint16">
+<VALUE.ARRAY>
+<VALUE>2</VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="Description" TYPE="string">
+<VALUE>A communication endpoint which, when its associated interface device is connected to a LAN, may send and receive data frames.</VALUE>
+</PROPERTY>
+<PROPERTY NAME="TransitioningToState" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY.ARRAY NAME="AvailableRequestedStates" TYPE="uint16">
+<VALUE.ARRAY>
+<VALUE>2</VALUE>
+<VALUE>3</VALUE>
+<VALUE>4</VALUE>
+<VALUE>6</VALUE>
+<VALUE>7</VALUE>
+<VALUE>8</VALUE>
+<VALUE>9</VALUE>
+<VALUE>10</VALUE>
+<VALUE>11</VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="EnabledDefault" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RequestedState" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="OtherEnabledState" TYPE="string">
+<VALUE></VALUE>
+</PROPERTY>
+<PROPERTY NAME="PrimaryStatus" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="OperatingStatus" TYPE="uint16">
+<VALUE>16</VALUE>
+</PROPERTY>
+<PROPERTY NAME="DetailedStatus" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="CommunicationStatus" TYPE="uint16">
+<VALUE>2</VALUE>
+</PROPERTY>
+<PROPERTY NAME="HealthState" TYPE="uint16">
+<VALUE>5</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Status" TYPE="string">
+</PROPERTY>
+<PROPERTY.ARRAY NAME="StatusDescriptions" TYPE="string">
+<VALUE.ARRAY>
+<VALUE></VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="InstallDate" TYPE="datetime">
+</PROPERTY>
+<PROPERTY NAME="InstanceID" TYPE="string">
+<VALUE>lo-00:00:00:00:00:00</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Caption" TYPE="string">
+<VALUE>LAN EndPoint</VALUE>
+</PROPERTY>
+<PROPERTY NAME="ElementName" TYPE="string">
+<VALUE>lo_1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="SystemCreationClassName" TYPE="string">
+<VALUE>Linux_ComputerSystem</VALUE>
+</PROPERTY>
+<PROPERTY NAME="SystemName" TYPE="string">
+<VALUE>etacarinae</VALUE>
+</PROPERTY>
+<PROPERTY NAME="CreationClassName" TYPE="string">
+<VALUE>Linux_LANEndpoint</VALUE>
+</PROPERTY>
+<PROPERTY NAME="LANID" TYPE="string">
+<VALUE>NULL</VALUE>
+</PROPERTY>
+<PROPERTY NAME="LANType" TYPE="uint16">
+</PROPERTY>
+<PROPERTY NAME="OtherLANType" TYPE="string">
+</PROPERTY>
+<PROPERTY NAME="MACAddress" TYPE="string">
+<VALUE>00:00:00:00:00:00</VALUE>
+</PROPERTY>
+<PROPERTY.ARRAY NAME="AliasAddresses" TYPE="string">
+<VALUE.ARRAY>
+<VALUE></VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY.ARRAY NAME="GroupAddresses" TYPE="string">
+<VALUE.ARRAY>
+<VALUE></VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="MaxDataSize" TYPE="uint32">
+<VALUE>16436</VALUE>
+</PROPERTY>
+</INSTANCE>
+</VALUE.NAMEDINSTANCE>
+<VALUE.NAMEDINSTANCE>
+<INSTANCENAME CLASSNAME="Linux_LANEndpoint">
+<KEYBINDING NAME="CreationClassName">
+<KEYVALUE VALUETYPE="string">Linux_LANEndpoint</KEYVALUE>
+</KEYBINDING>
+<KEYBINDING NAME="SystemName">
+<KEYVALUE VALUETYPE="string">etacarinae</KEYVALUE>
+</KEYBINDING>
+<KEYBINDING NAME="SystemCreationClassName">
+<KEYVALUE VALUETYPE="string">Linux_ComputerSystem</KEYVALUE>
+</KEYBINDING>
+<KEYBINDING NAME="Name">
+<KEYVALUE VALUETYPE="string">eth0</KEYVALUE>
+</KEYBINDING>
+</INSTANCENAME>
+<INSTANCE CLASSNAME="Linux_LANEndpoint">
+<PROPERTY NAME="OtherTypeDescription" TYPE="string">
+<VALUE></VALUE>
+</PROPERTY>
+<PROPERTY NAME="ProtocolIFType" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="ProtocolType" TYPE="uint16">
+</PROPERTY>
+<PROPERTY NAME="NameFormat" TYPE="string">
+<VALUE>ETHER</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Name" TYPE="string">
+<VALUE>eth0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="TimeOfLastStateChange" TYPE="datetime">
+</PROPERTY>
+<PROPERTY NAME="EnabledState" TYPE="uint16">
+<VALUE>2</VALUE>
+</PROPERTY>
+<PROPERTY.ARRAY NAME="OperationalStatus" TYPE="uint16">
+<VALUE.ARRAY>
+<VALUE>2</VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="Description" TYPE="string">
+<VALUE>A communication endpoint which, when its associated interface device is connected to a LAN, may send and receive data frames.</VALUE>
+</PROPERTY>
+<PROPERTY NAME="TransitioningToState" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY.ARRAY NAME="AvailableRequestedStates" TYPE="uint16">
+<VALUE.ARRAY>
+<VALUE>2</VALUE>
+<VALUE>3</VALUE>
+<VALUE>4</VALUE>
+<VALUE>6</VALUE>
+<VALUE>7</VALUE>
+<VALUE>8</VALUE>
+<VALUE>9</VALUE>
+<VALUE>10</VALUE>
+<VALUE>11</VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="EnabledDefault" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="RequestedState" TYPE="uint16">
+<VALUE>0</VALUE>
+</PROPERTY>
+<PROPERTY NAME="OtherEnabledState" TYPE="string">
+<VALUE></VALUE>
+</PROPERTY>
+<PROPERTY NAME="PrimaryStatus" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="OperatingStatus" TYPE="uint16">
+<VALUE>16</VALUE>
+</PROPERTY>
+<PROPERTY NAME="DetailedStatus" TYPE="uint16">
+<VALUE>1</VALUE>
+</PROPERTY>
+<PROPERTY NAME="CommunicationStatus" TYPE="uint16">
+<VALUE>2</VALUE>
+</PROPERTY>
+<PROPERTY NAME="HealthState" TYPE="uint16">
+<VALUE>5</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Status" TYPE="string">
+</PROPERTY>
+<PROPERTY.ARRAY NAME="StatusDescriptions" TYPE="string">
+<VALUE.ARRAY>
+<VALUE></VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="InstallDate" TYPE="datetime">
+</PROPERTY>
+<PROPERTY NAME="InstanceID" TYPE="string">
+<VALUE>eth0-00:1b:fc:fc:11:cb</VALUE>
+</PROPERTY>
+<PROPERTY NAME="Caption" TYPE="string">
+<VALUE>LAN EndPoint</VALUE>
+</PROPERTY>
+<PROPERTY NAME="ElementName" TYPE="string">
+<VALUE>eth0_2</VALUE>
+</PROPERTY>
+<PROPERTY NAME="SystemCreationClassName" TYPE="string">
+<VALUE>Linux_ComputerSystem</VALUE>
+</PROPERTY>
+<PROPERTY NAME="SystemName" TYPE="string">
+<VALUE>etacarinae</VALUE>
+</PROPERTY>
+<PROPERTY NAME="CreationClassName" TYPE="string">
+<VALUE>Linux_LANEndpoint</VALUE>
+</PROPERTY>
+<PROPERTY NAME="LANID" TYPE="string">
+<VALUE>NULL</VALUE>
+</PROPERTY>
+<PROPERTY NAME="LANType" TYPE="uint16">
+</PROPERTY>
+<PROPERTY NAME="OtherLANType" TYPE="string">
+</PROPERTY>
+<PROPERTY NAME="MACAddress" TYPE="string">
+<VALUE>00:1b:fc:fc:11:cb</VALUE>
+</PROPERTY>
+<PROPERTY.ARRAY NAME="AliasAddresses" TYPE="string">
+<VALUE.ARRAY>
+<VALUE></VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY.ARRAY NAME="GroupAddresses" TYPE="string">
+<VALUE.ARRAY>
+<VALUE></VALUE>
+</VALUE.ARRAY>
+</PROPERTY.ARRAY>
+<PROPERTY NAME="MaxDataSize" TYPE="uint32">
+<VALUE>1500</VALUE>
+</PROPERTY>
+</INSTANCE>
+</VALUE.NAMEDINSTANCE>
+</IRETURNVALUE>
+</IMETHODRESPONSE>
+</SIMPLERSP>
+</MESSAGE>
+</CIM>

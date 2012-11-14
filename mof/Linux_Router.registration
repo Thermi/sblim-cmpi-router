@@ -1,0 +1,5 @@
+# Classname Namespace Providername Libraryname Capabilities ...
+Linux_NextHopIPRoute root/cimv2 OSBase_NextHopIPRouteProvider cmpiOSBase_NextHopIPRouteProvider instance method
+Linux_CSHostedRoute root/cimv2 OSBase_CSHostedRouteProvider cmpiOSBase_CSHostedRouteProvider instance association
+Linux_LANEndpoint root/cimv2 OSBase_LANEndpointProvider cmpiOSBase_LANEndpointProvider instance method
+Linux_RouteUsesEndpoint root/cimv2 OSBase_RouteUsesEndpointProvider cmpiOSBase_RouteUsesEndpointProvider instance association

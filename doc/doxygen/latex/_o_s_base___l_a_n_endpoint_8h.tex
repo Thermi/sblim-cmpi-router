@@ -1,0 +1,790 @@
+\hypertarget{_o_s_base___l_a_n_endpoint_8h}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-LANEndpoint.h File Reference}
+\label{_o_s_base___l_a_n_endpoint_8h}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-LANEndpoint.h@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-LANEndpoint.h}}
+}
+{\ttfamily \#include \char`\"{}OSBase\_\-Netlink.h\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_l_a_n_endpoint}{LANEndpoint}
+\item 
+struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_o_s_base___l_a_n_endpoint_8h_a74e6ec358f512d509115db0833ec5518}{LEP\_\-OK}~0
+\item 
+\#define \hyperlink{_o_s_base___l_a_n_endpoint_8h_a74fd4d8065ac8872abd1ce8ab029ac82}{LEP\_\-FAIL}~1
+\item 
+\#define \hyperlink{_o_s_base___l_a_n_endpoint_8h_afd80ecbe3170ca4fc85b65cda8659f82}{MAXHOSTNAMELEN}~256
+\item 
+\#define \hyperlink{_o_s_base___l_a_n_endpoint_8h_ae03dfeb08993a673daac5875bf43a17b}{LANENDPOINT\_\-CAPTION}~\char`\"{}LAN EndPoint\char`\"{}
+\item 
+\#define \hyperlink{_o_s_base___l_a_n_endpoint_8h_ab8af03c95cfe4a4fd9601a8271a43b43}{CREATION\_\-CLASS\_\-NAME}~\char`\"{}Linux\_\-LANEndpoint\char`\"{}
+\item 
+\#define \hyperlink{_o_s_base___l_a_n_endpoint_8h_a36798f62c5b8cd4866824a5024ce3108}{LANENDPOINT\_\-DESC}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7af25c20e39f24657e16c28b23b6b1f811}{LEP\_\-ES\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ab4a5d3aff8e48311ba9c9b5490f89ac4}{LEP\_\-ES\_\-OTHER}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a4cbfec42c62ed0f4adde3d761348a208}{LEP\_\-ES\_\-ENABLED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a8fead427450bcd2f9d605f29495ae6a2}{LEP\_\-ES\_\-DISABLED}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a0c9999cf66f2897ae1d532d4271b9136}{LEP\_\-ES\_\-SHUTTING\_\-DOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ad2c2d06dbe11a794784108eb13b1b18a}{LEP\_\-ES\_\-NOT\_\-APPLICABLE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a87baa38b76ecd2eb63da03b42c1a1b83}{LEP\_\-ES\_\-ENABLED\_\-BUT\_\-OFFLINE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a0dcf209de698e4eaeaea6289bd33a8bb}{LEP\_\-ES\_\-IN\_\-TEST}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ac877080a9cede7370aa18e70d7d90fc2}{LEP\_\-ES\_\-DEFERRED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a76545b63f05c94df56e104e0a979b9df}{LEP\_\-ES\_\-QUIESCE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a2bd1d51a28b4f5b594c9332cbc2ce751}{LEP\_\-ES\_\-STARTING}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5ae75b3bb037e624f5835e547e48dbfe90}{LEP\_\-ED\_\-ENABLED} =  2, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5af66aa16ffa44a6ebd5fee1ab9f891c62}{LEP\_\-ED\_\-DISABLED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a7788b92b22b2bf0b82e2b6b1ff1b5ad2}{LEP\_\-ED\_\-NOT\_\-APPLICABLE} =  5, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a5d4c1738a7982a1e06a5093bb9498b1e}{LEP\_\-ED\_\-ENABLED\_\-BUT\_\-OFFLINE}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a43f56afaf2ea08b11fe7640fd1044461}{LEP\_\-ED\_\-NO\_\-DEFAULT}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5ad5a793d557427ebc23cd7a685ab569e7}{LEP\_\-ED\_\-QUIESCE} =  9
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a305fd2b1a221f387eadcd591dde2f479}{LEP\_\-RS\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a1f5090a2c36ad9e248c2f2462ca6b81d}{LEP\_\-RS\_\-ENABLED} =  2, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a51474f9c38cf7486103c2d7aa0518bbd}{LEP\_\-RS\_\-DISABLED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a92c8ceb4b316e95e7519eb0bad4a0aaa}{LEP\_\-RS\_\-SHUT\_\-DOWN}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04aebda740ff3298f7682acc0d767d1be26}{LEP\_\-RS\_\-NO\_\-CHANGE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a3d436eadd639331719c7d767c4f9bac4}{LEP\_\-RS\_\-OFFLINE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a15569ea352d602e975551a48840bd851}{LEP\_\-RS\_\-TEST}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a73863b380241373c7566ef4648210e7b}{LEP\_\-RS\_\-DEFERRED}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04acd549d13e2f75a8e6d5d5bc7ae841b98}{LEP\_\-RS\_\-QUIESCE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a7fcbffbc1268a826e153493439a70997}{LEP\_\-RS\_\-REBOOT}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a78e7c276617ae1c05239db9edf5af25e}{LEP\_\-RS\_\-RESET}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a66d33d2b2d616a1506977c5b7de56879}{LEP\_\-RS\_\-NOT\_\-APPLICABLE}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06cab7e16fa2f7783d9d35736fcd53cdeee7}{LEP\_\-CS\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca5ab1acd36b8d1b2e9f20cd8188bb3b7b}{LEP\_\-CS\_\-NOT\_\-AVAILABLE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca22506e42995f0cd3de94ae0aeaaab773}{LEP\_\-CS\_\-COMMUNICATION\_\-OK}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca24dc988140e59c489b588eb5b6077568}{LEP\_\-CS\_\-LOST\_\-COMMUNICATION}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca3debe8437f4f8a7bf3e6ff3775104ffa}{LEP\_\-CS\_\-NO\_\-CONTACT}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea972fe34f4e08e325575b85fc139a9529}{LEP\_\-DS\_\-NOT\_\-AVAILABLE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea584cc4b369a58ef5ef31cafbfb9300d5}{LEP\_\-DS\_\-NO\_\-ADDITIONAL\_\-INFORMATION}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea092d26c31722863711c425bd169b4dc7}{LEP\_\-DS\_\-STRESSED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9eabc24f39a4da09dfa0af58db6ca9eb243}{LEP\_\-DS\_\-PREDICTIVE\_\-FAILURE}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea48e92dfb412f80b22862367ac19f0fbd}{LEP\_\-DS\_\-NON\_\-RECOVERABLE\_\-ERROR}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea7baaa33a1a9a1a262b634b4e719a4808}{LEP\_\-DS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a387a776e4eb879a6d0d5c7b3e0472222}{LEP\_\-HS\_\-UNKNOWN} =  0, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a6136d155b5a5e1e498b67448d4aee1fd}{LEP\_\-HS\_\-OK} =  5, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a356ada3a088ce075acd96d76ea017f22}{LEP\_\-HS\_\-DEGRADED\_\-WARNING} =  10, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a3868d60b0902f179660a360ad01afbb7}{LEP\_\-HS\_\-MINOR\_\-FAILURE} =  15, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635afee17ba355aed1d9552ddb3dfb7a260f}{LEP\_\-HS\_\-MAJOR\_\-FAILURE} =  20, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a6b4cb183f7555eeb3b2930367da8b3a0}{LEP\_\-HS\_\-CRITICAL\_\-FAILURE} =  25, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a4c6e09b1170fa2532a097eb16c541e65}{LEP\_\-HS\_\-NON\_\-RECOVERABLE\_\-ERROR} =  30
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadf7caaa4e025007e5c378ddbd7220281}{LEP\_\-OS\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da76c6f71f140c1f72ef1209ac9ef9a0a2}{LEP\_\-OS\_\-NOT\_\-AVAILABLE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0ad9506847bc79018a9ea8957a773ade}{LEP\_\-OS\_\-SERVICING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da767a7ecb1d39f662099f4b90370e6c6b}{LEP\_\-OS\_\-STARTING}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daea9ca6ae0b8180746fb8fb2dfb8d54b0}{LEP\_\-OS\_\-STOPPING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadfb5d7b0dcc0f22926737d1cfbe78cca}{LEP\_\-OS\_\-STOPPED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da980551dbd9ba487c8222d5aa2febbedb}{LEP\_\-OS\_\-ABORTED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4cdb7624cdb6e5d75124c821b3fe0ed8}{LEP\_\-OS\_\-DORMANT}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da505c60ab9e2e4ed14bf2eee587d229cd}{LEP\_\-OS\_\-COMPLETED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa99c60a13cbd27a03e27f86527652e58}{LEP\_\-OS\_\-MIGRATING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da17a820259e82405ff9e03084ca1352a5}{LEP\_\-OS\_\-EMIGRATING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da45e5e84035f6f9c52537c9a648254b62}{LEP\_\-OS\_\-IMMIGRATING}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0760cf0a1cc10c2f2864e0b31a1adc08}{LEP\_\-OS\_\-SNAPSHOTTING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadbfdd70634cff8619d64af2161f37bcb}{LEP\_\-OS\_\-SHUTTING\_\-DOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa3b125add9abb37eb2f72804775038fa}{LEP\_\-OS\_\-IN\_\-TEST}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da6b7d2fd53359e68a732c639fdb549f98}{LEP\_\-OS\_\-TRANSITIONING}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da26c2a481c50c0f616c7d94f6fb0f1270}{LEP\_\-OS\_\-IN\_\-SERVICE}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a0b66a7f51d6dea5ff1f746d8c7e62608}{LEP\_\-OPS\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a58eae3168117990797eb13d5e0f85cda}{LEP\_\-OPS\_\-OTHER}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a80c21beea7f4505c12a289f275c38a66}{LEP\_\-OPS\_\-OK}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a3f75f79a8bcb16a9975ba0daa98b537e}{LEP\_\-OPS\_\-DEGRADED}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600aa6a1f6f69e8198a1a9e9daf1a800dd34}{LEP\_\-OPS\_\-STRESSED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ac345bfacbee25ec06fcb0a2425f39295}{LEP\_\-OPS\_\-PREDICTIVE\_\-FAILURE}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600aae395a4604b43113e5e536f4f850a67e}{LEP\_\-OPS\_\-ERROR}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a8f4a3a564d0d8b2f06c1275e7af40aef}{LEP\_\-OPS\_\-NON\_\-RECOVERABLE\_\-ERROR}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a83ae4295cbf5fbe7a0efa52dab3d2732}{LEP\_\-OPS\_\-STARTING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a95536cab5f447f2d40245ff24d2c0cc9}{LEP\_\-OPS\_\-STOPPING}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ad8f27442aa0784082d21c9772b1e2589}{LEP\_\-OPS\_\-STOPPED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a874417046524407cf78e52788d2423a4}{LEP\_\-OPS\_\-IN\_\-SERVICE}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a443214c72afa62732b9ae2bc00014a57}{LEP\_\-OPS\_\-NO\_\-CONTACT}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a1a3a5065da3c38c6ea9c4928251f6169}{LEP\_\-OPS\_\-LOST\_\-COMMUNICATION}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a4af491e1927e84d0a7de09e5b2490b8a}{LEP\_\-OPS\_\-ABORTED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a46b071288ff1824aedf3a3d3e59c8de6}{LEP\_\-OPS\_\-DORMANT}, 
+\par
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ae3e63259f95277aca2fb85f581f27624}{LEP\_\-OPS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a076b4fa53a1e3c864cb927156af87c4f}{LEP\_\-OPS\_\-COMPLETED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a74e7ffdcfefad1701cccd4765817cc38}{LEP\_\-OPS\_\-POWER\_\-MODE}
+ \}
+\item 
+enum \{ \hyperlink{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a48cf58fbd37ec5ea6a332e461b0c945b}{LEP\_\-PS\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a6a6b43dd7cbbee9b496e89008ccc5cfd}{LEP\_\-PS\_\-OK}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a673c704893d0ab20a6c0030fc5d12916}{LEP\_\-PS\_\-DEGRADED}, 
+\hyperlink{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a939e58a3d0ba4a299cdf05582567d50a}{LEP\_\-PS\_\-ERROR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8h_a93cd8187af6d71b81bbdcb57a1fc91a7}{getLANEndpoints} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList, const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8h_a50feca5140a2101662a937440d957888}{getALLLANEndpoint} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8h_a0e24fae564ca4e06b1a7e8ce7c246ce5}{getLANEndpoint} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList, const char $\ast$linkName)
+\item 
+unsigned short \hyperlink{_o_s_base___l_a_n_endpoint_8h_ab96e1416278e303b6eeb6fe2feb0af82}{changeLinkOPState} (const char $\ast$linkName, unsigned short enabledState, unsigned long timeoutPeriod)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8h_a1cfc38a0229aa40f4f9bb549de1a5edc}{nlListTOLanEPList} (struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$$\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList}, struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8h_a06810d11e411c5ed06363cbf22d6ffb7}{nlInfoTOLanEP} (struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo}, struct \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} $\ast$lanEP)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8h_a0ff3f1739478cd89305b5dbb5240aaad}{freeLANEndpointList} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$lptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_o_s_base___l_a_n_endpoint_8h}{OSBase\_\-LANEndpoint.h}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This file defines the interfaces for the resource access implementation of the CIM class Linux\_\-LANEndpoint. 
+
+Definition in file \hyperlink{_o_s_base___l_a_n_endpoint_8h_source}{OSBase\_\-LANEndpoint.h}.
+
+\subsection{Define Documentation}
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab8af03c95cfe4a4fd9601a8271a43b43}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!CREATION\_\-CLASS\_\-NAME@{CREATION\_\-CLASS\_\-NAME}}
+\index{CREATION\_\-CLASS\_\-NAME@{CREATION\_\-CLASS\_\-NAME}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{CREATION\_\-CLASS\_\-NAME}]{\setlength{\rightskip}{0pt plus 5cm}\#define CREATION\_\-CLASS\_\-NAME~\char`\"{}Linux\_\-LANEndpoint\char`\"{}}}
+\label{_o_s_base___l_a_n_endpoint_8h_ab8af03c95cfe4a4fd9601a8271a43b43}
+CIM -\/ Creation class name. 
+
+Definition at line 52 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_ae03dfeb08993a673daac5875bf43a17b}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LANENDPOINT\_\-CAPTION@{LANENDPOINT\_\-CAPTION}}
+\index{LANENDPOINT\_\-CAPTION@{LANENDPOINT\_\-CAPTION}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{LANENDPOINT\_\-CAPTION}]{\setlength{\rightskip}{0pt plus 5cm}\#define LANENDPOINT\_\-CAPTION~\char`\"{}LAN EndPoint\char`\"{}}}
+\label{_o_s_base___l_a_n_endpoint_8h_ae03dfeb08993a673daac5875bf43a17b}
+CIM -\/ \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} caption. 
+
+Definition at line 47 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a36798f62c5b8cd4866824a5024ce3108}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LANENDPOINT\_\-DESC@{LANENDPOINT\_\-DESC}}
+\index{LANENDPOINT\_\-DESC@{LANENDPOINT\_\-DESC}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{LANENDPOINT\_\-DESC}]{\setlength{\rightskip}{0pt plus 5cm}\#define LANENDPOINT\_\-DESC}}
+\label{_o_s_base___l_a_n_endpoint_8h_a36798f62c5b8cd4866824a5024ce3108}
+{\bfseries Value:}
+\begin{DoxyCode}
+"A communication endpoint which, when "        \
+    "its associated interface device is connected to a LAN, "           \
+    "may send and receive data frames."
+\end{DoxyCode}
+CIM -\/ \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} desctiption. 
+
+Definition at line 57 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a74fd4d8065ac8872abd1ce8ab029ac82}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-FAIL@{LEP\_\-FAIL}}
+\index{LEP\_\-FAIL@{LEP\_\-FAIL}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{LEP\_\-FAIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define LEP\_\-FAIL~1}}
+\label{_o_s_base___l_a_n_endpoint_8h_a74fd4d8065ac8872abd1ce8ab029ac82}
+An error occurs when executing desired operation. 
+
+Definition at line 35 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a74e6ec358f512d509115db0833ec5518}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OK@{LEP\_\-OK}}
+\index{LEP\_\-OK@{LEP\_\-OK}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{LEP\_\-OK}]{\setlength{\rightskip}{0pt plus 5cm}\#define LEP\_\-OK~0}}
+\label{_o_s_base___l_a_n_endpoint_8h_a74e6ec358f512d509115db0833ec5518}
+Operation executed succesful. 
+
+Definition at line 34 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_afd80ecbe3170ca4fc85b65cda8659f82}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!MAXHOSTNAMELEN@{MAXHOSTNAMELEN}}
+\index{MAXHOSTNAMELEN@{MAXHOSTNAMELEN}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{MAXHOSTNAMELEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXHOSTNAMELEN~256}}
+\label{_o_s_base___l_a_n_endpoint_8h_afd80ecbe3170ca4fc85b65cda8659f82}
+Maximum hostName length. 
+
+Definition at line 41 of file OSBase\_\-LANEndpoint.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7}{
+\subsubsection[{"@1}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7}
+CIM -\/ EnabledState. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-ES\_\-UNKNOWN@{LEP\_\-ES\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-UNKNOWN@{LEP\_\-ES\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7af25c20e39f24657e16c28b23b6b1f811}{
+LEP\_\-ES\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7af25c20e39f24657e16c28b23b6b1f811}
+}]Unknown state. \index{LEP\_\-ES\_\-OTHER@{LEP\_\-ES\_\-OTHER}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-OTHER@{LEP\_\-ES\_\-OTHER}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ab4a5d3aff8e48311ba9c9b5490f89ac4}{
+LEP\_\-ES\_\-OTHER}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ab4a5d3aff8e48311ba9c9b5490f89ac4}
+}]Admin specified state. \index{LEP\_\-ES\_\-ENABLED@{LEP\_\-ES\_\-ENABLED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-ENABLED@{LEP\_\-ES\_\-ENABLED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a4cbfec42c62ed0f4adde3d761348a208}{
+LEP\_\-ES\_\-ENABLED}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a4cbfec42c62ed0f4adde3d761348a208}
+}]Indicates that the element is or could be executing commands, will process any queued commands, and queues new requests. \index{LEP\_\-ES\_\-DISABLED@{LEP\_\-ES\_\-DISABLED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-DISABLED@{LEP\_\-ES\_\-DISABLED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a8fead427450bcd2f9d605f29495ae6a2}{
+LEP\_\-ES\_\-DISABLED}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a8fead427450bcd2f9d605f29495ae6a2}
+}]Indicates that the element will not execute commands and will drop any new requests. \index{LEP\_\-ES\_\-SHUTTING\_\-DOWN@{LEP\_\-ES\_\-SHUTTING\_\-DOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-SHUTTING\_\-DOWN@{LEP\_\-ES\_\-SHUTTING\_\-DOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a0c9999cf66f2897ae1d532d4271b9136}{
+LEP\_\-ES\_\-SHUTTING\_\-DOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a0c9999cf66f2897ae1d532d4271b9136}
+}]Indicates that the element is in the process of going to a Disabled state. \index{LEP\_\-ES\_\-NOT\_\-APPLICABLE@{LEP\_\-ES\_\-NOT\_\-APPLICABLE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-NOT\_\-APPLICABLE@{LEP\_\-ES\_\-NOT\_\-APPLICABLE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ad2c2d06dbe11a794784108eb13b1b18a}{
+LEP\_\-ES\_\-NOT\_\-APPLICABLE}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ad2c2d06dbe11a794784108eb13b1b18a}
+}]Indicates the element does not support being enabled or disabled. \index{LEP\_\-ES\_\-ENABLED\_\-BUT\_\-OFFLINE@{LEP\_\-ES\_\-ENABLED\_\-BUT\_\-OFFLINE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-ENABLED\_\-BUT\_\-OFFLINE@{LEP\_\-ES\_\-ENABLED\_\-BUT\_\-OFFLINE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a87baa38b76ecd2eb63da03b42c1a1b83}{
+LEP\_\-ES\_\-ENABLED\_\-BUT\_\-OFFLINE}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a87baa38b76ecd2eb63da03b42c1a1b83}
+}]Indicates that the element might be completing commands, and will drop any new requests. \index{LEP\_\-ES\_\-IN\_\-TEST@{LEP\_\-ES\_\-IN\_\-TEST}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-IN\_\-TEST@{LEP\_\-ES\_\-IN\_\-TEST}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a0dcf209de698e4eaeaea6289bd33a8bb}{
+LEP\_\-ES\_\-IN\_\-TEST}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a0dcf209de698e4eaeaea6289bd33a8bb}
+}]Indicates that the element is in a test state. \index{LEP\_\-ES\_\-DEFERRED@{LEP\_\-ES\_\-DEFERRED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-DEFERRED@{LEP\_\-ES\_\-DEFERRED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ac877080a9cede7370aa18e70d7d90fc2}{
+LEP\_\-ES\_\-DEFERRED}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7ac877080a9cede7370aa18e70d7d90fc2}
+}]Indicates that the element might be completing commands, but will queue any new requests. \index{LEP\_\-ES\_\-QUIESCE@{LEP\_\-ES\_\-QUIESCE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-QUIESCE@{LEP\_\-ES\_\-QUIESCE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a76545b63f05c94df56e104e0a979b9df}{
+LEP\_\-ES\_\-QUIESCE}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a76545b63f05c94df56e104e0a979b9df}
+}]Indicates that the element is enabled but in a restricted mode. \index{LEP\_\-ES\_\-STARTING@{LEP\_\-ES\_\-STARTING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ES\_\-STARTING@{LEP\_\-ES\_\-STARTING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a2bd1d51a28b4f5b594c9332cbc2ce751}{
+LEP\_\-ES\_\-STARTING}
+\label{_o_s_base___l_a_n_endpoint_8h_adf764cbdea00d65edcd07bb9953ad2b7a2bd1d51a28b4f5b594c9332cbc2ce751}
+}]Indicates that the element is in the process of going to an Enabled state. \end{description}
+\end{Desc}
+
+
+
+Definition at line 64 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5}{
+\subsubsection[{"@2}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5}
+CIM -\/ EnabledDefault. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-ED\_\-ENABLED@{LEP\_\-ED\_\-ENABLED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ED\_\-ENABLED@{LEP\_\-ED\_\-ENABLED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5ae75b3bb037e624f5835e547e48dbfe90}{
+LEP\_\-ED\_\-ENABLED}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5ae75b3bb037e624f5835e547e48dbfe90}
+}](Default) Indicates that the element is or could be executing commands, will process any queued commands, and queues new requests. \index{LEP\_\-ED\_\-DISABLED@{LEP\_\-ED\_\-DISABLED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ED\_\-DISABLED@{LEP\_\-ED\_\-DISABLED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5af66aa16ffa44a6ebd5fee1ab9f891c62}{
+LEP\_\-ED\_\-DISABLED}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5af66aa16ffa44a6ebd5fee1ab9f891c62}
+}]Indicates that the element will not execute commands and will drop any new requests. \index{LEP\_\-ED\_\-NOT\_\-APPLICABLE@{LEP\_\-ED\_\-NOT\_\-APPLICABLE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ED\_\-NOT\_\-APPLICABLE@{LEP\_\-ED\_\-NOT\_\-APPLICABLE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a7788b92b22b2bf0b82e2b6b1ff1b5ad2}{
+LEP\_\-ED\_\-NOT\_\-APPLICABLE}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a7788b92b22b2bf0b82e2b6b1ff1b5ad2}
+}]Indicates the element does not support being enabled or disabled. \index{LEP\_\-ED\_\-ENABLED\_\-BUT\_\-OFFLINE@{LEP\_\-ED\_\-ENABLED\_\-BUT\_\-OFFLINE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ED\_\-ENABLED\_\-BUT\_\-OFFLINE@{LEP\_\-ED\_\-ENABLED\_\-BUT\_\-OFFLINE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a5d4c1738a7982a1e06a5093bb9498b1e}{
+LEP\_\-ED\_\-ENABLED\_\-BUT\_\-OFFLINE}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a5d4c1738a7982a1e06a5093bb9498b1e}
+}]Indicates that the element might be completing commands, and will drop any new requests. \index{LEP\_\-ED\_\-NO\_\-DEFAULT@{LEP\_\-ED\_\-NO\_\-DEFAULT}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ED\_\-NO\_\-DEFAULT@{LEP\_\-ED\_\-NO\_\-DEFAULT}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a43f56afaf2ea08b11fe7640fd1044461}{
+LEP\_\-ED\_\-NO\_\-DEFAULT}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5a43f56afaf2ea08b11fe7640fd1044461}
+}]Not default enabled state. \index{LEP\_\-ED\_\-QUIESCE@{LEP\_\-ED\_\-QUIESCE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-ED\_\-QUIESCE@{LEP\_\-ED\_\-QUIESCE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5ad5a793d557427ebc23cd7a685ab569e7}{
+LEP\_\-ED\_\-QUIESCE}
+\label{_o_s_base___l_a_n_endpoint_8h_a99fb83031ce9923c84392b4e92f956b5ad5a793d557427ebc23cd7a685ab569e7}
+}]Indicates that the element is enabled but in a restricted mode. \end{description}
+\end{Desc}
+
+
+
+Definition at line 95 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04}{
+\subsubsection[{"@3}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04}
+CIM -\/ RequestedState \& TransitioningToState. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-RS\_\-UNKNOWN@{LEP\_\-RS\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-UNKNOWN@{LEP\_\-RS\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a305fd2b1a221f387eadcd591dde2f479}{
+LEP\_\-RS\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a305fd2b1a221f387eadcd591dde2f479}
+}]Indicates the last requested state for the element is unknown. \index{LEP\_\-RS\_\-ENABLED@{LEP\_\-RS\_\-ENABLED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-ENABLED@{LEP\_\-RS\_\-ENABLED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a1f5090a2c36ad9e248c2f2462ca6b81d}{
+LEP\_\-RS\_\-ENABLED}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a1f5090a2c36ad9e248c2f2462ca6b81d}
+}]Enabled. \index{LEP\_\-RS\_\-DISABLED@{LEP\_\-RS\_\-DISABLED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-DISABLED@{LEP\_\-RS\_\-DISABLED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a51474f9c38cf7486103c2d7aa0518bbd}{
+LEP\_\-RS\_\-DISABLED}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a51474f9c38cf7486103c2d7aa0518bbd}
+}]Disabled. \index{LEP\_\-RS\_\-SHUT\_\-DOWN@{LEP\_\-RS\_\-SHUT\_\-DOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-SHUT\_\-DOWN@{LEP\_\-RS\_\-SHUT\_\-DOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a92c8ceb4b316e95e7519eb0bad4a0aaa}{
+LEP\_\-RS\_\-SHUT\_\-DOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a92c8ceb4b316e95e7519eb0bad4a0aaa}
+}]Shut down. \index{LEP\_\-RS\_\-NO\_\-CHANGE@{LEP\_\-RS\_\-NO\_\-CHANGE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-NO\_\-CHANGE@{LEP\_\-RS\_\-NO\_\-CHANGE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04aebda740ff3298f7682acc0d767d1be26}{
+LEP\_\-RS\_\-NO\_\-CHANGE}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04aebda740ff3298f7682acc0d767d1be26}
+}]Deprecated. \index{LEP\_\-RS\_\-OFFLINE@{LEP\_\-RS\_\-OFFLINE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-OFFLINE@{LEP\_\-RS\_\-OFFLINE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a3d436eadd639331719c7d767c4f9bac4}{
+LEP\_\-RS\_\-OFFLINE}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a3d436eadd639331719c7d767c4f9bac4}
+}]Change to \char`\"{}Enabled but Offline\char`\"{} status. \index{LEP\_\-RS\_\-TEST@{LEP\_\-RS\_\-TEST}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-TEST@{LEP\_\-RS\_\-TEST}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a15569ea352d602e975551a48840bd851}{
+LEP\_\-RS\_\-TEST}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a15569ea352d602e975551a48840bd851}
+}]Test mode. \index{LEP\_\-RS\_\-DEFERRED@{LEP\_\-RS\_\-DEFERRED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-DEFERRED@{LEP\_\-RS\_\-DEFERRED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a73863b380241373c7566ef4648210e7b}{
+LEP\_\-RS\_\-DEFERRED}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a73863b380241373c7566ef4648210e7b}
+}]Dferred mode. \index{LEP\_\-RS\_\-QUIESCE@{LEP\_\-RS\_\-QUIESCE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-QUIESCE@{LEP\_\-RS\_\-QUIESCE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04acd549d13e2f75a8e6d5d5bc7ae841b98}{
+LEP\_\-RS\_\-QUIESCE}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04acd549d13e2f75a8e6d5d5bc7ae841b98}
+}]Quiesce mode. \index{LEP\_\-RS\_\-REBOOT@{LEP\_\-RS\_\-REBOOT}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-REBOOT@{LEP\_\-RS\_\-REBOOT}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a7fcbffbc1268a826e153493439a70997}{
+LEP\_\-RS\_\-REBOOT}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a7fcbffbc1268a826e153493439a70997}
+}]Reboot refers to doing a \char`\"{}Shut Down\char`\"{} and then moving to an \char`\"{}Enabled\char`\"{} state. \index{LEP\_\-RS\_\-RESET@{LEP\_\-RS\_\-RESET}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-RESET@{LEP\_\-RS\_\-RESET}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a78e7c276617ae1c05239db9edf5af25e}{
+LEP\_\-RS\_\-RESET}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a78e7c276617ae1c05239db9edf5af25e}
+}]Reset indicates that the element is first \char`\"{}Disabled\char`\"{} and then \char`\"{}Enabled\char`\"{}. \index{LEP\_\-RS\_\-NOT\_\-APPLICABLE@{LEP\_\-RS\_\-NOT\_\-APPLICABLE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-RS\_\-NOT\_\-APPLICABLE@{LEP\_\-RS\_\-NOT\_\-APPLICABLE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a66d33d2b2d616a1506977c5b7de56879}{
+LEP\_\-RS\_\-NOT\_\-APPLICABLE}
+\label{_o_s_base___l_a_n_endpoint_8h_abc6126af1d45847bc59afa0aa3216b04a66d33d2b2d616a1506977c5b7de56879}
+}]Not applicable. \end{description}
+\end{Desc}
+
+
+
+Definition at line 116 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06c}{
+\subsubsection[{"@4}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06c}
+CIM -\/ CommunicationStatus. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-CS\_\-UNKNOWN@{LEP\_\-CS\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-CS\_\-UNKNOWN@{LEP\_\-CS\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06cab7e16fa2f7783d9d35736fcd53cdeee7}{
+LEP\_\-CS\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06cab7e16fa2f7783d9d35736fcd53cdeee7}
+}]Indicates the implementation is in general capable of returning this property, but is unable to do so at this time. \index{LEP\_\-CS\_\-NOT\_\-AVAILABLE@{LEP\_\-CS\_\-NOT\_\-AVAILABLE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-CS\_\-NOT\_\-AVAILABLE@{LEP\_\-CS\_\-NOT\_\-AVAILABLE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca5ab1acd36b8d1b2e9f20cd8188bb3b7b}{
+LEP\_\-CS\_\-NOT\_\-AVAILABLE}
+\label{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca5ab1acd36b8d1b2e9f20cd8188bb3b7b}
+}]Indicates that the implementation is capable of returning a value for this property, but not ever for this particular piece of hardware/software. \index{LEP\_\-CS\_\-COMMUNICATION\_\-OK@{LEP\_\-CS\_\-COMMUNICATION\_\-OK}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-CS\_\-COMMUNICATION\_\-OK@{LEP\_\-CS\_\-COMMUNICATION\_\-OK}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca22506e42995f0cd3de94ae0aeaaab773}{
+LEP\_\-CS\_\-COMMUNICATION\_\-OK}
+\label{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca22506e42995f0cd3de94ae0aeaaab773}
+}]Indicates communication is established with the element, but does not convey any quality of service. \index{LEP\_\-CS\_\-LOST\_\-COMMUNICATION@{LEP\_\-CS\_\-LOST\_\-COMMUNICATION}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-CS\_\-LOST\_\-COMMUNICATION@{LEP\_\-CS\_\-LOST\_\-COMMUNICATION}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca24dc988140e59c489b588eb5b6077568}{
+LEP\_\-CS\_\-LOST\_\-COMMUNICATION}
+\label{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca24dc988140e59c489b588eb5b6077568}
+}]Indicates that the Managed Element is known to exist and has been contacted successfully in the past, but is currently unreachable. \index{LEP\_\-CS\_\-NO\_\-CONTACT@{LEP\_\-CS\_\-NO\_\-CONTACT}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-CS\_\-NO\_\-CONTACT@{LEP\_\-CS\_\-NO\_\-CONTACT}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca3debe8437f4f8a7bf3e6ff3775104ffa}{
+LEP\_\-CS\_\-NO\_\-CONTACT}
+\label{_o_s_base___l_a_n_endpoint_8h_adc29c2ff13d900c2f185ee95427fb06ca3debe8437f4f8a7bf3e6ff3775104ffa}
+}]Indicates that the monitoring system has knowledge of this element, but has never been able to establish communications with it. \end{description}
+\end{Desc}
+
+
+
+Definition at line 138 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9e}{
+\subsubsection[{"@5}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9e}
+CIM -\/ DetailedStatus. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-DS\_\-NOT\_\-AVAILABLE@{LEP\_\-DS\_\-NOT\_\-AVAILABLE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-DS\_\-NOT\_\-AVAILABLE@{LEP\_\-DS\_\-NOT\_\-AVAILABLE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea972fe34f4e08e325575b85fc139a9529}{
+LEP\_\-DS\_\-NOT\_\-AVAILABLE}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea972fe34f4e08e325575b85fc139a9529}
+}]Indicates that the implementation is capable of returning a value for this property, but not ever for this particular piece of hardware/software. \index{LEP\_\-DS\_\-NO\_\-ADDITIONAL\_\-INFORMATION@{LEP\_\-DS\_\-NO\_\-ADDITIONAL\_\-INFORMATION}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-DS\_\-NO\_\-ADDITIONAL\_\-INFORMATION@{LEP\_\-DS\_\-NO\_\-ADDITIONAL\_\-INFORMATION}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea584cc4b369a58ef5ef31cafbfb9300d5}{
+LEP\_\-DS\_\-NO\_\-ADDITIONAL\_\-INFORMATION}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea584cc4b369a58ef5ef31cafbfb9300d5}
+}]Indicates that the element is functioning normally as indicated by PrimaryStatus = \char`\"{}OK\char`\"{}. \index{LEP\_\-DS\_\-STRESSED@{LEP\_\-DS\_\-STRESSED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-DS\_\-STRESSED@{LEP\_\-DS\_\-STRESSED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea092d26c31722863711c425bd169b4dc7}{
+LEP\_\-DS\_\-STRESSED}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea092d26c31722863711c425bd169b4dc7}
+}]Indicates that the element is functioning, but needs attention. \index{LEP\_\-DS\_\-PREDICTIVE\_\-FAILURE@{LEP\_\-DS\_\-PREDICTIVE\_\-FAILURE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-DS\_\-PREDICTIVE\_\-FAILURE@{LEP\_\-DS\_\-PREDICTIVE\_\-FAILURE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9eabc24f39a4da09dfa0af58db6ca9eb243}{
+LEP\_\-DS\_\-PREDICTIVE\_\-FAILURE}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9eabc24f39a4da09dfa0af58db6ca9eb243}
+}]Indicates that an element is functioning normally but a failure is predicted in the near future. \index{LEP\_\-DS\_\-NON\_\-RECOVERABLE\_\-ERROR@{LEP\_\-DS\_\-NON\_\-RECOVERABLE\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-DS\_\-NON\_\-RECOVERABLE\_\-ERROR@{LEP\_\-DS\_\-NON\_\-RECOVERABLE\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea48e92dfb412f80b22862367ac19f0fbd}{
+LEP\_\-DS\_\-NON\_\-RECOVERABLE\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea48e92dfb412f80b22862367ac19f0fbd}
+}]Indicates that this element is in an error condition that requires human intervention. \index{LEP\_\-DS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR@{LEP\_\-DS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-DS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR@{LEP\_\-DS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea7baaa33a1a9a1a262b634b4e719a4808}{
+LEP\_\-DS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_a61dadd085c1777f559549e05962b2c9ea7baaa33a1a9a1a262b634b4e719a4808}
+}]Indicates that this element might be \char`\"{}OK\char`\"{} but that another element, on which it is dependent, is in error. \end{description}
+\end{Desc}
+
+
+
+Definition at line 163 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635}{
+\subsubsection[{"@6}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635}
+CIM -\/ HealthState. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-HS\_\-UNKNOWN@{LEP\_\-HS\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-UNKNOWN@{LEP\_\-HS\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a387a776e4eb879a6d0d5c7b3e0472222}{
+LEP\_\-HS\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a387a776e4eb879a6d0d5c7b3e0472222}
+}]The implementation cannot report on HealthState at this time. \index{LEP\_\-HS\_\-OK@{LEP\_\-HS\_\-OK}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-OK@{LEP\_\-HS\_\-OK}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a6136d155b5a5e1e498b67448d4aee1fd}{
+LEP\_\-HS\_\-OK}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a6136d155b5a5e1e498b67448d4aee1fd}
+}]The element is fully functional and is operating within normal operational parameters and without error. \index{LEP\_\-HS\_\-DEGRADED\_\-WARNING@{LEP\_\-HS\_\-DEGRADED\_\-WARNING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-DEGRADED\_\-WARNING@{LEP\_\-HS\_\-DEGRADED\_\-WARNING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a356ada3a088ce075acd96d76ea017f22}{
+LEP\_\-HS\_\-DEGRADED\_\-WARNING}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a356ada3a088ce075acd96d76ea017f22}
+}]The element is in working order and all functionality is provided. However, the element is not working to the best of its abilities. \index{LEP\_\-HS\_\-MINOR\_\-FAILURE@{LEP\_\-HS\_\-MINOR\_\-FAILURE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-MINOR\_\-FAILURE@{LEP\_\-HS\_\-MINOR\_\-FAILURE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a3868d60b0902f179660a360ad01afbb7}{
+LEP\_\-HS\_\-MINOR\_\-FAILURE}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a3868d60b0902f179660a360ad01afbb7}
+}]All functionality is available but some might be degraded. \index{LEP\_\-HS\_\-MAJOR\_\-FAILURE@{LEP\_\-HS\_\-MAJOR\_\-FAILURE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-MAJOR\_\-FAILURE@{LEP\_\-HS\_\-MAJOR\_\-FAILURE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635afee17ba355aed1d9552ddb3dfb7a260f}{
+LEP\_\-HS\_\-MAJOR\_\-FAILURE}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635afee17ba355aed1d9552ddb3dfb7a260f}
+}]The element is failing. It is possible that some or all of the functionality of this component is degraded or not working. \index{LEP\_\-HS\_\-CRITICAL\_\-FAILURE@{LEP\_\-HS\_\-CRITICAL\_\-FAILURE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-CRITICAL\_\-FAILURE@{LEP\_\-HS\_\-CRITICAL\_\-FAILURE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a6b4cb183f7555eeb3b2930367da8b3a0}{
+LEP\_\-HS\_\-CRITICAL\_\-FAILURE}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a6b4cb183f7555eeb3b2930367da8b3a0}
+}]The element is non-\/functional and recovery might not be possible. \index{LEP\_\-HS\_\-NON\_\-RECOVERABLE\_\-ERROR@{LEP\_\-HS\_\-NON\_\-RECOVERABLE\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-HS\_\-NON\_\-RECOVERABLE\_\-ERROR@{LEP\_\-HS\_\-NON\_\-RECOVERABLE\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a4c6e09b1170fa2532a097eb16c541e65}{
+LEP\_\-HS\_\-NON\_\-RECOVERABLE\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_a726ca809ffd3d67ab4b8476646f26635a4c6e09b1170fa2532a097eb16c541e65}
+}]The element has completely failed, and recovery is not possible. \end{description}
+\end{Desc}
+
+
+
+Definition at line 192 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}{
+\subsubsection[{"@7}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}
+CIM -\/ OperatingStatus. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-OS\_\-UNKNOWN@{LEP\_\-OS\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-UNKNOWN@{LEP\_\-OS\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadf7caaa4e025007e5c378ddbd7220281}{
+LEP\_\-OS\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadf7caaa4e025007e5c378ddbd7220281}
+}]Indicates the implementation is in general capable of returning this property, but is unable to do so at this time. \index{LEP\_\-OS\_\-NOT\_\-AVAILABLE@{LEP\_\-OS\_\-NOT\_\-AVAILABLE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-NOT\_\-AVAILABLE@{LEP\_\-OS\_\-NOT\_\-AVAILABLE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da76c6f71f140c1f72ef1209ac9ef9a0a2}{
+LEP\_\-OS\_\-NOT\_\-AVAILABLE}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da76c6f71f140c1f72ef1209ac9ef9a0a2}
+}]Indicates that the implementation is capable of returning a value for this property, but not ever for this particular piece of hardware/software. \index{LEP\_\-OS\_\-SERVICING@{LEP\_\-OS\_\-SERVICING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-SERVICING@{LEP\_\-OS\_\-SERVICING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0ad9506847bc79018a9ea8957a773ade}{
+LEP\_\-OS\_\-SERVICING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0ad9506847bc79018a9ea8957a773ade}
+}]Describes an element being configured, maintained, cleaned, or otherwise administered. \index{LEP\_\-OS\_\-STARTING@{LEP\_\-OS\_\-STARTING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-STARTING@{LEP\_\-OS\_\-STARTING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da767a7ecb1d39f662099f4b90370e6c6b}{
+LEP\_\-OS\_\-STARTING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da767a7ecb1d39f662099f4b90370e6c6b}
+}]Describes an element being initialized. \index{LEP\_\-OS\_\-STOPPING@{LEP\_\-OS\_\-STOPPING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-STOPPING@{LEP\_\-OS\_\-STOPPING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daea9ca6ae0b8180746fb8fb2dfb8d54b0}{
+LEP\_\-OS\_\-STOPPING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daea9ca6ae0b8180746fb8fb2dfb8d54b0}
+}]Describes an element being brought to an orderly stop. \index{LEP\_\-OS\_\-STOPPED@{LEP\_\-OS\_\-STOPPED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-STOPPED@{LEP\_\-OS\_\-STOPPED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadfb5d7b0dcc0f22926737d1cfbe78cca}{
+LEP\_\-OS\_\-STOPPED}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadfb5d7b0dcc0f22926737d1cfbe78cca}
+}]Clean and orderly stop. \index{LEP\_\-OS\_\-ABORTED@{LEP\_\-OS\_\-ABORTED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-ABORTED@{LEP\_\-OS\_\-ABORTED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da980551dbd9ba487c8222d5aa2febbedb}{
+LEP\_\-OS\_\-ABORTED}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da980551dbd9ba487c8222d5aa2febbedb}
+}]Abrupt stop. \index{LEP\_\-OS\_\-DORMANT@{LEP\_\-OS\_\-DORMANT}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-DORMANT@{LEP\_\-OS\_\-DORMANT}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4cdb7624cdb6e5d75124c821b3fe0ed8}{
+LEP\_\-OS\_\-DORMANT}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4cdb7624cdb6e5d75124c821b3fe0ed8}
+}]Indicates that the element is inactive or quiesced. \index{LEP\_\-OS\_\-COMPLETED@{LEP\_\-OS\_\-COMPLETED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-COMPLETED@{LEP\_\-OS\_\-COMPLETED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da505c60ab9e2e4ed14bf2eee587d229cd}{
+LEP\_\-OS\_\-COMPLETED}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da505c60ab9e2e4ed14bf2eee587d229cd}
+}]Indicates that the element has completed its operation. \index{LEP\_\-OS\_\-MIGRATING@{LEP\_\-OS\_\-MIGRATING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-MIGRATING@{LEP\_\-OS\_\-MIGRATING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa99c60a13cbd27a03e27f86527652e58}{
+LEP\_\-OS\_\-MIGRATING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa99c60a13cbd27a03e27f86527652e58}
+}]Element is being moved between host elements. \index{LEP\_\-OS\_\-EMIGRATING@{LEP\_\-OS\_\-EMIGRATING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-EMIGRATING@{LEP\_\-OS\_\-EMIGRATING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da17a820259e82405ff9e03084ca1352a5}{
+LEP\_\-OS\_\-EMIGRATING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da17a820259e82405ff9e03084ca1352a5}
+}]Element is being moved away from host element. \index{LEP\_\-OS\_\-IMMIGRATING@{LEP\_\-OS\_\-IMMIGRATING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-IMMIGRATING@{LEP\_\-OS\_\-IMMIGRATING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da45e5e84035f6f9c52537c9a648254b62}{
+LEP\_\-OS\_\-IMMIGRATING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da45e5e84035f6f9c52537c9a648254b62}
+}]Element is being moved to new host element. \index{LEP\_\-OS\_\-SNAPSHOTTING@{LEP\_\-OS\_\-SNAPSHOTTING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-SNAPSHOTTING@{LEP\_\-OS\_\-SNAPSHOTTING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0760cf0a1cc10c2f2864e0b31a1adc08}{
+LEP\_\-OS\_\-SNAPSHOTTING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da0760cf0a1cc10c2f2864e0b31a1adc08}
+}]\index{LEP\_\-OS\_\-SHUTTING\_\-DOWN@{LEP\_\-OS\_\-SHUTTING\_\-DOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-SHUTTING\_\-DOWN@{LEP\_\-OS\_\-SHUTTING\_\-DOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadbfdd70634cff8619d64af2161f37bcb}{
+LEP\_\-OS\_\-SHUTTING\_\-DOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2dadbfdd70634cff8619d64af2161f37bcb}
+}]Describes an element being brought to an abrupt stop. \index{LEP\_\-OS\_\-IN\_\-TEST@{LEP\_\-OS\_\-IN\_\-TEST}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-IN\_\-TEST@{LEP\_\-OS\_\-IN\_\-TEST}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa3b125add9abb37eb2f72804775038fa}{
+LEP\_\-OS\_\-IN\_\-TEST}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa3b125add9abb37eb2f72804775038fa}
+}]Element is performing test functions. \index{LEP\_\-OS\_\-TRANSITIONING@{LEP\_\-OS\_\-TRANSITIONING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-TRANSITIONING@{LEP\_\-OS\_\-TRANSITIONING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da6b7d2fd53359e68a732c639fdb549f98}{
+LEP\_\-OS\_\-TRANSITIONING}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da6b7d2fd53359e68a732c639fdb549f98}
+}]Describes an element that is between states. \index{LEP\_\-OS\_\-IN\_\-SERVICE@{LEP\_\-OS\_\-IN\_\-SERVICE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OS\_\-IN\_\-SERVICE@{LEP\_\-OS\_\-IN\_\-SERVICE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da26c2a481c50c0f616c7d94f6fb0f1270}{
+LEP\_\-OS\_\-IN\_\-SERVICE}
+\label{_o_s_base___l_a_n_endpoint_8h_a0411cd49bb5b71852cecd93bcbf0ca2da26c2a481c50c0f616c7d94f6fb0f1270}
+}]Describes an element that is in service and operational. \end{description}
+\end{Desc}
+
+
+
+Definition at line 221 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600}{
+\subsubsection[{"@8}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600}
+CIM -\/ OperationalStatus. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-OPS\_\-UNKNOWN@{LEP\_\-OPS\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-UNKNOWN@{LEP\_\-OPS\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a0b66a7f51d6dea5ff1f746d8c7e62608}{
+LEP\_\-OPS\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a0b66a7f51d6dea5ff1f746d8c7e62608}
+}]Unknown operational status. \index{LEP\_\-OPS\_\-OTHER@{LEP\_\-OPS\_\-OTHER}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-OTHER@{LEP\_\-OPS\_\-OTHER}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a58eae3168117990797eb13d5e0f85cda}{
+LEP\_\-OPS\_\-OTHER}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a58eae3168117990797eb13d5e0f85cda}
+}]Other status. \index{LEP\_\-OPS\_\-OK@{LEP\_\-OPS\_\-OK}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-OK@{LEP\_\-OPS\_\-OK}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a80c21beea7f4505c12a289f275c38a66}{
+LEP\_\-OPS\_\-OK}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a80c21beea7f4505c12a289f275c38a66}
+}]The element is fully functional and is operating within normal operational. \index{LEP\_\-OPS\_\-DEGRADED@{LEP\_\-OPS\_\-DEGRADED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-DEGRADED@{LEP\_\-OPS\_\-DEGRADED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a3f75f79a8bcb16a9975ba0daa98b537e}{
+LEP\_\-OPS\_\-DEGRADED}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a3f75f79a8bcb16a9975ba0daa98b537e}
+}]The element is in working order and all functionality is provided. However, the element is not working to the best of its abilities. \index{LEP\_\-OPS\_\-STRESSED@{LEP\_\-OPS\_\-STRESSED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-STRESSED@{LEP\_\-OPS\_\-STRESSED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600aa6a1f6f69e8198a1a9e9daf1a800dd34}{
+LEP\_\-OPS\_\-STRESSED}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600aa6a1f6f69e8198a1a9e9daf1a800dd34}
+}]The element is functioning, but needs attention. \index{LEP\_\-OPS\_\-PREDICTIVE\_\-FAILURE@{LEP\_\-OPS\_\-PREDICTIVE\_\-FAILURE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-PREDICTIVE\_\-FAILURE@{LEP\_\-OPS\_\-PREDICTIVE\_\-FAILURE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ac345bfacbee25ec06fcb0a2425f39295}{
+LEP\_\-OPS\_\-PREDICTIVE\_\-FAILURE}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ac345bfacbee25ec06fcb0a2425f39295}
+}]Element is functioning nominally but predicting a failure in the near future. \index{LEP\_\-OPS\_\-ERROR@{LEP\_\-OPS\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-ERROR@{LEP\_\-OPS\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600aae395a4604b43113e5e536f4f850a67e}{
+LEP\_\-OPS\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600aae395a4604b43113e5e536f4f850a67e}
+}]In error state. \index{LEP\_\-OPS\_\-NON\_\-RECOVERABLE\_\-ERROR@{LEP\_\-OPS\_\-NON\_\-RECOVERABLE\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-NON\_\-RECOVERABLE\_\-ERROR@{LEP\_\-OPS\_\-NON\_\-RECOVERABLE\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a8f4a3a564d0d8b2f06c1275e7af40aef}{
+LEP\_\-OPS\_\-NON\_\-RECOVERABLE\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a8f4a3a564d0d8b2f06c1275e7af40aef}
+}]Indicates that this element is in an error condition that requires human intervention. \index{LEP\_\-OPS\_\-STARTING@{LEP\_\-OPS\_\-STARTING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-STARTING@{LEP\_\-OPS\_\-STARTING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a83ae4295cbf5fbe7a0efa52dab3d2732}{
+LEP\_\-OPS\_\-STARTING}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a83ae4295cbf5fbe7a0efa52dab3d2732}
+}]Indicates that the element is in the process of going to an Enabled state. \index{LEP\_\-OPS\_\-STOPPING@{LEP\_\-OPS\_\-STOPPING}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-STOPPING@{LEP\_\-OPS\_\-STOPPING}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a95536cab5f447f2d40245ff24d2c0cc9}{
+LEP\_\-OPS\_\-STOPPING}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a95536cab5f447f2d40245ff24d2c0cc9}
+}]Describes an element being brought to an orderly stop. \index{LEP\_\-OPS\_\-STOPPED@{LEP\_\-OPS\_\-STOPPED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-STOPPED@{LEP\_\-OPS\_\-STOPPED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ad8f27442aa0784082d21c9772b1e2589}{
+LEP\_\-OPS\_\-STOPPED}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ad8f27442aa0784082d21c9772b1e2589}
+}]Clean and orderly stop. \index{LEP\_\-OPS\_\-IN\_\-SERVICE@{LEP\_\-OPS\_\-IN\_\-SERVICE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-IN\_\-SERVICE@{LEP\_\-OPS\_\-IN\_\-SERVICE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a874417046524407cf78e52788d2423a4}{
+LEP\_\-OPS\_\-IN\_\-SERVICE}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a874417046524407cf78e52788d2423a4}
+}]Element being configured, maintained, cleaned, or otherwise administered. \index{LEP\_\-OPS\_\-NO\_\-CONTACT@{LEP\_\-OPS\_\-NO\_\-CONTACT}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-NO\_\-CONTACT@{LEP\_\-OPS\_\-NO\_\-CONTACT}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a443214c72afa62732b9ae2bc00014a57}{
+LEP\_\-OPS\_\-NO\_\-CONTACT}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a443214c72afa62732b9ae2bc00014a57}
+}]The monitoring system has knowledge of this element, but has never been able to establish communications with it. \index{LEP\_\-OPS\_\-LOST\_\-COMMUNICATION@{LEP\_\-OPS\_\-LOST\_\-COMMUNICATION}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-LOST\_\-COMMUNICATION@{LEP\_\-OPS\_\-LOST\_\-COMMUNICATION}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a1a3a5065da3c38c6ea9c4928251f6169}{
+LEP\_\-OPS\_\-LOST\_\-COMMUNICATION}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a1a3a5065da3c38c6ea9c4928251f6169}
+}]The ManagedSystem Element is known to exist and has been contacted successfully in the past, but is currently unreachable. \index{LEP\_\-OPS\_\-ABORTED@{LEP\_\-OPS\_\-ABORTED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-ABORTED@{LEP\_\-OPS\_\-ABORTED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a4af491e1927e84d0a7de09e5b2490b8a}{
+LEP\_\-OPS\_\-ABORTED}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a4af491e1927e84d0a7de09e5b2490b8a}
+}]Abrupt stop. \index{LEP\_\-OPS\_\-DORMANT@{LEP\_\-OPS\_\-DORMANT}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-DORMANT@{LEP\_\-OPS\_\-DORMANT}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a46b071288ff1824aedf3a3d3e59c8de6}{
+LEP\_\-OPS\_\-DORMANT}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a46b071288ff1824aedf3a3d3e59c8de6}
+}]The element is inactive or quiesced. \index{LEP\_\-OPS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR@{LEP\_\-OPS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR@{LEP\_\-OPS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ae3e63259f95277aca2fb85f581f27624}{
+LEP\_\-OPS\_\-SUPPORTING\_\-ENTITY\_\-IN\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600ae3e63259f95277aca2fb85f581f27624}
+}]This element might be \char`\"{}OK\char`\"{} but that another element, on which it is dependent, is in error. \index{LEP\_\-OPS\_\-COMPLETED@{LEP\_\-OPS\_\-COMPLETED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-COMPLETED@{LEP\_\-OPS\_\-COMPLETED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a076b4fa53a1e3c864cb927156af87c4f}{
+LEP\_\-OPS\_\-COMPLETED}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a076b4fa53a1e3c864cb927156af87c4f}
+}]Tthe element has completed its operation. \index{LEP\_\-OPS\_\-POWER\_\-MODE@{LEP\_\-OPS\_\-POWER\_\-MODE}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-OPS\_\-POWER\_\-MODE@{LEP\_\-OPS\_\-POWER\_\-MODE}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a74e7ffdcfefad1701cccd4765817cc38}{
+LEP\_\-OPS\_\-POWER\_\-MODE}
+\label{_o_s_base___l_a_n_endpoint_8h_abed82baf7f470b522273a3e37c24c600a74e7ffdcfefad1701cccd4765817cc38}
+}]The element has additional power model information. \end{description}
+\end{Desc}
+
+
+
+Definition at line 260 of file OSBase\_\-LANEndpoint.h.\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}{
+\subsubsection[{"@9}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}
+CIM -\/ PrimaryStatus. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{LEP\_\-PS\_\-UNKNOWN@{LEP\_\-PS\_\-UNKNOWN}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-PS\_\-UNKNOWN@{LEP\_\-PS\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a48cf58fbd37ec5ea6a332e461b0c945b}{
+LEP\_\-PS\_\-UNKNOWN}
+\label{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a48cf58fbd37ec5ea6a332e461b0c945b}
+}]Unknown primary status. \index{LEP\_\-PS\_\-OK@{LEP\_\-PS\_\-OK}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-PS\_\-OK@{LEP\_\-PS\_\-OK}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a6a6b43dd7cbbee9b496e89008ccc5cfd}{
+LEP\_\-PS\_\-OK}
+\label{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a6a6b43dd7cbbee9b496e89008ccc5cfd}
+}]The element is fully functional and is operating within normal operational. \index{LEP\_\-PS\_\-DEGRADED@{LEP\_\-PS\_\-DEGRADED}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-PS\_\-DEGRADED@{LEP\_\-PS\_\-DEGRADED}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a673c704893d0ab20a6c0030fc5d12916}{
+LEP\_\-PS\_\-DEGRADED}
+\label{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a673c704893d0ab20a6c0030fc5d12916}
+}]The element is in working order and all functionality is provided. However, the element is not working to the best of its abilities. \index{LEP\_\-PS\_\-ERROR@{LEP\_\-PS\_\-ERROR}!OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!LEP\_\-PS\_\-ERROR@{LEP\_\-PS\_\-ERROR}}\item[{\em 
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a939e58a3d0ba4a299cdf05582567d50a}{
+LEP\_\-PS\_\-ERROR}
+\label{_o_s_base___l_a_n_endpoint_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a939e58a3d0ba4a299cdf05582567d50a}
+}]In error state. \end{description}
+\end{Desc}
+
+
+
+Definition at line 313 of file OSBase\_\-LANEndpoint.h.
+
+\subsection{Function Documentation}
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_ab96e1416278e303b6eeb6fe2feb0af82}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!changeLinkOPState@{changeLinkOPState}}
+\index{changeLinkOPState@{changeLinkOPState}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{changeLinkOPState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short changeLinkOPState (const char $\ast$ {\em linkName}, \/  unsigned short {\em enabledState}, \/  unsigned long {\em timeoutPeriod})}}
+\label{_o_s_base___l_a_n_endpoint_8h_ab96e1416278e303b6eeb6fe2feb0af82}
+Used to set device status. 
+\begin{DoxyParams}{Parameters}
+\item[{\em linkName}]\mbox{[}in\mbox{]} link name. \item[{\em enabledState}]\mbox{[}in\mbox{]} desired state for the device. \item[{\em timeoutPeriod}]\mbox{[}in\mbox{]} maximum amount of time that the client expects the transition to the new state to take. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 = Completed with No Error 1 = Not Supported 2 = Unknown or Unspecified Error 3 = Cannot complete within Timeout Period 4 = Failed 5 = Invalid Parameter 6 = In Use 7..4095 = DMTF Reserved 4096 = Method Parameters Checked -\/ Job Started 4097 = Invalid State Transition 4098 = Use of Timeout Parameter Not Supported 4099 = Busy 4100..32767 = Method Reserved 32768..65535 = Vendor Specific 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0ff3f1739478cd89305b5dbb5240aaad}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!freeLANEndpointList@{freeLANEndpointList}}
+\index{freeLANEndpointList@{freeLANEndpointList}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{freeLANEndpointList}]{\setlength{\rightskip}{0pt plus 5cm}int freeLANEndpointList (struct {\bf LANEndpointList} $\ast$ {\em lptr})}}
+\label{_o_s_base___l_a_n_endpoint_8h_a0ff3f1739478cd89305b5dbb5240aaad}
+This function is used to clean a \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lptr}]\mbox{[}in\mbox{]} list to be cleaned. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 536 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a50feca5140a2101662a937440d957888}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!getALLLANEndpoint@{getALLLANEndpoint}}
+\index{getALLLANEndpoint@{getALLLANEndpoint}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{getALLLANEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}int getALLLANEndpoint (struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList})}}
+\label{_o_s_base___l_a_n_endpoint_8h_a50feca5140a2101662a937440d957888}
+This functions is used to get whole LANEndpoints available in the system. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lanEPList}]\mbox{[}out\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} struct to be filled. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+\hypertarget{_o_s_base___l_a_n_endpoint_8h_a0e24fae564ca4e06b1a7e8ce7c246ce5}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!getLANEndpoint@{getLANEndpoint}}
+\index{getLANEndpoint@{getLANEndpoint}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{getLANEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}int getLANEndpoint (struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList}, \/  const char $\ast$ {\em linkName})}}
+\label{_o_s_base___l_a_n_endpoint_8h_a0e24fae564ca4e06b1a7e8ce7c246ce5}
+This functions is used to get a route base on specified InstanceID. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lanEPList}]\mbox{[}out\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} struct to be filled. \item[{\em linkName}]\mbox{[}in\mbox{]} link ifname. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a93cd8187af6d71b81bbdcb57a1fc91a7}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!getLANEndpoints@{getLANEndpoints}}
+\index{getLANEndpoints@{getLANEndpoints}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{getLANEndpoints}]{\setlength{\rightskip}{0pt plus 5cm}int getLANEndpoints (struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList}, \/  const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___l_a_n_endpoint_8h_a93cd8187af6d71b81bbdcb57a1fc91a7}
+This functions is used to get a list of LANEndpoints based on \hyperlink{structnl_link_info}{nlLinkInfo} filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lanEPList}]\mbox{[}out\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} struct to be filled. \item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link filter info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a06810d11e411c5ed06363cbf22d6ffb7}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!nlInfoTOLanEP@{nlInfoTOLanEP}}
+\index{nlInfoTOLanEP@{nlInfoTOLanEP}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{nlInfoTOLanEP}]{\setlength{\rightskip}{0pt plus 5cm}int nlInfoTOLanEP (struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo}, \/  struct {\bf LANEndpoint} $\ast$ {\em lanEP})}}
+\label{_o_s_base___l_a_n_endpoint_8h_a06810d11e411c5ed06363cbf22d6ffb7}
+Converts a \hyperlink{structnl_link_info}{nlLinkInfo} structure to \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} structure. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} structure to be converted. \item[{\em lanEP}]\mbox{[}out\mbox{]} converted structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 345 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8h_a1cfc38a0229aa40f4f9bb549de1a5edc}{
+\index{OSBase\_\-LANEndpoint.h@{OSBase\_\-LANEndpoint.h}!nlListTOLanEPList@{nlListTOLanEPList}}
+\index{nlListTOLanEPList@{nlListTOLanEPList}!OSBase_LANEndpoint.h@{OSBase\_\-LANEndpoint.h}}
+\subsubsection[{nlListTOLanEPList}]{\setlength{\rightskip}{0pt plus 5cm}int nlListTOLanEPList (struct {\bf nlLinkInfoList} $\ast$$\ast$ {\em nlLinkInfoList}, \/  struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList})}}
+\label{_o_s_base___l_a_n_endpoint_8h_a1cfc38a0229aa40f4f9bb549de1a5edc}
+Converts a \hyperlink{structnl_link_info_list}{nlLinkInfoList} structure to \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} strucutre. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}in\mbox{]} list to be converted. \item[{\em lanEPList}]\mbox{[}out\mbox{]} converted list. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 289 of file OSBase\_\-LANEndpoint.c.

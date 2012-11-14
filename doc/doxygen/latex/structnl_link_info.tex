@@ -1,0 +1,184 @@
+\hypertarget{structnl_link_info}{
+\section{nlLinkInfo Struct Reference}
+\label{structnl_link_info}\index{nlLinkInfo@{nlLinkInfo}}
+}
+
+
+{\ttfamily \#include $<$OSBase\_\-Netlink.h$>$}\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{structnl_link_info_a6f1c3e3a98f91eb22d3bbb7ea4828c86}{family}
+\item 
+unsigned short \hyperlink{structnl_link_info_aa929142c5ddf34cf0915c97a617a1a63}{type}
+\item 
+int \hyperlink{structnl_link_info_a750b5d744c39a06bfb13e6eb010e35d0}{index}
+\item 
+unsigned int \hyperlink{structnl_link_info_ac92588540e8c1d014a08cd8a45462b19}{flags}
+\item 
+unsigned int \hyperlink{structnl_link_info_adda9fdcf309da55ca70fe8fa44228669}{change}
+\item 
+unsigned char \hyperlink{structnl_link_info_a47f1d37ed4036597b5349643cdf0ee95}{address} \mbox{[}32\mbox{]}
+\item 
+int \hyperlink{structnl_link_info_a40ac8032a304ec8c7e75994741c59674}{addressLen}
+\item 
+unsigned char \hyperlink{structnl_link_info_a67a214db57ca3f0cf9379b5a2d7f5af5}{broadcast} \mbox{[}32\mbox{]}
+\item 
+int \hyperlink{structnl_link_info_a7be8940ebbe48647e242987fef72d3bd}{broadcastLen}
+\item 
+char \hyperlink{structnl_link_info_ac7b430acaa92a7a26fbcdad47d2efc20}{ifname} \mbox{[}IFNAMSIZ\mbox{]}
+\item 
+unsigned int \hyperlink{structnl_link_info_a5ac894ab93685970e62fbf6756f38309}{mtu}
+\item 
+int \hyperlink{structnl_link_info_af203a1810ce3b44e2b2219c63e0ceff9}{link}
+\item 
+char \hyperlink{structnl_link_info_a94e47ef065f1ff000d841f20ec8e197f}{qdisc} \mbox{[}64\mbox{]}
+\item 
+struct net\_\-device\_\-stats \hyperlink{structnl_link_info_a28d1784acc4686245082b95c528ae50b}{stats}
+\item 
+int \hyperlink{structnl_link_info_a6c449a25cfc076fbbea4f640804e5fe1}{txqlen}
+\item 
+struct ifmap \hyperlink{structnl_link_info_a042d45afd6edfb21fcfc73235b695caa}{map}
+\item 
+unsigned char \hyperlink{structnl_link_info_a6389aebefc5f2ef983c0fccfbdb0e042}{operstate}
+\item 
+unsigned char \hyperlink{structnl_link_info_ac505421ab0f5f1cf48029ff5bd30554c}{linkmode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information of a single link. 
+
+Definition at line 243 of file OSBase\_\-Netlink.h.
+
+\subsection{Field Documentation}
+\hypertarget{structnl_link_info_a47f1d37ed4036597b5349643cdf0ee95}{
+\index{nlLinkInfo@{nlLinkInfo}!address@{address}}
+\index{address@{address}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf address}\mbox{[}32\mbox{]}}}
+\label{structnl_link_info_a47f1d37ed4036597b5349643cdf0ee95}
+Interface L2 address (IFLA\_\-ADDRESS). 
+
+Definition at line 254 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a40ac8032a304ec8c7e75994741c59674}{
+\index{nlLinkInfo@{nlLinkInfo}!addressLen@{addressLen}}
+\index{addressLen@{addressLen}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{addressLen}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf addressLen}}}
+\label{structnl_link_info_a40ac8032a304ec8c7e75994741c59674}
+Used to store the length of the address. 
+
+Definition at line 256 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a67a214db57ca3f0cf9379b5a2d7f5af5}{
+\index{nlLinkInfo@{nlLinkInfo}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{broadcast}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf broadcast}\mbox{[}32\mbox{]}}}
+\label{structnl_link_info_a67a214db57ca3f0cf9379b5a2d7f5af5}
+L2 broadcast address (IFLA\_\-BROADCAST). 
+
+Definition at line 258 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a7be8940ebbe48647e242987fef72d3bd}{
+\index{nlLinkInfo@{nlLinkInfo}!broadcastLen@{broadcastLen}}
+\index{broadcastLen@{broadcastLen}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{broadcastLen}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf broadcastLen}}}
+\label{structnl_link_info_a7be8940ebbe48647e242987fef72d3bd}
+Used to store the length of the broadcast. 
+
+Definition at line 260 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_adda9fdcf309da55ca70fe8fa44228669}{
+\index{nlLinkInfo@{nlLinkInfo}!change@{change}}
+\index{change@{change}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{change}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf change}}}
+\label{structnl_link_info_adda9fdcf309da55ca70fe8fa44228669}
+Reserved for future use. 
+
+Definition at line 252 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a6f1c3e3a98f91eb22d3bbb7ea4828c86}{
+\index{nlLinkInfo@{nlLinkInfo}!family@{family}}
+\index{family@{family}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{family}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf family}}}
+\label{structnl_link_info_a6f1c3e3a98f91eb22d3bbb7ea4828c86}
+AF\_\-UNSPEC (from ifinfomsg). 
+
+Definition at line 244 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_ac92588540e8c1d014a08cd8a45462b19}{
+\index{nlLinkInfo@{nlLinkInfo}!flags@{flags}}
+\index{flags@{flags}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf flags}}}
+\label{structnl_link_info_ac92588540e8c1d014a08cd8a45462b19}
+Device flags (see netdevice(7)). 
+
+Definition at line 250 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_ac7b430acaa92a7a26fbcdad47d2efc20}{
+\index{nlLinkInfo@{nlLinkInfo}!ifname@{ifname}}
+\index{ifname@{ifname}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{ifname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf ifname}\mbox{[}IFNAMSIZ\mbox{]}}}
+\label{structnl_link_info_ac7b430acaa92a7a26fbcdad47d2efc20}
+Device name (IFLA\_\-IFNAME). 
+
+Definition at line 262 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a750b5d744c39a06bfb13e6eb010e35d0}{
+\index{nlLinkInfo@{nlLinkInfo}!index@{index}}
+\index{index@{index}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf index}}}
+\label{structnl_link_info_a750b5d744c39a06bfb13e6eb010e35d0}
+Unique interface index. 
+
+Definition at line 248 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_af203a1810ce3b44e2b2219c63e0ceff9}{
+\index{nlLinkInfo@{nlLinkInfo}!link@{link}}
+\index{link@{link}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf link}}}
+\label{structnl_link_info_af203a1810ce3b44e2b2219c63e0ceff9}
+Link type (IFLA\_\-LINK). 
+
+Definition at line 266 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_ac505421ab0f5f1cf48029ff5bd30554c}{
+\index{nlLinkInfo@{nlLinkInfo}!linkmode@{linkmode}}
+\index{linkmode@{linkmode}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{linkmode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf linkmode}}}
+\label{structnl_link_info_ac505421ab0f5f1cf48029ff5bd30554c}
+Link mode. 
+
+Definition at line 283 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a042d45afd6edfb21fcfc73235b695caa}{
+\index{nlLinkInfo@{nlLinkInfo}!map@{map}}
+\index{map@{map}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}struct ifmap {\bf map}\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}
+\label{structnl_link_info_a042d45afd6edfb21fcfc73235b695caa}
+Device mapping structure. 
+
+Definition at line 278 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a5ac894ab93685970e62fbf6756f38309}{
+\index{nlLinkInfo@{nlLinkInfo}!mtu@{mtu}}
+\index{mtu@{mtu}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{mtu}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf mtu}}}
+\label{structnl_link_info_a5ac894ab93685970e62fbf6756f38309}
+MTU of the device (IFLA\_\-MTU). 
+
+Definition at line 264 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a6389aebefc5f2ef983c0fccfbdb0e042}{
+\index{nlLinkInfo@{nlLinkInfo}!operstate@{operstate}}
+\index{operstate@{operstate}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{operstate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf operstate}}}
+\label{structnl_link_info_a6389aebefc5f2ef983c0fccfbdb0e042}
+Operational state (rfc 2863). 
+
+Definition at line 281 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a94e47ef065f1ff000d841f20ec8e197f}{
+\index{nlLinkInfo@{nlLinkInfo}!qdisc@{qdisc}}
+\index{qdisc@{qdisc}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{qdisc}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf qdisc}\mbox{[}64\mbox{]}}}
+\label{structnl_link_info_a94e47ef065f1ff000d841f20ec8e197f}
+Queueing discipline (IFLA\_\-QDISC). 
+
+Definition at line 268 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a28d1784acc4686245082b95c528ae50b}{
+\index{nlLinkInfo@{nlLinkInfo}!stats@{stats}}
+\index{stats@{stats}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}struct net\_\-device\_\-stats {\bf stats}\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}
+\label{structnl_link_info_a28d1784acc4686245082b95c528ae50b}
+Interface statistics (IFLA\_\-STATS). 
+
+Definition at line 270 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_a6c449a25cfc076fbbea4f640804e5fe1}{
+\index{nlLinkInfo@{nlLinkInfo}!txqlen@{txqlen}}
+\index{txqlen@{txqlen}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{txqlen}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf txqlen}}}
+\label{structnl_link_info_a6c449a25cfc076fbbea4f640804e5fe1}
+Tx queue length. 
+
+Definition at line 277 of file OSBase\_\-Netlink.h.\hypertarget{structnl_link_info_aa929142c5ddf34cf0915c97a617a1a63}{
+\index{nlLinkInfo@{nlLinkInfo}!type@{type}}
+\index{type@{type}!nlLinkInfo@{nlLinkInfo}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf type}}}
+\label{structnl_link_info_aa929142c5ddf34cf0915c97a617a1a63}
+Link type -\/ ARPHRD\_\-$\ast$ (from ifinfomsg). 
+
+Definition at line 246 of file OSBase\_\-Netlink.h.
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/\hyperlink{_o_s_base___netlink_8h}{OSBase\_\-Netlink.h}\end{DoxyCompactItemize}

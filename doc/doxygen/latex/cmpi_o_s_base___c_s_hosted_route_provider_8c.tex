@@ -1,0 +1,241 @@
+\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-CSHostedRouteProvider.c File Reference}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-CSHostedRouteProvider.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-CSHostedRouteProvider.c}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpift.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpimacs.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-Common.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a92f4e6b20e7c90e14a75335d96bb9620}{OSBase\_\-CSHostedRouteProviderCleanup} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_ab26474e5f530090b3caddf08fdbf5c04}{OSBase\_\-CSHostedRouteProviderEnumInstanceNames} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_af232befb8e69798e0a66b8cd4eab022b}{OSBase\_\-CSHostedRouteProviderEnumInstances} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_ae9b2ca40d6d648b7a2ed238a3a68bbb4}{OSBase\_\-CSHostedRouteProviderGetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_ae8bf5d6ef2df841b56a1518d16c4068a}{OSBase\_\-CSHostedRouteProviderCreateInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a853b12830299eaaed9ee6a79159490f6}{OSBase\_\-CSHostedRouteProviderSetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a52690eeeb849ee5a105c0f9c0523561c}{OSBase\_\-CSHostedRouteProviderDeleteInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a69cb9bf69e53505749b4e69ecb60bbfc}{OSBase\_\-CSHostedRouteProviderExecQuery} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$lang, const char $\ast$query)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_aa76989d3e0c37259b71efb095d27af95}{OSBase\_\-CSHostedRouteProviderAssociationCleanup} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_aa7e9aeaa961f52893dad11b05619330b}{OSBase\_\-CSHostedRouteProviderAssociators} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$resultClass, const char $\ast$role, const char $\ast$resultRole, const char $\ast$$\ast$propertyList)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a32af202ac72f4bb777bc1cbe092a86a9}{OSBase\_\-CSHostedRouteProviderAssociatorNames} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$resultClass, const char $\ast$role, const char $\ast$resultRole)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_abc15dc13a0afe59e91bdcfe380a6dbe3}{OSBase\_\-CSHostedRouteProviderReferences} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$role, const char $\ast$$\ast$propertyList)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_aafa8c4e01fd0b52b491193dcf9a13638}{OSBase\_\-CSHostedRouteProviderReferenceNames} (CMPIAssociationMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$assocClass, const char $\ast$role)
+\item 
+\hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a327fa2fe6ce10d502bb0058f4ed3945c}{CMInstanceMIStub} (OSBase\_\-CSHostedRouteProvider, OSBase\_\-CSHostedRouteProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\item 
+\hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a6019a4ca589db414192c21df461b2bd0}{CMAssociationMIStub} (OSBase\_\-CSHostedRouteProvider, OSBase\_\-CSHostedRouteProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const CMPIBroker $\ast$ \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_af2a15829b64ca3acb0e5b158763519f4}{\_\-ClassName} = \char`\"{}Linux\_\-CSHostedRoute\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_ad69220253069462d0669e74773d37c7f}{\_\-RefLeft} = \char`\"{}Antecedent\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_abd1d1c92a7ae081a0ab50b2aefb36ab7}{\_\-RefRight} = \char`\"{}Dependent\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a9267b302bfb26b82f1a5491376b59f96}{\_\-RefLeftClass} = \char`\"{}Linux\_\-ComputerSystem\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_a57a3a7575a7ad6e9f508979998e43871}{\_\-RefRightClass} = \char`\"{}CIM\_\-NextHopRoute\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c}{cmpiOSBase\_\-CSHostedRouteProvider.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+Linux\_\-CSHostedRoute association class provider implementation. The following CMPI instance methods are supported:
+\begin{DoxyItemize}
+\item Cleanup
+\item EnumerateInstanceNames
+\item EnumerateInstances
+\item GetInstance
+\item AssociationCleanup
+\item Associators
+\item AssociatorNames
+\item References
+\item ReferenceNames
+\end{DoxyItemize}
+\end{DoxyParagraph}
+Interface Type : Common Manageability Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___c_s_hosted_route_provider_8c_source}{cmpiOSBase\_\-CSHostedRouteProvider.c}.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a6019a4ca589db414192c21df461b2bd0}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!CMAssociationMIStub@{CMAssociationMIStub}}
+\index{CMAssociationMIStub@{CMAssociationMIStub}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{CMAssociationMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMAssociationMIStub (OSBase\_\-CSHostedRouteProvider, \/  OSBase\_\-CSHostedRouteProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a6019a4ca589db414192c21df461b2bd0}
+\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a327fa2fe6ce10d502bb0058f4ed3945c}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!CMInstanceMIStub@{CMInstanceMIStub}}
+\index{CMInstanceMIStub@{CMInstanceMIStub}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{CMInstanceMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMInstanceMIStub (OSBase\_\-CSHostedRouteProvider, \/  OSBase\_\-CSHostedRouteProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a327fa2fe6ce10d502bb0058f4ed3945c}
+\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_aa76989d3e0c37259b71efb095d27af95}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderAssociationCleanup@{OSBase\_\-CSHostedRouteProviderAssociationCleanup}}
+\index{OSBase\_\-CSHostedRouteProviderAssociationCleanup@{OSBase\_\-CSHostedRouteProviderAssociationCleanup}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderAssociationCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderAssociationCleanup (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_aa76989d3e0c37259b71efb095d27af95}
+
+
+Definition at line 299 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a32af202ac72f4bb777bc1cbe092a86a9}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderAssociatorNames@{OSBase\_\-CSHostedRouteProviderAssociatorNames}}
+\index{OSBase\_\-CSHostedRouteProviderAssociatorNames@{OSBase\_\-CSHostedRouteProviderAssociatorNames}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderAssociatorNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderAssociatorNames (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em resultClass}, \/  const char $\ast$ {\em role}, \/  const char $\ast$ {\em resultRole})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a32af202ac72f4bb777bc1cbe092a86a9}
+
+
+Definition at line 431 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_aa7e9aeaa961f52893dad11b05619330b}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderAssociators@{OSBase\_\-CSHostedRouteProviderAssociators}}
+\index{OSBase\_\-CSHostedRouteProviderAssociators@{OSBase\_\-CSHostedRouteProviderAssociators}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderAssociators}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderAssociators (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em resultClass}, \/  const char $\ast$ {\em role}, \/  const char $\ast$ {\em resultRole}, \/  const char $\ast$$\ast$ {\em propertyList})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_aa7e9aeaa961f52893dad11b05619330b}
+
+
+Definition at line 312 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a92f4e6b20e7c90e14a75335d96bb9620}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderCleanup@{OSBase\_\-CSHostedRouteProviderCleanup}}
+\index{OSBase\_\-CSHostedRouteProviderCleanup@{OSBase\_\-CSHostedRouteProviderCleanup}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderCleanup (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a92f4e6b20e7c90e14a75335d96bb9620}
+
+
+Definition at line 85 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_ae8bf5d6ef2df841b56a1518d16c4068a}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderCreateInstance@{OSBase\_\-CSHostedRouteProviderCreateInstance}}
+\index{OSBase\_\-CSHostedRouteProviderCreateInstance@{OSBase\_\-CSHostedRouteProviderCreateInstance}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderCreateInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderCreateInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_ae8bf5d6ef2df841b56a1518d16c4068a}
+
+
+Definition at line 210 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a52690eeeb849ee5a105c0f9c0523561c}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderDeleteInstance@{OSBase\_\-CSHostedRouteProviderDeleteInstance}}
+\index{OSBase\_\-CSHostedRouteProviderDeleteInstance@{OSBase\_\-CSHostedRouteProviderDeleteInstance}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderDeleteInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderDeleteInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a52690eeeb849ee5a105c0f9c0523561c}
+
+
+Definition at line 252 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_ab26474e5f530090b3caddf08fdbf5c04}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderEnumInstanceNames@{OSBase\_\-CSHostedRouteProviderEnumInstanceNames}}
+\index{OSBase\_\-CSHostedRouteProviderEnumInstanceNames@{OSBase\_\-CSHostedRouteProviderEnumInstanceNames}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderEnumInstanceNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderEnumInstanceNames (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_ab26474e5f530090b3caddf08fdbf5c04}
+
+
+Definition at line 98 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_af232befb8e69798e0a66b8cd4eab022b}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderEnumInstances@{OSBase\_\-CSHostedRouteProviderEnumInstances}}
+\index{OSBase\_\-CSHostedRouteProviderEnumInstances@{OSBase\_\-CSHostedRouteProviderEnumInstances}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderEnumInstances}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderEnumInstances (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_af232befb8e69798e0a66b8cd4eab022b}
+
+
+Definition at line 135 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a69cb9bf69e53505749b4e69ecb60bbfc}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderExecQuery@{OSBase\_\-CSHostedRouteProviderExecQuery}}
+\index{OSBase\_\-CSHostedRouteProviderExecQuery@{OSBase\_\-CSHostedRouteProviderExecQuery}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderExecQuery}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderExecQuery (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em lang}, \/  const char $\ast$ {\em query})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a69cb9bf69e53505749b4e69ecb60bbfc}
+
+
+Definition at line 271 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_ae9b2ca40d6d648b7a2ed238a3a68bbb4}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderGetInstance@{OSBase\_\-CSHostedRouteProviderGetInstance}}
+\index{OSBase\_\-CSHostedRouteProviderGetInstance@{OSBase\_\-CSHostedRouteProviderGetInstance}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderGetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderGetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_ae9b2ca40d6d648b7a2ed238a3a68bbb4}
+
+
+Definition at line 173 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_aafa8c4e01fd0b52b491193dcf9a13638}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderReferenceNames@{OSBase\_\-CSHostedRouteProviderReferenceNames}}
+\index{OSBase\_\-CSHostedRouteProviderReferenceNames@{OSBase\_\-CSHostedRouteProviderReferenceNames}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderReferenceNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderReferenceNames (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em role})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_aafa8c4e01fd0b52b491193dcf9a13638}
+
+
+Definition at line 629 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_abc15dc13a0afe59e91bdcfe380a6dbe3}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderReferences@{OSBase\_\-CSHostedRouteProviderReferences}}
+\index{OSBase\_\-CSHostedRouteProviderReferences@{OSBase\_\-CSHostedRouteProviderReferences}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderReferences}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderReferences (CMPIAssociationMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$ {\em assocClass}, \/  const char $\ast$ {\em role}, \/  const char $\ast$$\ast$ {\em propertyList})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_abc15dc13a0afe59e91bdcfe380a6dbe3}
+
+
+Definition at line 550 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a853b12830299eaaed9ee6a79159490f6}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!OSBase\_\-CSHostedRouteProviderSetInstance@{OSBase\_\-CSHostedRouteProviderSetInstance}}
+\index{OSBase\_\-CSHostedRouteProviderSetInstance@{OSBase\_\-CSHostedRouteProviderSetInstance}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{OSBase\_\-CSHostedRouteProviderSetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-CSHostedRouteProviderSetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a853b12830299eaaed9ee6a79159490f6}
+
+
+Definition at line 230 of file cmpiOSBase\_\-CSHostedRouteProvider.c.
+
+\subsection{Variable Documentation}
+\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!\_\-broker@{\_\-broker}}
+\index{\_\-broker@{\_\-broker}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{\_\-broker}]{\setlength{\rightskip}{0pt plus 5cm}const CMPIBroker$\ast$ {\bf \_\-broker}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}
+Provider ClassName. 
+
+Definition at line 47 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_af2a15829b64ca3acb0e5b158763519f4}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!\_\-ClassName@{\_\-ClassName}}
+\index{\_\-ClassName@{\_\-ClassName}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{\_\-ClassName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-ClassName} = \char`\"{}Linux\_\-CSHostedRoute\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_af2a15829b64ca3acb0e5b158763519f4}
+Class name. 
+
+Definition at line 52 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_ad69220253069462d0669e74773d37c7f}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!\_\-RefLeft@{\_\-RefLeft}}
+\index{\_\-RefLeft@{\_\-RefLeft}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{\_\-RefLeft}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefLeft} = \char`\"{}Antecedent\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_ad69220253069462d0669e74773d37c7f}
+Left reference identifier. 
+
+Definition at line 57 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a9267b302bfb26b82f1a5491376b59f96}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!\_\-RefLeftClass@{\_\-RefLeftClass}}
+\index{\_\-RefLeftClass@{\_\-RefLeftClass}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{\_\-RefLeftClass}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefLeftClass} = \char`\"{}Linux\_\-ComputerSystem\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a9267b302bfb26b82f1a5491376b59f96}
+Left reference class. 
+
+Definition at line 67 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_abd1d1c92a7ae081a0ab50b2aefb36ab7}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!\_\-RefRight@{\_\-RefRight}}
+\index{\_\-RefRight@{\_\-RefRight}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{\_\-RefRight}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefRight} = \char`\"{}Dependent\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_abd1d1c92a7ae081a0ab50b2aefb36ab7}
+Right reference identifier. 
+
+Definition at line 62 of file cmpiOSBase\_\-CSHostedRouteProvider.c.\hypertarget{cmpi_o_s_base___c_s_hosted_route_provider_8c_a57a3a7575a7ad6e9f508979998e43871}{
+\index{cmpiOSBase\_\-CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}!\_\-RefRightClass@{\_\-RefRightClass}}
+\index{\_\-RefRightClass@{\_\-RefRightClass}!cmpiOSBase_CSHostedRouteProvider.c@{cmpiOSBase\_\-CSHostedRouteProvider.c}}
+\subsubsection[{\_\-RefRightClass}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefRightClass} = \char`\"{}CIM\_\-NextHopRoute\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___c_s_hosted_route_provider_8c_a57a3a7575a7ad6e9f508979998e43871}
+Right reference class. 
+
+Definition at line 72 of file cmpiOSBase\_\-CSHostedRouteProvider.c.

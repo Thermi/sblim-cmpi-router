@@ -1,0 +1,80 @@
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_8h}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/cmpiOSBase\_\-NextHopIPRoute.h File Reference}
+\label{cmpi_o_s_base___next_hop_i_p_route_8h}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/cmpiOSBase\_\-NextHopIPRoute.h@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/cmpiOSBase\_\-NextHopIPRoute.h}}
+}
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-NextHopIPRoute.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIObjectPath $\ast$ \hyperlink{cmpi_o_s_base___next_hop_i_p_route_8h_a6696a5a1aaaee6b97e84740a092c5145}{\_\-makePath\_\-NextHopIPRoute} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIObjectPath $\ast$cop, const struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$NHop, CMPIStatus $\ast$rc)
+\item 
+CMPIInstance $\ast$ \hyperlink{cmpi_o_s_base___next_hop_i_p_route_8h_a3882aa5545500059f63ce2c394eb4bf9}{\_\-makeInst\_\-NextHopIPRoute} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIObjectPath $\ast$cop, const char $\ast$$\ast$properties, const struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$NHop, CMPIStatus $\ast$rc)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___next_hop_i_p_route_8h_af2a15829b64ca3acb0e5b158763519f4}{\_\-ClassName} = \char`\"{}Linux\_\-NextHopIPRoute\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___next_hop_i_p_route_8h}{cmpiOSBase\_\-NextHopIPRoute.h}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This file defines the interfaces for the factory implementation of the CIM class Linux\_\-NextHopIPRoute.
+
+Interface Type : Common Magabeablity Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___next_hop_i_p_route_8h_source}{cmpiOSBase\_\-NextHopIPRoute.h}.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_8h_a3882aa5545500059f63ce2c394eb4bf9}{
+\index{cmpiOSBase\_\-NextHopIPRoute.h@{cmpiOSBase\_\-NextHopIPRoute.h}!\_\-makeInst\_\-NextHopIPRoute@{\_\-makeInst\_\-NextHopIPRoute}}
+\index{\_\-makeInst\_\-NextHopIPRoute@{\_\-makeInst\_\-NextHopIPRoute}!cmpiOSBase_NextHopIPRoute.h@{cmpiOSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{\_\-makeInst\_\-NextHopIPRoute}]{\setlength{\rightskip}{0pt plus 5cm}CMPIInstance$\ast$ \_\-makeInst\_\-NextHopIPRoute (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$$\ast$ {\em properties}, \/  const struct {\bf nextHopIP} $\ast$ {\em NHop}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_8h_a3882aa5545500059f63ce2c394eb4bf9}
+Method to create a CMPIInstance of this class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} Context object. \item[{\em cop}]\mbox{[}in\mbox{]} Source objectPath. \item[{\em properties}]\mbox{[}in\mbox{]} \item[{\em NHop}]\mbox{[}in\mbox{]} \hyperlink{structnext_hop_i_p}{nextHopIP} instance. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created NextHopIPRoute instance. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file cmpiOSBase\_\-NextHopIPRoute.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_8h_a6696a5a1aaaee6b97e84740a092c5145}{
+\index{cmpiOSBase\_\-NextHopIPRoute.h@{cmpiOSBase\_\-NextHopIPRoute.h}!\_\-makePath\_\-NextHopIPRoute@{\_\-makePath\_\-NextHopIPRoute}}
+\index{\_\-makePath\_\-NextHopIPRoute@{\_\-makePath\_\-NextHopIPRoute}!cmpiOSBase_NextHopIPRoute.h@{cmpiOSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{\_\-makePath\_\-NextHopIPRoute}]{\setlength{\rightskip}{0pt plus 5cm}CMPIObjectPath$\ast$ \_\-makePath\_\-NextHopIPRoute (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const struct {\bf nextHopIP} $\ast$ {\em NHop}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_8h_a6696a5a1aaaee6b97e84740a092c5145}
+Method to create a CMPIObjectPath of this class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} Context object. \item[{\em cop}]\mbox{[}in\mbox{]} Source objectPath. \item[{\em NHop}]\mbox{[}in\mbox{]} \hyperlink{structnext_hop_i_p}{nextHopIP} instance. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created NextHopIPRoute ObjectPath. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file cmpiOSBase\_\-NextHopIPRoute.c.
+
+\subsection{Variable Documentation}
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_8h_af2a15829b64ca3acb0e5b158763519f4}{
+\index{cmpiOSBase\_\-NextHopIPRoute.h@{cmpiOSBase\_\-NextHopIPRoute.h}!\_\-ClassName@{\_\-ClassName}}
+\index{\_\-ClassName@{\_\-ClassName}!cmpiOSBase_NextHopIPRoute.h@{cmpiOSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{\_\-ClassName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-ClassName} = \char`\"{}Linux\_\-NextHopIPRoute\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___next_hop_i_p_route_8h_af2a15829b64ca3acb0e5b158763519f4}
+Provider ClassName. 
+
+Definition at line 34 of file cmpiOSBase\_\-NextHopIPRoute.h.

@@ -1,0 +1,145 @@
+//
+// Linux_Router.mof
+//
+// THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+// ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+// CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+//
+// You can obtain a current copy of the Eclipse Public License from
+// http://www.opensource.org/licenses/eclipse-1.0.php
+//
+// Author:       Federico Martin Casares (warptrosse@gmail.com)
+// Contributors:
+//
+// Description: CIM classes for Linux Router Instrumentation
+//
+
+
+#pragma locale ("en_US")
+//#pragma namespace ("root/cimv2")
+
+
+// -----------------------------------------------------------------------------
+// *****************************************************************************
+// 	Classes
+// *****************************************************************************
+// -----------------------------------------------------------------------------
+
+
+// =============================================================================
+// 	Linux_NextHopIPRoute
+// =============================================================================
+
+[ Provider("cmpi:cmpiOSBase_NextHopIPRouteProvider"),
+  Description ("NextHopIPRoute specifies routing in an IP network.")
+] 
+class Linux_NextHopIPRoute : CIM_NextHopIPRoute
+{
+      [Description ( "The gateway of the route." )]
+   string RouteGateway;
+
+      [Description ( "Output interface index." )]
+   uint16 RouteOutputIf;
+
+      [Description ( 
+          "Sort of distance to the destination. NOWHERE are reserved "
+          "for not existing destinations, HOST is our local addresses, "
+          "LINK are destinations, located on directly attached link and "
+          "UNIVERSE is everywhere in the Universe."
+       ),
+       ValueMap { "0", "..", "200", "253", "254", "255" }, 
+       Values { "Universe", "User-Defined", "Site", "Link", "Host", "Nowhere" }]
+   uint16 RouteScope;
+
+      [Description ( "Routing table id." ),
+       ValueMap { "0", "..", "252", "253", "254", "255" }, 
+       Values { "Unspec", "User-Defined" "Compat", "Default", "Main", "Local" }]
+   uint16 RouteTable;
+
+      [Description ( 
+          "An enumeration that describes the type of route. "
+          "Unicast: Gateway or direct route, "
+          "Local: Accept locally, "
+          "Broadcast: Accept locally as broadcast, send as broadcast, "
+          "Anycast: Accept locally as broadcast, but send as unicast, "
+          "Multicast: Multicast route, "
+          "Blackhole: Drop, "
+          "Unreachable: Destination is unreachable, "
+          "Prohibit: Administratively prohibited, "
+          "Throw: Not in this table, "
+          "Nat: Translate this address, "
+          "XResolve: Use external resolver"
+       ),
+       ValueMap { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }, 
+       Values { "Unspec", "Unicast", "Local", "Broadcast", "Anycast",
+                "Multicast", "Blackhole", "Unreachable", "Prohibit",
+                "Throw", "Nat", "XResolve" }]
+   uint16 RouteType;
+};
+
+// =============================================================================
+// 	Linux_LANEndpoint
+// =============================================================================
+
+[ Provider("cmpi:cmpiOSBase_LANEndpointProvider"),
+  Description ("A communication endpoint which, when its associated "
+               "interface device is connected to a LAN, may send and "
+               "receive data frames. LANEndpoints include Ethernet, "
+               "Token Ring and FDDI interfaces.")
+] 
+class Linux_LANEndpoint : CIM_LANEndpoint
+{
+};
+
+
+// -----------------------------------------------------------------------------
+// *****************************************************************************
+// 	Associations
+// *****************************************************************************
+// -----------------------------------------------------------------------------
+
+
+// =============================================================================
+// 	Linux_CSHostedRoute
+// =============================================================================
+
+[ Association, 
+  Aggregation,
+  Composition,
+  Provider("cmpi:cmpiOSBase_CSHostedRouteProvider") ] 
+class Linux_CSHostedRoute : CIM_HostedRoute
+{
+  [ Override ( "Antecedent" ), 
+    Description ( "The Computer System that scopes/provides context for the "
+                  "route." )
+  ]
+  Linux_ComputerSystem REF Antecedent;
+
+  [ Override ( "Dependent" ), 
+    Description ( "The next hop route defined on the System." )
+  ]
+  CIM_NextHopRoute REF Dependent;
+};
+
+// =============================================================================
+// 	Linux_RouteUsesEndpoint
+// =============================================================================
+
+[ Association, 
+  Aggregation,
+  Composition,
+  Provider("cmpi:cmpiOSBase_RouteUsesEndpointProvider") ] 
+class Linux_RouteUsesEndpoint : CIM_RouteUsesEndpoint
+{
+  [ Override ( "Antecedent" ), 
+    Description ( "A communication point from which data can be sent or "
+                  "received." )
+  ]
+  CIM_ProtocolEndpoint REF Antecedent;
+
+  [ Override ( "Dependent" ), 
+    Description ( "NextHopRoute represents one of a series of 'hops' to reach "
+                  "a network destination." )
+  ]
+  CIM_NextHopRoute REF Dependent;
+};

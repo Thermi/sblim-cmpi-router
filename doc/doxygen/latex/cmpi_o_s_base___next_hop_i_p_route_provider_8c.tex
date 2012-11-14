@@ -1,0 +1,183 @@
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-NextHopIPRouteProvider.c File Reference}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-NextHopIPRouteProvider.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpift.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpimacs.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-NextHopIPRoute.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a630e7236bca4155181baafc9a1da0e86}{getNextHopIPParams} (const CMPIInstance $\ast$ci, struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP, const struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIPPrev)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a7a82d0823917faadbd32e62d97cfd67b}{OSBase\_\-NextHopIPRouteProviderCleanup} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_aed3683be23162eb40efcda5565f2761d}{OSBase\_\-NextHopIPRouteProviderEnumInstanceNames} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_ab9fb4a32f033e0af18d795ad7160b247}{OSBase\_\-NextHopIPRouteProviderEnumInstances} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a808a785864bed29cdf0a97a6283755c9}{OSBase\_\-NextHopIPRouteProviderGetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2cd2875b41a2c7b4f3cd7eb8c93998ab}{OSBase\_\-NextHopIPRouteProviderCreateInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_af1d593f9035b0889fbcd37dec0086657}{OSBase\_\-NextHopIPRouteProviderSetInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop, const CMPIInstance $\ast$ci, const char $\ast$$\ast$properties)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a684a2521aa837ec4b8cf2aa8f2f70950}{OSBase\_\-NextHopIPRouteProviderDeleteInstance} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$cop)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2d1e3b2aaa7e7d81988d8552c39c2e9f}{OSBase\_\-NextHopIPRouteProviderExecQuery} (CMPIInstanceMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$lang, const char $\ast$query)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a9abd40b3f53b4ba4b353614cbe3e13ea}{OSBase\_\-NextHopIPRouteProviderMethodCleanup} (CMPIMethodMI $\ast$mi, const CMPIContext $\ast$ctx, CMPIBoolean terminating)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2eb7dff061787e5f9cd3500d4400a48d}{OSBase\_\-NextHopIPRouteProviderInvokeMethod} (CMPIMethodMI $\ast$mi, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$methodName, const CMPIArgs $\ast$in, CMPIArgs $\ast$out)
+\item 
+\hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a9e823461f35cc525eda03255a3f975aa}{CMInstanceMIStub} (OSBase\_\-NextHopIPRouteProvider, OSBase\_\-NextHopIPRouteProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\item 
+\hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a7f0c1435359442e58a4a4b9ac85d1e32}{CMMethodMIStub} (OSBase\_\-NextHopIPRouteProvider, OSBase\_\-NextHopIPRouteProvider, \hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, CMNoHook)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const CMPIBroker $\ast$ \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c}{cmpiOSBase\_\-NextHopIPRouteProvider.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+Linux\_\-NextHopIPRoute class provider implementation. The following CMPI instance methods are supported:
+\begin{DoxyItemize}
+\item Cleanup
+\item EnumerateInstanceNames
+\item EnumerateInstances
+\item GetInstance
+\item CreateInstance
+\item SetInstance
+\item DeleteInstance
+\end{DoxyItemize}
+\end{DoxyParagraph}
+Interface Type : Common Manageability Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___next_hop_i_p_route_provider_8c_source}{cmpiOSBase\_\-NextHopIPRouteProvider.c}.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a9e823461f35cc525eda03255a3f975aa}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!CMInstanceMIStub@{CMInstanceMIStub}}
+\index{CMInstanceMIStub@{CMInstanceMIStub}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{CMInstanceMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMInstanceMIStub (OSBase\_\-NextHopIPRouteProvider, \/  OSBase\_\-NextHopIPRouteProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a9e823461f35cc525eda03255a3f975aa}
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a7f0c1435359442e58a4a4b9ac85d1e32}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!CMMethodMIStub@{CMMethodMIStub}}
+\index{CMMethodMIStub@{CMMethodMIStub}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{CMMethodMIStub}]{\setlength{\rightskip}{0pt plus 5cm}CMMethodMIStub (OSBase\_\-NextHopIPRouteProvider, \/  OSBase\_\-NextHopIPRouteProvider, \/  {\bf \_\-broker}, \/  CMNoHook)}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a7f0c1435359442e58a4a4b9ac85d1e32}
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a630e7236bca4155181baafc9a1da0e86}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!getNextHopIPParams@{getNextHopIPParams}}
+\index{getNextHopIPParams@{getNextHopIPParams}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{getNextHopIPParams}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus getNextHopIPParams (const CMPIInstance $\ast$ {\em ci}, \/  struct {\bf nextHopIP} $\ast$ {\em nHopIP}, \/  const struct {\bf nextHopIP} $\ast$ {\em nHopIPPrev})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a630e7236bca4155181baafc9a1da0e86}
+Get parameters from CMPIInstance. 
+\begin{DoxyParams}{Parameters}
+\item[{\em ci}]\mbox{[}in\mbox{]} CMPIInstance. \item[{\em nHopIP}]\mbox{[}out\mbox{]} structure to be filled. \item[{\em nHopIPPrev}]\mbox{[}in\mbox{]} previous route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0=succesful $|$ 1=fail 
+\end{DoxyReturn}
+
+
+Definition at line 563 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a7a82d0823917faadbd32e62d97cfd67b}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderCleanup@{OSBase\_\-NextHopIPRouteProviderCleanup}}
+\index{OSBase\_\-NextHopIPRouteProviderCleanup@{OSBase\_\-NextHopIPRouteProviderCleanup}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderCleanup (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a7a82d0823917faadbd32e62d97cfd67b}
+
+
+Definition at line 73 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2cd2875b41a2c7b4f3cd7eb8c93998ab}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderCreateInstance@{OSBase\_\-NextHopIPRouteProviderCreateInstance}}
+\index{OSBase\_\-NextHopIPRouteProviderCreateInstance@{OSBase\_\-NextHopIPRouteProviderCreateInstance}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderCreateInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderCreateInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2cd2875b41a2c7b4f3cd7eb8c93998ab}
+
+
+Definition at line 268 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a684a2521aa837ec4b8cf2aa8f2f70950}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderDeleteInstance@{OSBase\_\-NextHopIPRouteProviderDeleteInstance}}
+\index{OSBase\_\-NextHopIPRouteProviderDeleteInstance@{OSBase\_\-NextHopIPRouteProviderDeleteInstance}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderDeleteInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderDeleteInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a684a2521aa837ec4b8cf2aa8f2f70950}
+
+
+Definition at line 405 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_aed3683be23162eb40efcda5565f2761d}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderEnumInstanceNames@{OSBase\_\-NextHopIPRouteProviderEnumInstanceNames}}
+\index{OSBase\_\-NextHopIPRouteProviderEnumInstanceNames@{OSBase\_\-NextHopIPRouteProviderEnumInstanceNames}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderEnumInstanceNames}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderEnumInstanceNames (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_aed3683be23162eb40efcda5565f2761d}
+
+
+Definition at line 86 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_ab9fb4a32f033e0af18d795ad7160b247}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderEnumInstances@{OSBase\_\-NextHopIPRouteProviderEnumInstances}}
+\index{OSBase\_\-NextHopIPRouteProviderEnumInstances@{OSBase\_\-NextHopIPRouteProviderEnumInstances}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderEnumInstances}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderEnumInstances (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_ab9fb4a32f033e0af18d795ad7160b247}
+
+
+Definition at line 146 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2d1e3b2aaa7e7d81988d8552c39c2e9f}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderExecQuery@{OSBase\_\-NextHopIPRouteProviderExecQuery}}
+\index{OSBase\_\-NextHopIPRouteProviderExecQuery@{OSBase\_\-NextHopIPRouteProviderExecQuery}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderExecQuery}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderExecQuery (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em lang}, \/  const char $\ast$ {\em query})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2d1e3b2aaa7e7d81988d8552c39c2e9f}
+
+
+Definition at line 460 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a808a785864bed29cdf0a97a6283755c9}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderGetInstance@{OSBase\_\-NextHopIPRouteProviderGetInstance}}
+\index{OSBase\_\-NextHopIPRouteProviderGetInstance@{OSBase\_\-NextHopIPRouteProviderGetInstance}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderGetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderGetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a808a785864bed29cdf0a97a6283755c9}
+
+
+Definition at line 207 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2eb7dff061787e5f9cd3500d4400a48d}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderInvokeMethod@{OSBase\_\-NextHopIPRouteProviderInvokeMethod}}
+\index{OSBase\_\-NextHopIPRouteProviderInvokeMethod@{OSBase\_\-NextHopIPRouteProviderInvokeMethod}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderInvokeMethod}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderInvokeMethod (CMPIMethodMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em methodName}, \/  const CMPIArgs $\ast$ {\em in}, \/  CMPIArgs $\ast$ {\em out})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a2eb7dff061787e5f9cd3500d4400a48d}
+
+
+Definition at line 501 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a9abd40b3f53b4ba4b353614cbe3e13ea}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderMethodCleanup@{OSBase\_\-NextHopIPRouteProviderMethodCleanup}}
+\index{OSBase\_\-NextHopIPRouteProviderMethodCleanup@{OSBase\_\-NextHopIPRouteProviderMethodCleanup}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderMethodCleanup}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderMethodCleanup (CMPIMethodMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  CMPIBoolean {\em terminating})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a9abd40b3f53b4ba4b353614cbe3e13ea}
+
+
+Definition at line 488 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_af1d593f9035b0889fbcd37dec0086657}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!OSBase\_\-NextHopIPRouteProviderSetInstance@{OSBase\_\-NextHopIPRouteProviderSetInstance}}
+\index{OSBase\_\-NextHopIPRouteProviderSetInstance@{OSBase\_\-NextHopIPRouteProviderSetInstance}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{OSBase\_\-NextHopIPRouteProviderSetInstance}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus OSBase\_\-NextHopIPRouteProviderSetInstance (CMPIInstanceMI $\ast$ {\em mi}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const CMPIInstance $\ast$ {\em ci}, \/  const char $\ast$$\ast$ {\em properties})}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_af1d593f9035b0889fbcd37dec0086657}
+
+
+Definition at line 319 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.
+
+\subsection{Variable Documentation}
+\hypertarget{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{
+\index{cmpiOSBase\_\-NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}!\_\-broker@{\_\-broker}}
+\index{\_\-broker@{\_\-broker}!cmpiOSBase_NextHopIPRouteProvider.c@{cmpiOSBase\_\-NextHopIPRouteProvider.c}}
+\subsubsection[{\_\-broker}]{\setlength{\rightskip}{0pt plus 5cm}const CMPIBroker$\ast$ {\bf \_\-broker}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___next_hop_i_p_route_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}
+
+
+Definition at line 43 of file cmpiOSBase\_\-NextHopIPRouteProvider.c.

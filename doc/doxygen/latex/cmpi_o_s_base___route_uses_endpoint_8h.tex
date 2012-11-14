@@ -1,0 +1,217 @@
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/cmpiOSBase\_\-RouteUsesEndpoint.h File Reference}
+\label{cmpi_o_s_base___route_uses_endpoint_8h}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/cmpiOSBase\_\-RouteUsesEndpoint.h@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/cmpiOSBase\_\-RouteUsesEndpoint.h}}
+}
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba7fd919494550e4bf2c10a8d7faecf1c1}{ATYPE\_\-ASSOC}, 
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba4f4010fd3230aaac39bbcc79a91e63a8}{ATYPE\_\-ASSOCN}, 
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba3e2c2fbec95f3028e969f265ed7dcce0}{ATYPE\_\-REFER}, 
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba06ec1df807d0b5f54788dec5af04c8da}{ATYPE\_\-REFERN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIObjectPath $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_ae48f6ad3db436adb706ea097dc7f5663}{\_\-makePath\_\-RouteUsesEndpoint} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIObjectPath $\ast$ops, const CMPIObjectPath $\ast$opt, CMPIStatus $\ast$rc)
+\item 
+CMPIInstance $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_af949b2ff67bd0b279a5b578064c41c41}{\_\-makeInst\_\-RouteUsesEndpoint} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIObjectPath $\ast$ops, const CMPIObjectPath $\ast$opt, CMPIStatus $\ast$rc)
+\item 
+CMPIStatus $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_ab97169f9a3f44a7e8ee18df6a3604aca}{\_\-assoc\_\-get\_\-NextHopRoute\_\-insts} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const CMPIInstance $\ast$sourceInst, const char $\ast$targetClass, int assocType, CMPIStatus $\ast$rc)
+\item 
+CMPIStatus $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_ae9fdc61d607f7d155062cf0412378ce5}{\_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const CMPIInstance $\ast$sourceInst, const char $\ast$targetClass, int assocType, CMPIStatus $\ast$rc)
+\item 
+CMPIStatus \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_aad1a7a187b4128cd91595d65cb07cd74}{\_\-assoc\_\-RouteUsesEndpoint} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIResult $\ast$rslt, const CMPIObjectPath $\ast$ref, const char $\ast$targetClass, int assocType, CMPIStatus $\ast$rc)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_af2a15829b64ca3acb0e5b158763519f4}{\_\-ClassName} = \char`\"{}Linux\_\-RouteUsesEndpoint\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_ad69220253069462d0669e74773d37c7f}{\_\-RefLeft} = \char`\"{}Antecedent\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_abd1d1c92a7ae081a0ab50b2aefb36ab7}{\_\-RefRight} = \char`\"{}Dependent\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a9267b302bfb26b82f1a5491376b59f96}{\_\-RefLeftClass} = \char`\"{}CIM\_\-ProtocolEndpoint\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a57a3a7575a7ad6e9f508979998e43871}{\_\-RefRightClass} = \char`\"{}CIM\_\-NextHopRoute\char`\"{}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a81ed3b9a448a0baab7f58a3fda2553cb}{\_\-RefLeftClasses} \mbox{[}$\,$\mbox{]} = \{ \char`\"{}Linux\_\-LANEndpoint\char`\"{} \}
+\item 
+static char $\ast$ \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_a826afa87af98b7e0941f4b15026fd4f3}{\_\-RefRightClasses} \mbox{[}$\,$\mbox{]} = \{ \char`\"{}Linux\_\-NextHopIPRoute\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___route_uses_endpoint_8h}{cmpiOSBase\_\-RouteUsesEndpoint.h}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This is the factory implementation for creating instances of CIM class Linux\_\-RouteUsesEndpoint.
+
+Interface Type : Common Magabeablity Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___route_uses_endpoint_8h_source}{cmpiOSBase\_\-RouteUsesEndpoint.h}.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55b}{
+\subsubsection[{"@0}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55b}
+Association type. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ATYPE\_\-ASSOC@{ATYPE\_\-ASSOC}!cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!ATYPE\_\-ASSOC@{ATYPE\_\-ASSOC}}\item[{\em 
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba7fd919494550e4bf2c10a8d7faecf1c1}{
+ATYPE\_\-ASSOC}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba7fd919494550e4bf2c10a8d7faecf1c1}
+}]Associators. \index{ATYPE\_\-ASSOCN@{ATYPE\_\-ASSOCN}!cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!ATYPE\_\-ASSOCN@{ATYPE\_\-ASSOCN}}\item[{\em 
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba4f4010fd3230aaac39bbcc79a91e63a8}{
+ATYPE\_\-ASSOCN}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba4f4010fd3230aaac39bbcc79a91e63a8}
+}]AssociatorNames. \index{ATYPE\_\-REFER@{ATYPE\_\-REFER}!cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!ATYPE\_\-REFER@{ATYPE\_\-REFER}}\item[{\em 
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba3e2c2fbec95f3028e969f265ed7dcce0}{
+ATYPE\_\-REFER}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba3e2c2fbec95f3028e969f265ed7dcce0}
+}]References. \index{ATYPE\_\-REFERN@{ATYPE\_\-REFERN}!cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!ATYPE\_\-REFERN@{ATYPE\_\-REFERN}}\item[{\em 
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba06ec1df807d0b5f54788dec5af04c8da}{
+ATYPE\_\-REFERN}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a06fc87d81c62e9abb8790b6e5713c55ba06ec1df807d0b5f54788dec5af04c8da}
+}]ReferenceNames. \end{description}
+\end{Desc}
+
+
+
+Definition at line 33 of file cmpiOSBase\_\-RouteUsesEndpoint.h.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_ab97169f9a3f44a7e8ee18df6a3604aca}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-assoc\_\-get\_\-NextHopRoute\_\-insts@{\_\-assoc\_\-get\_\-NextHopRoute\_\-insts}}
+\index{\_\-assoc\_\-get\_\-NextHopRoute\_\-insts@{\_\-assoc\_\-get\_\-NextHopRoute\_\-insts}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-assoc\_\-get\_\-NextHopRoute\_\-insts}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus$\ast$ \_\-assoc\_\-get\_\-NextHopRoute\_\-insts (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const CMPIInstance $\ast$ {\em sourceInst}, \/  const char $\ast$ {\em targetClass}, \/  int {\em assocType}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_ab97169f9a3f44a7e8ee18df6a3604aca}
+Retrieve a list of instances from target class (CIM\_\-NextHopRoute subclass), associated to source class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} context object. \item[{\em rslt}]\mbox{[}in\mbox{]} result. \item[{\em ref}]\mbox{[}in\mbox{]} source objectPath. \item[{\em sourceInst}]\mbox{[}in\mbox{]} source class instance. \item[{\em targetClass}]\mbox{[}in\mbox{]} target class name. \item[{\em assocType}]\mbox{[}in\mbox{]} association type. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cim status. 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file cmpiOSBase\_\-RouteUsesEndpoint.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_ae9fdc61d607f7d155062cf0412378ce5}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts@{\_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts}}
+\index{\_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts@{\_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus$\ast$ \_\-assoc\_\-get\_\-ProtocolEndpoint\_\-insts (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const CMPIInstance $\ast$ {\em sourceInst}, \/  const char $\ast$ {\em targetClass}, \/  int {\em assocType}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_ae9fdc61d607f7d155062cf0412378ce5}
+Retrieve a list of instances from target class (CIM\_\-ProtocolEndpoint subclass), associated to source class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} context object. \item[{\em rslt}]\mbox{[}in\mbox{]} result. \item[{\em ref}]\mbox{[}in\mbox{]} source objectPath. \item[{\em sourceInst}]\mbox{[}in\mbox{]} source class instance. \item[{\em targetClass}]\mbox{[}in\mbox{]} target class name. \item[{\em assocType}]\mbox{[}in\mbox{]} association type. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cim status. 
+\end{DoxyReturn}
+
+
+Definition at line 246 of file cmpiOSBase\_\-RouteUsesEndpoint.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_aad1a7a187b4128cd91595d65cb07cd74}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-assoc\_\-RouteUsesEndpoint@{\_\-assoc\_\-RouteUsesEndpoint}}
+\index{\_\-assoc\_\-RouteUsesEndpoint@{\_\-assoc\_\-RouteUsesEndpoint}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-assoc\_\-RouteUsesEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}CMPIStatus \_\-assoc\_\-RouteUsesEndpoint (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIResult $\ast$ {\em rslt}, \/  const CMPIObjectPath $\ast$ {\em ref}, \/  const char $\ast$ {\em targetClass}, \/  int {\em assocType}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_aad1a7a187b4128cd91595d65cb07cd74}
+Create CMPIInstances of association. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} context object. \item[{\em rslt}]\mbox{[}in\mbox{]} result. \item[{\em ref}]\mbox{[}in\mbox{]} source objectPath. \item[{\em targetClass}]\mbox{[}in\mbox{]} target class name. \item[{\em assocType}]\mbox{[}in\mbox{]} association type. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cim status. 
+\end{DoxyReturn}
+
+
+Definition at line 377 of file cmpiOSBase\_\-RouteUsesEndpoint.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_af949b2ff67bd0b279a5b578064c41c41}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-makeInst\_\-RouteUsesEndpoint@{\_\-makeInst\_\-RouteUsesEndpoint}}
+\index{\_\-makeInst\_\-RouteUsesEndpoint@{\_\-makeInst\_\-RouteUsesEndpoint}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-makeInst\_\-RouteUsesEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}CMPIInstance$\ast$ \_\-makeInst\_\-RouteUsesEndpoint (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIObjectPath $\ast$ {\em ops}, \/  const CMPIObjectPath $\ast$ {\em opt}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_af949b2ff67bd0b279a5b578064c41c41}
+Method to create a CMPIInstance of this class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ops}]\mbox{[}in\mbox{]} Source objectPath. \item[{\em opt}]\mbox{[}in\mbox{]} Target objectPath. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created Instance. 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file cmpiOSBase\_\-RouteUsesEndpoint.c.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_ae48f6ad3db436adb706ea097dc7f5663}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-makePath\_\-RouteUsesEndpoint@{\_\-makePath\_\-RouteUsesEndpoint}}
+\index{\_\-makePath\_\-RouteUsesEndpoint@{\_\-makePath\_\-RouteUsesEndpoint}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-makePath\_\-RouteUsesEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}CMPIObjectPath$\ast$ \_\-makePath\_\-RouteUsesEndpoint (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIObjectPath $\ast$ {\em ops}, \/  const CMPIObjectPath $\ast$ {\em opt}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_ae48f6ad3db436adb706ea097dc7f5663}
+Method to create a CMPIObjectPath of this class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ops}]\mbox{[}in\mbox{]} Source objectPath. \item[{\em opt}]\mbox{[}in\mbox{]} Target objectPath. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created ObjectPath. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file cmpiOSBase\_\-RouteUsesEndpoint.c.
+
+\subsection{Variable Documentation}
+\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_af2a15829b64ca3acb0e5b158763519f4}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-ClassName@{\_\-ClassName}}
+\index{\_\-ClassName@{\_\-ClassName}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-ClassName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-ClassName} = \char`\"{}Linux\_\-RouteUsesEndpoint\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_af2a15829b64ca3acb0e5b158763519f4}
+Class name. 
+
+Definition at line 43 of file cmpiOSBase\_\-RouteUsesEndpoint.h.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_ad69220253069462d0669e74773d37c7f}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-RefLeft@{\_\-RefLeft}}
+\index{\_\-RefLeft@{\_\-RefLeft}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-RefLeft}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefLeft} = \char`\"{}Antecedent\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_ad69220253069462d0669e74773d37c7f}
+Left reference identifier. 
+
+Definition at line 48 of file cmpiOSBase\_\-RouteUsesEndpoint.h.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a9267b302bfb26b82f1a5491376b59f96}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-RefLeftClass@{\_\-RefLeftClass}}
+\index{\_\-RefLeftClass@{\_\-RefLeftClass}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-RefLeftClass}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefLeftClass} = \char`\"{}CIM\_\-ProtocolEndpoint\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a9267b302bfb26b82f1a5491376b59f96}
+Left reference class. 
+
+Definition at line 58 of file cmpiOSBase\_\-RouteUsesEndpoint.h.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a81ed3b9a448a0baab7f58a3fda2553cb}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-RefLeftClasses@{\_\-RefLeftClasses}}
+\index{\_\-RefLeftClasses@{\_\-RefLeftClasses}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-RefLeftClasses}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefLeftClasses}\mbox{[}$\,$\mbox{]} = \{ \char`\"{}Linux\_\-LANEndpoint\char`\"{} \}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a81ed3b9a448a0baab7f58a3fda2553cb}
+Left reference classes. 
+
+Definition at line 68 of file cmpiOSBase\_\-RouteUsesEndpoint.h.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_abd1d1c92a7ae081a0ab50b2aefb36ab7}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-RefRight@{\_\-RefRight}}
+\index{\_\-RefRight@{\_\-RefRight}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-RefRight}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefRight} = \char`\"{}Dependent\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_abd1d1c92a7ae081a0ab50b2aefb36ab7}
+Right reference identifier. 
+
+Definition at line 53 of file cmpiOSBase\_\-RouteUsesEndpoint.h.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a57a3a7575a7ad6e9f508979998e43871}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-RefRightClass@{\_\-RefRightClass}}
+\index{\_\-RefRightClass@{\_\-RefRightClass}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-RefRightClass}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefRightClass} = \char`\"{}CIM\_\-NextHopRoute\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a57a3a7575a7ad6e9f508979998e43871}
+Right reference class. 
+
+Definition at line 63 of file cmpiOSBase\_\-RouteUsesEndpoint.h.\hypertarget{cmpi_o_s_base___route_uses_endpoint_8h_a826afa87af98b7e0941f4b15026fd4f3}{
+\index{cmpiOSBase\_\-RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}!\_\-RefRightClasses@{\_\-RefRightClasses}}
+\index{\_\-RefRightClasses@{\_\-RefRightClasses}!cmpiOSBase_RouteUsesEndpoint.h@{cmpiOSBase\_\-RouteUsesEndpoint.h}}
+\subsubsection[{\_\-RefRightClasses}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \_\-RefRightClasses}\mbox{[}$\,$\mbox{]} = \{ \char`\"{}Linux\_\-NextHopIPRoute\char`\"{} \}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cmpi_o_s_base___route_uses_endpoint_8h_a826afa87af98b7e0941f4b15026fd4f3}
+Right reference classes. 
+
+Definition at line 73 of file cmpiOSBase\_\-RouteUsesEndpoint.h.

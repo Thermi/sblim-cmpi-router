@@ -1,0 +1,72 @@
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-LANEndpoint.c File Reference}
+\label{cmpi_o_s_base___l_a_n_endpoint_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-LANEndpoint.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/cmpiOSBase\_\-LANEndpoint.c}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}cmpidt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpimacs.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cmpiOSBase\_\-LANEndpoint.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-LANEndpoint.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+CMPIObjectPath $\ast$ \hyperlink{cmpi_o_s_base___l_a_n_endpoint_8c_ae5f3d2d4919eb540a7d4f673584d4039}{\_\-makePath\_\-LANEndpoint} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIObjectPath $\ast$cop, const struct \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} $\ast$LANEP, CMPIStatus $\ast$rc)
+\item 
+CMPIInstance $\ast$ \hyperlink{cmpi_o_s_base___l_a_n_endpoint_8c_af657b2d667cbd02cc249ba45ad324cd6}{\_\-makeInst\_\-LANEndpoint} (const CMPIBroker $\ast$\hyperlink{cmpi_o_s_base___route_uses_endpoint_provider_8c_a04019a4fbec5a9013e08c1d5621320cb}{\_\-broker}, const CMPIContext $\ast$ctx, const CMPIObjectPath $\ast$cop, const char $\ast$$\ast$properties, const struct \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} $\ast$LANEP, CMPIStatus $\ast$rc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{cmpi_o_s_base___l_a_n_endpoint_8c}{cmpiOSBase\_\-LANEndpoint.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This is the factory implementation for creating instances of CIM class Linux\_\-LANEndpoint.
+
+Interface Type : Common Magabeablity Programming Interface ( CMPI ) 
+
+Definition in file \hyperlink{cmpi_o_s_base___l_a_n_endpoint_8c_source}{cmpiOSBase\_\-LANEndpoint.c}.
+
+\subsection{Function Documentation}
+\hypertarget{cmpi_o_s_base___l_a_n_endpoint_8c_af657b2d667cbd02cc249ba45ad324cd6}{
+\index{cmpiOSBase\_\-LANEndpoint.c@{cmpiOSBase\_\-LANEndpoint.c}!\_\-makeInst\_\-LANEndpoint@{\_\-makeInst\_\-LANEndpoint}}
+\index{\_\-makeInst\_\-LANEndpoint@{\_\-makeInst\_\-LANEndpoint}!cmpiOSBase_LANEndpoint.c@{cmpiOSBase\_\-LANEndpoint.c}}
+\subsubsection[{\_\-makeInst\_\-LANEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}CMPIInstance$\ast$ \_\-makeInst\_\-LANEndpoint (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const char $\ast$$\ast$ {\em properties}, \/  const struct {\bf LANEndpoint} $\ast$ {\em LANEP}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_8c_af657b2d667cbd02cc249ba45ad324cd6}
+Method to create a CMPIInstance of this class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} Context object. \item[{\em cop}]\mbox{[}in\mbox{]} Source objectPath. \item[{\em properties}]\mbox{[}in\mbox{]} \item[{\em LANEP}]\mbox{[}in\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} instance. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} instance. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file cmpiOSBase\_\-LANEndpoint.c.\hypertarget{cmpi_o_s_base___l_a_n_endpoint_8c_ae5f3d2d4919eb540a7d4f673584d4039}{
+\index{cmpiOSBase\_\-LANEndpoint.c@{cmpiOSBase\_\-LANEndpoint.c}!\_\-makePath\_\-LANEndpoint@{\_\-makePath\_\-LANEndpoint}}
+\index{\_\-makePath\_\-LANEndpoint@{\_\-makePath\_\-LANEndpoint}!cmpiOSBase_LANEndpoint.c@{cmpiOSBase\_\-LANEndpoint.c}}
+\subsubsection[{\_\-makePath\_\-LANEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}CMPIObjectPath$\ast$ \_\-makePath\_\-LANEndpoint (const CMPIBroker $\ast$ {\em \_\-broker}, \/  const CMPIContext $\ast$ {\em ctx}, \/  const CMPIObjectPath $\ast$ {\em cop}, \/  const struct {\bf LANEndpoint} $\ast$ {\em LANEP}, \/  CMPIStatus $\ast$ {\em rc})}}
+\label{cmpi_o_s_base___l_a_n_endpoint_8c_ae5f3d2d4919eb540a7d4f673584d4039}
+Method to create a CMPIObjectPath of this class. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \_\-broker}]\mbox{[}in\mbox{]} CIM Object Manager. \item[{\em ctx}]\mbox{[}in\mbox{]} Context object. \item[{\em cop}]\mbox{[}in\mbox{]} Source objectPath. \item[{\em LANEP}]\mbox{[}in\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} instance. \item[{\em rc}]\mbox{[}in\mbox{]} cim status. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+created \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} ObjectPath. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file cmpiOSBase\_\-LANEndpoint.c.

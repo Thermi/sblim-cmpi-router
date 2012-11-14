@@ -1,0 +1,156 @@
+\hypertarget{_o_s_base___l_a_n_endpoint_8c}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-LANEndpoint.c File Reference}
+\label{_o_s_base___l_a_n_endpoint_8c}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-LANEndpoint.c@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/src/OSBase\_\-LANEndpoint.c}}
+}
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$linux/if.h$>$}\par
+{\ttfamily \#include $<$linux/rtnetlink.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-Common.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}OSBase\_\-LANEndpoint.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \hyperlink{_o_s_base___l_a_n_endpoint_8c_a4516f8c4ceb2bb917acb8e3e4e5cedb9}{datetime\_\-str\_\-interval\_\-to\_\-ms} (const char $\ast$pDatetimeString)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8c_a93cd8187af6d71b81bbdcb57a1fc91a7}{getLANEndpoints} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList, const struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo})
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8c_a912c0a67e9c08a00c9c4af12c5d9fe4c}{getALLLANEndpoints} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$list)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8c_a0e24fae564ca4e06b1a7e8ce7c246ce5}{getLANEndpoint} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList, const char $\ast$linkName)
+\item 
+unsigned short \hyperlink{_o_s_base___l_a_n_endpoint_8c_ab96e1416278e303b6eeb6fe2feb0af82}{changeLinkOPState} (const char $\ast$linkName, unsigned short enabledState, unsigned long timeoutPeriod)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8c_a1cfc38a0229aa40f4f9bb549de1a5edc}{nlListTOLanEPList} (struct \hyperlink{structnl_link_info_list}{nlLinkInfoList} $\ast$$\ast$\hyperlink{structnl_link_info_list}{nlLinkInfoList}, struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$$\ast$lanEPList)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8c_a06810d11e411c5ed06363cbf22d6ffb7}{nlInfoTOLanEP} (struct \hyperlink{structnl_link_info}{nlLinkInfo} $\ast$\hyperlink{structnl_link_info}{nlLinkInfo}, struct \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} $\ast$lanEP)
+\item 
+int \hyperlink{_o_s_base___l_a_n_endpoint_8c_a0ff3f1739478cd89305b5dbb5240aaad}{freeLANEndpointList} (struct \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} $\ast$lptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_o_s_base___l_a_n_endpoint_8c}{OSBase\_\-LANEndpoint.c}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This shared library provides resource access functionality for the class Linux\_\-LANEndpoint. It is independent from any specific CIM technology. 
+
+Definition in file \hyperlink{_o_s_base___l_a_n_endpoint_8c_source}{OSBase\_\-LANEndpoint.c}.
+
+\subsection{Function Documentation}
+\hypertarget{_o_s_base___l_a_n_endpoint_8c_ab96e1416278e303b6eeb6fe2feb0af82}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!changeLinkOPState@{changeLinkOPState}}
+\index{changeLinkOPState@{changeLinkOPState}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{changeLinkOPState}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short changeLinkOPState (const char $\ast$ {\em linkName}, \/  unsigned short {\em enabledState}, \/  unsigned long {\em timeoutPeriod})}}
+\label{_o_s_base___l_a_n_endpoint_8c_ab96e1416278e303b6eeb6fe2feb0af82}
+Used to set device status. 
+\begin{DoxyParams}{Parameters}
+\item[{\em linkName}]\mbox{[}in\mbox{]} link name. \item[{\em enabledState}]\mbox{[}in\mbox{]} desired state for the device. \item[{\em timeoutPeriod}]\mbox{[}in\mbox{]} maximum amount of time that the client expects the transition to the new state to take. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 = Completed with No Error 1 = Not Supported 2 = Unknown or Unspecified Error 3 = Cannot complete within Timeout Period 4 = Failed 5 = Invalid Parameter 6 = In Use 7..4095 = DMTF Reserved 4096 = Method Parameters Checked -\/ Job Started 4097 = Invalid State Transition 4098 = Use of Timeout Parameter Not Supported 4099 = Busy 4100..32767 = Method Reserved 32768..65535 = Vendor Specific 
+\end{DoxyReturn}
+
+
+Definition at line 185 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a4516f8c4ceb2bb917acb8e3e4e5cedb9}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!datetime\_\-str\_\-interval\_\-to\_\-ms@{datetime\_\-str\_\-interval\_\-to\_\-ms}}
+\index{datetime\_\-str\_\-interval\_\-to\_\-ms@{datetime\_\-str\_\-interval\_\-to\_\-ms}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{datetime\_\-str\_\-interval\_\-to\_\-ms}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long datetime\_\-str\_\-interval\_\-to\_\-ms (const char $\ast$ {\em pDatetimeString})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a4516f8c4ceb2bb917acb8e3e4e5cedb9}
+This function converts from datetime string interval to total number of milliseconds (10e-\/3). 
+\begin{DoxyParams}{Parameters}
+\item[{\em pDatetimeString}]\mbox{[}in\mbox{]} datetime string interval to be converted. \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000003}{Todo}]move this function to the proper file (could be in common.h). \end{Desc}
+\begin{DoxyReturn}{Returns}
+converted datetime string interval. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a0ff3f1739478cd89305b5dbb5240aaad}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!freeLANEndpointList@{freeLANEndpointList}}
+\index{freeLANEndpointList@{freeLANEndpointList}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{freeLANEndpointList}]{\setlength{\rightskip}{0pt plus 5cm}int freeLANEndpointList (struct {\bf LANEndpointList} $\ast$ {\em lptr})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a0ff3f1739478cd89305b5dbb5240aaad}
+This function is used to clean a \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lptr}]\mbox{[}in\mbox{]} list to be cleaned. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 536 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a912c0a67e9c08a00c9c4af12c5d9fe4c}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!getALLLANEndpoints@{getALLLANEndpoints}}
+\index{getALLLANEndpoints@{getALLLANEndpoints}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{getALLLANEndpoints}]{\setlength{\rightskip}{0pt plus 5cm}int getALLLANEndpoints (struct {\bf LANEndpointList} $\ast$$\ast$ {\em list})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a912c0a67e9c08a00c9c4af12c5d9fe4c}
+
+
+Definition at line 124 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a0e24fae564ca4e06b1a7e8ce7c246ce5}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!getLANEndpoint@{getLANEndpoint}}
+\index{getLANEndpoint@{getLANEndpoint}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{getLANEndpoint}]{\setlength{\rightskip}{0pt plus 5cm}int getLANEndpoint (struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList}, \/  const char $\ast$ {\em linkName})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a0e24fae564ca4e06b1a7e8ce7c246ce5}
+This functions is used to get a route base on specified InstanceID. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lanEPList}]\mbox{[}out\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} struct to be filled. \item[{\em linkName}]\mbox{[}in\mbox{]} link ifname. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a93cd8187af6d71b81bbdcb57a1fc91a7}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!getLANEndpoints@{getLANEndpoints}}
+\index{getLANEndpoints@{getLANEndpoints}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{getLANEndpoints}]{\setlength{\rightskip}{0pt plus 5cm}int getLANEndpoints (struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList}, \/  const struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a93cd8187af6d71b81bbdcb57a1fc91a7}
+This functions is used to get a list of LANEndpoints based on \hyperlink{structnl_link_info}{nlLinkInfo} filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lanEPList}]\mbox{[}out\mbox{]} \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} struct to be filled. \item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} link filter info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a06810d11e411c5ed06363cbf22d6ffb7}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!nlInfoTOLanEP@{nlInfoTOLanEP}}
+\index{nlInfoTOLanEP@{nlInfoTOLanEP}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{nlInfoTOLanEP}]{\setlength{\rightskip}{0pt plus 5cm}int nlInfoTOLanEP (struct {\bf nlLinkInfo} $\ast$ {\em nlLinkInfo}, \/  struct {\bf LANEndpoint} $\ast$ {\em lanEP})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a06810d11e411c5ed06363cbf22d6ffb7}
+Converts a \hyperlink{structnl_link_info}{nlLinkInfo} structure to \hyperlink{struct_l_a_n_endpoint}{LANEndpoint} structure. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info}{nlLinkInfo}}]\mbox{[}in\mbox{]} structure to be converted. \item[{\em lanEP}]\mbox{[}out\mbox{]} converted structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 345 of file OSBase\_\-LANEndpoint.c.\hypertarget{_o_s_base___l_a_n_endpoint_8c_a1cfc38a0229aa40f4f9bb549de1a5edc}{
+\index{OSBase\_\-LANEndpoint.c@{OSBase\_\-LANEndpoint.c}!nlListTOLanEPList@{nlListTOLanEPList}}
+\index{nlListTOLanEPList@{nlListTOLanEPList}!OSBase_LANEndpoint.c@{OSBase\_\-LANEndpoint.c}}
+\subsubsection[{nlListTOLanEPList}]{\setlength{\rightskip}{0pt plus 5cm}int nlListTOLanEPList (struct {\bf nlLinkInfoList} $\ast$$\ast$ {\em nlLinkInfoList}, \/  struct {\bf LANEndpointList} $\ast$$\ast$ {\em lanEPList})}}
+\label{_o_s_base___l_a_n_endpoint_8c_a1cfc38a0229aa40f4f9bb549de1a5edc}
+Converts a \hyperlink{structnl_link_info_list}{nlLinkInfoList} structure to \hyperlink{struct_l_a_n_endpoint_list}{LANEndpointList} strucutre. 
+\begin{DoxyParams}{Parameters}
+\item[{\em \hyperlink{structnl_link_info_list}{nlLinkInfoList}}]\mbox{[}in\mbox{]} list to be converted. \item[{\em lanEPList}]\mbox{[}out\mbox{]} converted list. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LEP\_\-OK=succesful $|$ LEP\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 289 of file OSBase\_\-LANEndpoint.c.

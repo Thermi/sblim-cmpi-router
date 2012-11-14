@@ -1,0 +1,549 @@
+\hypertarget{_o_s_base___next_hop_i_p_route_8h}{
+\section{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-NextHopIPRoute.h File Reference}
+\label{_o_s_base___next_hop_i_p_route_8h}\index{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-NextHopIPRoute.h@{/mnt/storage/cygnus/TESIS/sblim/cmpi-\/router/include/OSBase\_\-NextHopIPRoute.h}}
+}
+{\ttfamily \#include \char`\"{}OSBase\_\-Netlink.h\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnext_hop_i_p}{nextHopIP}
+\item 
+struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_o_s_base___next_hop_i_p_route_8h_ad7554a7a9db5bef6b14f09e440667790}{NH\_\-OK}~0
+\item 
+\#define \hyperlink{_o_s_base___next_hop_i_p_route_8h_a5e59af5398b862acdde790d70938d3b8}{NH\_\-FAIL}~1
+\item 
+\#define \hyperlink{_o_s_base___next_hop_i_p_route_8h_aa1bcdc4c069fe860001f228165f6f43b}{ADDR\_\-TYPE\_\-STR\_\-MAXLEN}~7
+\item 
+\#define \hyperlink{_o_s_base___next_hop_i_p_route_8h_a4319d7c7fd6701380c96eb776fa200b0}{INSTANCEID\_\-FORMAT}~\char`\"{}\%s$|$\%s$|$\%d$|$\%d$|$\%d$|$\%d$|$\%s\char`\"{}
+\item 
+\#define \hyperlink{_o_s_base___next_hop_i_p_route_8h_ad9180931625cf9402590e7bc572f2aa1}{INSTANCEID\_\-FORMAT\_\-PARSE}~\char`\"{}\%\mbox{[}$^\wedge$$|$\mbox{]}$|$\%\mbox{[}$^\wedge$$|$\mbox{]}$|$\%d$|$\%d$|$\%d$|$\%d$|$\%\mbox{[}$^\wedge$$|$\mbox{]}\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8ac97620ef184164a5d035639efd201913}{NH\_\-AT\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8a32301eddc33ecad97c7f9596690eb0d7}{NH\_\-AT\_\-IPV4}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8a40952b1f665dd03df43d2cccb7985957}{NH\_\-AT\_\-IPV6}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea6a1c9ac2596ef88b43ae0d42619b96ee}{NH\_\-RTD\_\-UNKNOWN}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eacb7f419ef925670123eb3691d8442d82}{NH\_\-RTD\_\-OTHER}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaaa9eb0708854248b9dbda940a59433a7}{NH\_\-RTD\_\-CONNECTED}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaf0a5db4d18aee2d945534a2c71333b39}{NH\_\-RTD\_\-USER\_\-DEFINED}, 
+\par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea460dcacfd8c951691cd0bb09e31a5cf0}{NH\_\-RTD\_\-IGRP}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaae3fdb028d3206e23ee5a9be269fa857}{NH\_\-RTD\_\-EIGRP}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea3cc8a875d286c39b3a4873139de7ae36}{NH\_\-RTD\_\-RIP}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eac5166e86f6c9844c04de2033c34d11c9}{NH\_\-RTD\_\-HELLO}, 
+\par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea20f0ab352aa3acebdafedcee03fd2645}{NH\_\-RTD\_\-EGP}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaf4f9e93ad4c458d9d41ca8888901e647}{NH\_\-RTD\_\-BGP}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea4a6760e55e6e16bc692a26860a413fdb}{NH\_\-RTD\_\-ISIS}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ead83f91a29a3c71f9cf64935e8a004ac2}{NH\_\-RTD\_\-OSPF}
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4daf6524f554efd00377858670473ce8abf}{NH\_\-RTS\_\-UNIVERSE} =  0, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da8d6e5b8aa71f87822eae28e6b55681ef}{NH\_\-RTS\_\-SITE} =  200, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4dae034994bf9a008d8424e8170168003c8}{NH\_\-RTS\_\-LINK} =  253, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da3c5c04dbd77175b6b6bfa9e1f6ecad87}{NH\_\-RTS\_\-HOST} =  254, 
+\par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da564fe25ecb695306f20c5e279ae1e33e}{NH\_\-RTS\_\-NOWHERE} =  255
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25ae4a3cc706984e4c2c7d651a3d0f6bcca}{NH\_\-RTT\_\-UNSPEC} =  0, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25ab4bc600c8a146efc9753afac41016e7a}{NH\_\-RTT\_\-COMPAT} =  252, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a20329eee669bc122245e8456671dca22}{NH\_\-RTT\_\-DEFAULT} =  253, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a2398bf23373509959ee3ef1309672faa}{NH\_\-RTT\_\-MAIN} =  254, 
+\par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a063c1088f7f77fa37efc48ba4474ea67}{NH\_\-RTT\_\-LOCAL} =  255
+ \}
+\item 
+enum \{ \par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceaf693cd475d9c6b8303b56459bde594bf}{NH\_\-RTTY\_\-UNSPEC}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceabd4070c884cf1e35e9378d5b57e839d8}{NH\_\-RTTY\_\-UNICAST}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea7e57070d40ab6435aea7a7d5c7615f5a}{NH\_\-RTTY\_\-LOCAL}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea2fbc8930f99065111a5b43d726b890f1}{NH\_\-RTTY\_\-BROADCAST}, 
+\par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea547fbe5e57a765ea5335f0fecff57604}{NH\_\-RTTY\_\-ANYCAST}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea5a79bff44f0833576d053916b77b10d4}{NH\_\-RTTY\_\-MULTICAST}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceaddff4ce178415ae93f6516072fbdd6e9}{NH\_\-RTTY\_\-BLACKHOLE}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea352706ffa238331cafa7ec1bf476f1e8}{NH\_\-RTTY\_\-UNREACHABLE}, 
+\par
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea9e957bc4a174ffc0f5fd7ff378814035}{NH\_\-RTTY\_\-PROHIBIT}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceafbf21057948781f8c6ad8718cc5c8978}{NH\_\-RTTY\_\-THROW}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea9f216c9fbe310588ba891921a7189181}{NH\_\-RTTY\_\-NAT}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea97592da82232d211627a75f2ecce398f}{NH\_\-RTTY\_\-XRESOLVE}
+ \}
+\item 
+enum \{ \hyperlink{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaab8d926f04a592f423b0afb014c006a1a}{NH\_\-TOR\_\-ADMINISTRATOR} =  2, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaa8cff5fba10c76f7bead46ad9c5c67e0a}{NH\_\-TOR\_\-COMPUTED}, 
+\hyperlink{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaa66dea2e4ea974f9dbdae39ce3eeb9202}{NH\_\-TOR\_\-ACTUAL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_a36ea7c7b855508a2fc288d320c3c0e84}{getIPRoutes} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList, struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_a5085a0364ec84a538e904b84a4e25b77}{getAllIPRoutes} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_a56718bb7056e26173ab590bddad2ef14}{getIPRouteIId} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList, const char $\ast$instanceId)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_aac403d090b103ec1932b4d8660cfe91a}{addIPRoute} (struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_aa38ea18d638ce338d241cbf51e2b4ca4}{delIPRoute} (const struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_a666ba60b93e6769421c520282be53b4f}{nlListTOnhList} (struct \hyperlink{structnl_route_info_list}{nlRouteInfoList} $\ast$$\ast$nlRtInfoList, struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$$\ast$nHopIPList)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_af3a45ed713dd80af347b7e947184d892}{nhTOnlInfo} (struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP, struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_ab906646758b6f3346849230c8a27c76d}{nlInfoTOnh} (const struct \hyperlink{structnl_route_info}{nlRouteInfo} $\ast$nlRtInfo, struct \hyperlink{structnext_hop_i_p}{nextHopIP} $\ast$nHopIP)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_ac0f496778846a04608eb1cf5b8c32bfc}{getAddrType} (const char $\ast$addr)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_aa7253cd736fe33432756ce85ee1bd5af}{getAddrTypeStr} (int addressType, char $\ast$addrTypeStr)
+\item 
+int \hyperlink{_o_s_base___next_hop_i_p_route_8h_aba624c13f657f0638608df830c89806e}{freeNextHopIPList} (struct \hyperlink{structnext_hop_i_p_list}{nextHopIPList} $\ast$lptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{_o_s_base___next_hop_i_p_route_8h}{OSBase\_\-NextHopIPRoute.h}
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE (\char`\"{}AGREEMENT\char`\"{}). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from \href{http://www.opensource.org/licenses/eclipse-1.0.php}{\tt http://www.opensource.org/licenses/eclipse-\/1.0.php}
+
+\begin{DoxyAuthor}{Author}
+Federico Martin Casares (\href{mailto:warptrosse@gmail.com}{\tt warptrosse@gmail.com})
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Contributors:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description:}
+
+\end{DoxyParagraph}
+This file defines the interfaces for the resource access implementation of the CIM class Linux\_\-NextHopIPRoute. 
+
+Definition in file \hyperlink{_o_s_base___next_hop_i_p_route_8h_source}{OSBase\_\-NextHopIPRoute.h}.
+
+\subsection{Define Documentation}
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aa1bcdc4c069fe860001f228165f6f43b}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!ADDR\_\-TYPE\_\-STR\_\-MAXLEN@{ADDR\_\-TYPE\_\-STR\_\-MAXLEN}}
+\index{ADDR\_\-TYPE\_\-STR\_\-MAXLEN@{ADDR\_\-TYPE\_\-STR\_\-MAXLEN}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{ADDR\_\-TYPE\_\-STR\_\-MAXLEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADDR\_\-TYPE\_\-STR\_\-MAXLEN~7}}
+\label{_o_s_base___next_hop_i_p_route_8h_aa1bcdc4c069fe860001f228165f6f43b}
+Address type as string max length. 
+
+Definition at line 40 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a4319d7c7fd6701380c96eb776fa200b0}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!INSTANCEID\_\-FORMAT@{INSTANCEID\_\-FORMAT}}
+\index{INSTANCEID\_\-FORMAT@{INSTANCEID\_\-FORMAT}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{INSTANCEID\_\-FORMAT}]{\setlength{\rightskip}{0pt plus 5cm}\#define INSTANCEID\_\-FORMAT~\char`\"{}\%s$|$\%s$|$\%d$|$\%d$|$\%d$|$\%d$|$\%s\char`\"{}}}
+\label{_o_s_base___next_hop_i_p_route_8h_a4319d7c7fd6701380c96eb776fa200b0}
+Maximum hostName length. InstanceID format. It is supposed that it will be not changed. hostName$|$dstAddr$|$dstLen$|$table$|$outputIf$|$scope$|$gw 
+
+Definition at line 53 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_ad9180931625cf9402590e7bc572f2aa1}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!INSTANCEID\_\-FORMAT\_\-PARSE@{INSTANCEID\_\-FORMAT\_\-PARSE}}
+\index{INSTANCEID\_\-FORMAT\_\-PARSE@{INSTANCEID\_\-FORMAT\_\-PARSE}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{INSTANCEID\_\-FORMAT\_\-PARSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define INSTANCEID\_\-FORMAT\_\-PARSE~\char`\"{}\%\mbox{[}$^\wedge$$|$\mbox{]}$|$\%\mbox{[}$^\wedge$$|$\mbox{]}$|$\%d$|$\%d$|$\%d$|$\%d$|$\%\mbox{[}$^\wedge$$|$\mbox{]}\char`\"{}}}
+\label{_o_s_base___next_hop_i_p_route_8h_ad9180931625cf9402590e7bc572f2aa1}
+InstanceID format for parse. It is supposed that it will be not changed. 
+
+Definition at line 58 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a5e59af5398b862acdde790d70938d3b8}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-FAIL@{NH\_\-FAIL}}
+\index{NH\_\-FAIL@{NH\_\-FAIL}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{NH\_\-FAIL}]{\setlength{\rightskip}{0pt plus 5cm}\#define NH\_\-FAIL~1}}
+\label{_o_s_base___next_hop_i_p_route_8h_a5e59af5398b862acdde790d70938d3b8}
+An error occurs when executing desired operation. 
+
+Definition at line 35 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_ad7554a7a9db5bef6b14f09e440667790}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-OK@{NH\_\-OK}}
+\index{NH\_\-OK@{NH\_\-OK}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{NH\_\-OK}]{\setlength{\rightskip}{0pt plus 5cm}\#define NH\_\-OK~0}}
+\label{_o_s_base___next_hop_i_p_route_8h_ad7554a7a9db5bef6b14f09e440667790}
+Operation executed succesful. 
+
+Definition at line 34 of file OSBase\_\-NextHopIPRoute.h.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8}{
+\subsubsection[{"@12}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8}
+CIM -\/ Describes the format of the address properties. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NH\_\-AT\_\-UNKNOWN@{NH\_\-AT\_\-UNKNOWN}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-AT\_\-UNKNOWN@{NH\_\-AT\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8ac97620ef184164a5d035639efd201913}{
+NH\_\-AT\_\-UNKNOWN}
+\label{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8ac97620ef184164a5d035639efd201913}
+}]Unidentified. \index{NH\_\-AT\_\-IPV4@{NH\_\-AT\_\-IPV4}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-AT\_\-IPV4@{NH\_\-AT\_\-IPV4}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8a32301eddc33ecad97c7f9596690eb0d7}{
+NH\_\-AT\_\-IPV4}
+\label{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8a32301eddc33ecad97c7f9596690eb0d7}
+}]IP version 4. \index{NH\_\-AT\_\-IPV6@{NH\_\-AT\_\-IPV6}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-AT\_\-IPV6@{NH\_\-AT\_\-IPV6}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8a40952b1f665dd03df43d2cccb7985957}{
+NH\_\-AT\_\-IPV6}
+\label{_o_s_base___next_hop_i_p_route_8h_ac36f475ca5b446f4fde4c9b90bec77c8a40952b1f665dd03df43d2cccb7985957}
+}]IP version 6. \end{description}
+\end{Desc}
+
+
+
+Definition at line 63 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9e}{
+\subsubsection[{"@13}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9e}
+CIM -\/ How the route was derived. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NH\_\-RTD\_\-UNKNOWN@{NH\_\-RTD\_\-UNKNOWN}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-UNKNOWN@{NH\_\-RTD\_\-UNKNOWN}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea6a1c9ac2596ef88b43ae0d42619b96ee}{
+NH\_\-RTD\_\-UNKNOWN}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea6a1c9ac2596ef88b43ae0d42619b96ee}
+}]Unknown. \index{NH\_\-RTD\_\-OTHER@{NH\_\-RTD\_\-OTHER}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-OTHER@{NH\_\-RTD\_\-OTHER}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eacb7f419ef925670123eb3691d8442d82}{
+NH\_\-RTD\_\-OTHER}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eacb7f419ef925670123eb3691d8442d82}
+}]Other. \index{NH\_\-RTD\_\-CONNECTED@{NH\_\-RTD\_\-CONNECTED}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-CONNECTED@{NH\_\-RTD\_\-CONNECTED}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaaa9eb0708854248b9dbda940a59433a7}{
+NH\_\-RTD\_\-CONNECTED}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaaa9eb0708854248b9dbda940a59433a7}
+}]Connected. \index{NH\_\-RTD\_\-USER\_\-DEFINED@{NH\_\-RTD\_\-USER\_\-DEFINED}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-USER\_\-DEFINED@{NH\_\-RTD\_\-USER\_\-DEFINED}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaf0a5db4d18aee2d945534a2c71333b39}{
+NH\_\-RTD\_\-USER\_\-DEFINED}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaf0a5db4d18aee2d945534a2c71333b39}
+}]User-\/Defined. \index{NH\_\-RTD\_\-IGRP@{NH\_\-RTD\_\-IGRP}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-IGRP@{NH\_\-RTD\_\-IGRP}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea460dcacfd8c951691cd0bb09e31a5cf0}{
+NH\_\-RTD\_\-IGRP}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea460dcacfd8c951691cd0bb09e31a5cf0}
+}]IGRP. \index{NH\_\-RTD\_\-EIGRP@{NH\_\-RTD\_\-EIGRP}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-EIGRP@{NH\_\-RTD\_\-EIGRP}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaae3fdb028d3206e23ee5a9be269fa857}{
+NH\_\-RTD\_\-EIGRP}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaae3fdb028d3206e23ee5a9be269fa857}
+}]EIGRP. \index{NH\_\-RTD\_\-RIP@{NH\_\-RTD\_\-RIP}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-RIP@{NH\_\-RTD\_\-RIP}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea3cc8a875d286c39b3a4873139de7ae36}{
+NH\_\-RTD\_\-RIP}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea3cc8a875d286c39b3a4873139de7ae36}
+}]RIP. \index{NH\_\-RTD\_\-HELLO@{NH\_\-RTD\_\-HELLO}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-HELLO@{NH\_\-RTD\_\-HELLO}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eac5166e86f6c9844c04de2033c34d11c9}{
+NH\_\-RTD\_\-HELLO}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eac5166e86f6c9844c04de2033c34d11c9}
+}]HELLO. \index{NH\_\-RTD\_\-EGP@{NH\_\-RTD\_\-EGP}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-EGP@{NH\_\-RTD\_\-EGP}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea20f0ab352aa3acebdafedcee03fd2645}{
+NH\_\-RTD\_\-EGP}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea20f0ab352aa3acebdafedcee03fd2645}
+}]EGP. \index{NH\_\-RTD\_\-BGP@{NH\_\-RTD\_\-BGP}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-BGP@{NH\_\-RTD\_\-BGP}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaf4f9e93ad4c458d9d41ca8888901e647}{
+NH\_\-RTD\_\-BGP}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9eaf4f9e93ad4c458d9d41ca8888901e647}
+}]BGP. \index{NH\_\-RTD\_\-ISIS@{NH\_\-RTD\_\-ISIS}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-ISIS@{NH\_\-RTD\_\-ISIS}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea4a6760e55e6e16bc692a26860a413fdb}{
+NH\_\-RTD\_\-ISIS}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ea4a6760e55e6e16bc692a26860a413fdb}
+}]ISIS. \index{NH\_\-RTD\_\-OSPF@{NH\_\-RTD\_\-OSPF}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTD\_\-OSPF@{NH\_\-RTD\_\-OSPF}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ead83f91a29a3c71f9cf64935e8a004ac2}{
+NH\_\-RTD\_\-OSPF}
+\label{_o_s_base___next_hop_i_p_route_8h_a05589fbab0657f08285ebdfe93f5ec9ead83f91a29a3c71f9cf64935e8a004ac2}
+}]OSPF. \end{description}
+\end{Desc}
+
+
+
+Definition at line 72 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4d}{
+\subsubsection[{"@14}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4d}
+CIM -\/ Route scope. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NH\_\-RTS\_\-UNIVERSE@{NH\_\-RTS\_\-UNIVERSE}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTS\_\-UNIVERSE@{NH\_\-RTS\_\-UNIVERSE}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4daf6524f554efd00377858670473ce8abf}{
+NH\_\-RTS\_\-UNIVERSE}
+\label{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4daf6524f554efd00377858670473ce8abf}
+}]Everywhere in the \char`\"{}Universe\char`\"{}. \index{NH\_\-RTS\_\-SITE@{NH\_\-RTS\_\-SITE}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTS\_\-SITE@{NH\_\-RTS\_\-SITE}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da8d6e5b8aa71f87822eae28e6b55681ef}{
+NH\_\-RTS\_\-SITE}
+\label{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da8d6e5b8aa71f87822eae28e6b55681ef}
+}]Internal routes (only IPv6). \index{NH\_\-RTS\_\-LINK@{NH\_\-RTS\_\-LINK}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTS\_\-LINK@{NH\_\-RTS\_\-LINK}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4dae034994bf9a008d8424e8170168003c8}{
+NH\_\-RTS\_\-LINK}
+\label{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4dae034994bf9a008d8424e8170168003c8}
+}]Destination located on directly attached link. \index{NH\_\-RTS\_\-HOST@{NH\_\-RTS\_\-HOST}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTS\_\-HOST@{NH\_\-RTS\_\-HOST}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da3c5c04dbd77175b6b6bfa9e1f6ecad87}{
+NH\_\-RTS\_\-HOST}
+\label{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da3c5c04dbd77175b6b6bfa9e1f6ecad87}
+}]Local address. \index{NH\_\-RTS\_\-NOWHERE@{NH\_\-RTS\_\-NOWHERE}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTS\_\-NOWHERE@{NH\_\-RTS\_\-NOWHERE}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da564fe25ecb695306f20c5e279ae1e33e}{
+NH\_\-RTS\_\-NOWHERE}
+\label{_o_s_base___next_hop_i_p_route_8h_a16af7b253440dadd46a80a4b9fddba4da564fe25ecb695306f20c5e279ae1e33e}
+}]Not existing destination. \end{description}
+\end{Desc}
+
+
+
+Definition at line 90 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25}{
+\subsubsection[{"@15}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25}
+CIM -\/ Routing table. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NH\_\-RTT\_\-UNSPEC@{NH\_\-RTT\_\-UNSPEC}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTT\_\-UNSPEC@{NH\_\-RTT\_\-UNSPEC}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25ae4a3cc706984e4c2c7d651a3d0f6bcca}{
+NH\_\-RTT\_\-UNSPEC}
+\label{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25ae4a3cc706984e4c2c7d651a3d0f6bcca}
+}]Operate on all routing tables simultaneously. \index{NH\_\-RTT\_\-COMPAT@{NH\_\-RTT\_\-COMPAT}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTT\_\-COMPAT@{NH\_\-RTT\_\-COMPAT}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25ab4bc600c8a146efc9753afac41016e7a}{
+NH\_\-RTT\_\-COMPAT}
+\label{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25ab4bc600c8a146efc9753afac41016e7a}
+}]?. \index{NH\_\-RTT\_\-DEFAULT@{NH\_\-RTT\_\-DEFAULT}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTT\_\-DEFAULT@{NH\_\-RTT\_\-DEFAULT}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a20329eee669bc122245e8456671dca22}{
+NH\_\-RTT\_\-DEFAULT}
+\label{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a20329eee669bc122245e8456671dca22}
+}]?. \index{NH\_\-RTT\_\-MAIN@{NH\_\-RTT\_\-MAIN}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTT\_\-MAIN@{NH\_\-RTT\_\-MAIN}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a2398bf23373509959ee3ef1309672faa}{
+NH\_\-RTT\_\-MAIN}
+\label{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a2398bf23373509959ee3ef1309672faa}
+}]Main kernel table. \index{NH\_\-RTT\_\-LOCAL@{NH\_\-RTT\_\-LOCAL}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTT\_\-LOCAL@{NH\_\-RTT\_\-LOCAL}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a063c1088f7f77fa37efc48ba4474ea67}{
+NH\_\-RTT\_\-LOCAL}
+\label{_o_s_base___next_hop_i_p_route_8h_aba01db17f4a2bfbc3db60dc172972a25a063c1088f7f77fa37efc48ba4474ea67}
+}]Special routing table maintained by the kernel. \end{description}
+\end{Desc}
+
+
+
+Definition at line 102 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fce}{
+\subsubsection[{"@16}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fce}
+CIM -\/ Route Type. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NH\_\-RTTY\_\-UNSPEC@{NH\_\-RTTY\_\-UNSPEC}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-UNSPEC@{NH\_\-RTTY\_\-UNSPEC}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceaf693cd475d9c6b8303b56459bde594bf}{
+NH\_\-RTTY\_\-UNSPEC}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceaf693cd475d9c6b8303b56459bde594bf}
+}]Type not identified. \index{NH\_\-RTTY\_\-UNICAST@{NH\_\-RTTY\_\-UNICAST}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-UNICAST@{NH\_\-RTTY\_\-UNICAST}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceabd4070c884cf1e35e9378d5b57e839d8}{
+NH\_\-RTTY\_\-UNICAST}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceabd4070c884cf1e35e9378d5b57e839d8}
+}]Gateway or direct route. \index{NH\_\-RTTY\_\-LOCAL@{NH\_\-RTTY\_\-LOCAL}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-LOCAL@{NH\_\-RTTY\_\-LOCAL}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea7e57070d40ab6435aea7a7d5c7615f5a}{
+NH\_\-RTTY\_\-LOCAL}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea7e57070d40ab6435aea7a7d5c7615f5a}
+}]Accept locally. \index{NH\_\-RTTY\_\-BROADCAST@{NH\_\-RTTY\_\-BROADCAST}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-BROADCAST@{NH\_\-RTTY\_\-BROADCAST}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea2fbc8930f99065111a5b43d726b890f1}{
+NH\_\-RTTY\_\-BROADCAST}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea2fbc8930f99065111a5b43d726b890f1}
+}]Accept locally as broadcast, send as broadcast. \index{NH\_\-RTTY\_\-ANYCAST@{NH\_\-RTTY\_\-ANYCAST}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-ANYCAST@{NH\_\-RTTY\_\-ANYCAST}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea547fbe5e57a765ea5335f0fecff57604}{
+NH\_\-RTTY\_\-ANYCAST}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea547fbe5e57a765ea5335f0fecff57604}
+}]Accept locally as broadcast, but send as unicast. \index{NH\_\-RTTY\_\-MULTICAST@{NH\_\-RTTY\_\-MULTICAST}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-MULTICAST@{NH\_\-RTTY\_\-MULTICAST}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea5a79bff44f0833576d053916b77b10d4}{
+NH\_\-RTTY\_\-MULTICAST}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea5a79bff44f0833576d053916b77b10d4}
+}]Multicast route. \index{NH\_\-RTTY\_\-BLACKHOLE@{NH\_\-RTTY\_\-BLACKHOLE}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-BLACKHOLE@{NH\_\-RTTY\_\-BLACKHOLE}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceaddff4ce178415ae93f6516072fbdd6e9}{
+NH\_\-RTTY\_\-BLACKHOLE}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceaddff4ce178415ae93f6516072fbdd6e9}
+}]Drop. \index{NH\_\-RTTY\_\-UNREACHABLE@{NH\_\-RTTY\_\-UNREACHABLE}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-UNREACHABLE@{NH\_\-RTTY\_\-UNREACHABLE}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea352706ffa238331cafa7ec1bf476f1e8}{
+NH\_\-RTTY\_\-UNREACHABLE}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea352706ffa238331cafa7ec1bf476f1e8}
+}]Destination is unreachable. \index{NH\_\-RTTY\_\-PROHIBIT@{NH\_\-RTTY\_\-PROHIBIT}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-PROHIBIT@{NH\_\-RTTY\_\-PROHIBIT}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea9e957bc4a174ffc0f5fd7ff378814035}{
+NH\_\-RTTY\_\-PROHIBIT}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea9e957bc4a174ffc0f5fd7ff378814035}
+}]Administratively prohibited. \index{NH\_\-RTTY\_\-THROW@{NH\_\-RTTY\_\-THROW}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-THROW@{NH\_\-RTTY\_\-THROW}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceafbf21057948781f8c6ad8718cc5c8978}{
+NH\_\-RTTY\_\-THROW}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fceafbf21057948781f8c6ad8718cc5c8978}
+}]Not in this table. \index{NH\_\-RTTY\_\-NAT@{NH\_\-RTTY\_\-NAT}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-NAT@{NH\_\-RTTY\_\-NAT}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea9f216c9fbe310588ba891921a7189181}{
+NH\_\-RTTY\_\-NAT}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea9f216c9fbe310588ba891921a7189181}
+}]Translate this address. \index{NH\_\-RTTY\_\-XRESOLVE@{NH\_\-RTTY\_\-XRESOLVE}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-RTTY\_\-XRESOLVE@{NH\_\-RTTY\_\-XRESOLVE}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea97592da82232d211627a75f2ecce398f}{
+NH\_\-RTTY\_\-XRESOLVE}
+\label{_o_s_base___next_hop_i_p_route_8h_aaf105ae5beaca1dee30ae54530691fcea97592da82232d211627a75f2ecce398f}
+}]Use external resolver. \end{description}
+\end{Desc}
+
+
+
+Definition at line 115 of file OSBase\_\-NextHopIPRoute.h.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52caba}{
+\subsubsection[{"@17}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52caba}
+CIM -\/ Type of route. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NH\_\-TOR\_\-ADMINISTRATOR@{NH\_\-TOR\_\-ADMINISTRATOR}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-TOR\_\-ADMINISTRATOR@{NH\_\-TOR\_\-ADMINISTRATOR}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaab8d926f04a592f423b0afb014c006a1a}{
+NH\_\-TOR\_\-ADMINISTRATOR}
+\label{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaab8d926f04a592f423b0afb014c006a1a}
+}]Administrator-\/defined. \index{NH\_\-TOR\_\-COMPUTED@{NH\_\-TOR\_\-COMPUTED}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-TOR\_\-COMPUTED@{NH\_\-TOR\_\-COMPUTED}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaa8cff5fba10c76f7bead46ad9c5c67e0a}{
+NH\_\-TOR\_\-COMPUTED}
+\label{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaa8cff5fba10c76f7bead46ad9c5c67e0a}
+}]Computed via a routing protocol/algorithm. \index{NH\_\-TOR\_\-ACTUAL@{NH\_\-TOR\_\-ACTUAL}!OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!NH\_\-TOR\_\-ACTUAL@{NH\_\-TOR\_\-ACTUAL}}\item[{\em 
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaa66dea2e4ea974f9dbdae39ce3eeb9202}{
+NH\_\-TOR\_\-ACTUAL}
+\label{_o_s_base___next_hop_i_p_route_8h_a80155586fa275b28773c9b203f52cabaa66dea2e4ea974f9dbdae39ce3eeb9202}
+}]Actual route implemented in the network. \end{description}
+\end{Desc}
+
+
+
+Definition at line 135 of file OSBase\_\-NextHopIPRoute.h.
+
+\subsection{Function Documentation}
+\hypertarget{_o_s_base___next_hop_i_p_route_8h_aac403d090b103ec1932b4d8660cfe91a}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!addIPRoute@{addIPRoute}}
+\index{addIPRoute@{addIPRoute}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{addIPRoute}]{\setlength{\rightskip}{0pt plus 5cm}int addIPRoute (struct {\bf nextHopIP} $\ast$ {\em nHopIP})}}
+\label{_o_s_base___next_hop_i_p_route_8h_aac403d090b103ec1932b4d8660cfe91a}
+This function is used to add a new route to FIB. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIP}]\mbox{[}in\mbox{]} route to be added. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 160 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_aa38ea18d638ce338d241cbf51e2b4ca4}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!delIPRoute@{delIPRoute}}
+\index{delIPRoute@{delIPRoute}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{delIPRoute}]{\setlength{\rightskip}{0pt plus 5cm}int delIPRoute (const struct {\bf nextHopIP} $\ast$ {\em nHopIP})}}
+\label{_o_s_base___next_hop_i_p_route_8h_aa38ea18d638ce338d241cbf51e2b4ca4}
+This function is used to delete a route from FIB. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIP}]\mbox{[}in\mbox{]} route to be deleted. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 212 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_aba624c13f657f0638608df830c89806e}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!freeNextHopIPList@{freeNextHopIPList}}
+\index{freeNextHopIPList@{freeNextHopIPList}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{freeNextHopIPList}]{\setlength{\rightskip}{0pt plus 5cm}int freeNextHopIPList (struct {\bf nextHopIPList} $\ast$ {\em lptr})}}
+\label{_o_s_base___next_hop_i_p_route_8h_aba624c13f657f0638608df830c89806e}
+This function is used to clean a \hyperlink{structnext_hop_i_p}{nextHopIP} list. 
+\begin{DoxyParams}{Parameters}
+\item[{\em lptr}]\mbox{[}in\mbox{]} list to be cleaned. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 623 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_ac0f496778846a04608eb1cf5b8c32bfc}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!getAddrType@{getAddrType}}
+\index{getAddrType@{getAddrType}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{getAddrType}]{\setlength{\rightskip}{0pt plus 5cm}int getAddrType (const char $\ast$ {\em addr})}}
+\label{_o_s_base___next_hop_i_p_route_8h_ac0f496778846a04608eb1cf5b8c32bfc}
+Used to get CIM address type from specified route address. 
+\begin{DoxyParams}{Parameters}
+\item[{\em addr}]\mbox{[}int\mbox{]} route address. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CIM address type. 
+\end{DoxyReturn}
+
+
+Definition at line 582 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_aa7253cd736fe33432756ce85ee1bd5af}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!getAddrTypeStr@{getAddrTypeStr}}
+\index{getAddrTypeStr@{getAddrTypeStr}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{getAddrTypeStr}]{\setlength{\rightskip}{0pt plus 5cm}int getAddrTypeStr (int {\em addressType}, \/  char $\ast$ {\em addrTypeStr})}}
+\label{_o_s_base___next_hop_i_p_route_8h_aa7253cd736fe33432756ce85ee1bd5af}
+Used to get CIM address type in string format. 
+\begin{DoxyParams}{Parameters}
+\item[{\em addressType}]\mbox{[}in\mbox{]} address type identifier. \item[{\em addrTypeStr}]\mbox{[}out\mbox{]} address type string. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 603 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a5085a0364ec84a538e904b84a4e25b77}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!getAllIPRoutes@{getAllIPRoutes}}
+\index{getAllIPRoutes@{getAllIPRoutes}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{getAllIPRoutes}]{\setlength{\rightskip}{0pt plus 5cm}int getAllIPRoutes (struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList})}}
+\label{_o_s_base___next_hop_i_p_route_8h_a5085a0364ec84a538e904b84a4e25b77}
+This functions is used to get all ipv4 and ipv6 routes from fib. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIPList}]\mbox{[}out\mbox{]} routes struct to be filled. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a56718bb7056e26173ab590bddad2ef14}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!getIPRouteIId@{getIPRouteIId}}
+\index{getIPRouteIId@{getIPRouteIId}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{getIPRouteIId}]{\setlength{\rightskip}{0pt plus 5cm}int getIPRouteIId (struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList}, \/  const char $\ast$ {\em instanceId})}}
+\label{_o_s_base___next_hop_i_p_route_8h_a56718bb7056e26173ab590bddad2ef14}
+This functions is used to get a route base on specified InstanceID. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIPList}]\mbox{[}out\mbox{]} routes struct to be filled. \item[{\em instanceId}]\mbox{[}in\mbox{]} route InstanceID. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a36ea7c7b855508a2fc288d320c3c0e84}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!getIPRoutes@{getIPRoutes}}
+\index{getIPRoutes@{getIPRoutes}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{getIPRoutes}]{\setlength{\rightskip}{0pt plus 5cm}int getIPRoutes (struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList}, \/  struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___next_hop_i_p_route_8h_a36ea7c7b855508a2fc288d320c3c0e84}
+This functions is used to get a list of routes based on nlRtInfo filter. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIPList}]\mbox{[}out\mbox{]} routes struct to be filled. \item[{\em nlRtInfo}]\mbox{[}in\mbox{]} route info. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_af3a45ed713dd80af347b7e947184d892}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!nhTOnlInfo@{nhTOnlInfo}}
+\index{nhTOnlInfo@{nhTOnlInfo}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{nhTOnlInfo}]{\setlength{\rightskip}{0pt plus 5cm}int nhTOnlInfo (struct {\bf nextHopIP} $\ast$ {\em nHopIP}, \/  struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo})}}
+\label{_o_s_base___next_hop_i_p_route_8h_af3a45ed713dd80af347b7e947184d892}
+Converts a \hyperlink{structnext_hop_i_p}{nextHopIP} structure to \hyperlink{structnl_route_info}{nlRouteInfo} structure. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nHopIP}]\mbox{[}in\mbox{]} structure to be converted. \item[{\em nlRtInfo}]\mbox{[}out\mbox{]} converted structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 318 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_ab906646758b6f3346849230c8a27c76d}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!nlInfoTOnh@{nlInfoTOnh}}
+\index{nlInfoTOnh@{nlInfoTOnh}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{nlInfoTOnh}]{\setlength{\rightskip}{0pt plus 5cm}int nlInfoTOnh (const struct {\bf nlRouteInfo} $\ast$ {\em nlRtInfo}, \/  struct {\bf nextHopIP} $\ast$ {\em nHopIP})}}
+\label{_o_s_base___next_hop_i_p_route_8h_ab906646758b6f3346849230c8a27c76d}
+Converts a \hyperlink{structnl_route_info}{nlRouteInfo} structure to \hyperlink{structnext_hop_i_p}{nextHopIP} structure. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfo}]\mbox{[}in\mbox{]} structure to be converted. \item[{\em nHopIP}]\mbox{[}out\mbox{]} converted structure. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 427 of file OSBase\_\-NextHopIPRoute.c.\hypertarget{_o_s_base___next_hop_i_p_route_8h_a666ba60b93e6769421c520282be53b4f}{
+\index{OSBase\_\-NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}!nlListTOnhList@{nlListTOnhList}}
+\index{nlListTOnhList@{nlListTOnhList}!OSBase_NextHopIPRoute.h@{OSBase\_\-NextHopIPRoute.h}}
+\subsubsection[{nlListTOnhList}]{\setlength{\rightskip}{0pt plus 5cm}int nlListTOnhList (struct {\bf nlRouteInfoList} $\ast$$\ast$ {\em nlRtInfoList}, \/  struct {\bf nextHopIPList} $\ast$$\ast$ {\em nHopIPList})}}
+\label{_o_s_base___next_hop_i_p_route_8h_a666ba60b93e6769421c520282be53b4f}
+Converts a \hyperlink{structnl_route_info_list}{nlRouteInfoList} structure to \hyperlink{structnext_hop_i_p_list}{nextHopIPList} strucutre. 
+\begin{DoxyParams}{Parameters}
+\item[{\em nlRtInfoList}]\mbox{[}in\mbox{]} list to be converted. \item[{\em nHopIPList}]\mbox{[}out\mbox{]} converted list. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NH\_\-OK=succesful $|$ NH\_\-FAIL=fail 
+\end{DoxyReturn}
+
+
+Definition at line 262 of file OSBase\_\-NextHopIPRoute.c.
